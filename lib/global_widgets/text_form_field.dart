@@ -2,37 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 
-//====== Button Widget  =============
 
-class ButtonWidget extends StatelessWidget {
-  ButtonWidget({
-    Key? key,
-    required this.title,
-    required this.onTap,
-  }) : super(key: key);
 
-  String title;
-  VoidCallback? onTap;
 
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onTap,
-      child: Text(
-        title,
-        style: GoogleFonts.poppins(fontSize: 18),
-      ),
-
-      style: ElevatedButton.styleFrom(
-        //  primary:,
-        // primary: Colors.transparent,
-        // onPrimary: Colors.transparent,
-          padding: const EdgeInsets.symmetric(vertical: 16,),
-          shape:
-          RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
-    );
-  }
-}
 
 //====== TextFormField Widget ============
 
@@ -43,12 +15,14 @@ class TextFormFieldWidget extends StatelessWidget {
     this.icon,
     this.title,
     this.obscureText,
+    this.controller,
   }) : super(key: key);
 
   Widget? inkWell;
   Icon? icon;
   String? title;
   bool? obscureText;
+  TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +42,7 @@ class TextFormFieldWidget extends StatelessWidget {
           filled: true,
           fillColor: Colors.white,
           hintText: title!,
-          hintStyle: GoogleFonts.poppins(color: Colors.black),
+         // hintStyle: GoogleFonts.poppins(color: Colors.black),
 
           // --- when user does not interact with -----
           border: OutlineInputBorder(
@@ -80,7 +54,7 @@ class TextFormFieldWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
         ),
-        // controller: controller,
+         controller: controller,
         obscureText: obscureText!,
         keyboardType: TextInputType.text,
       ),

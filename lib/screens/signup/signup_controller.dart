@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController{
-  final _rememberMe = false.obs;
-  get rememberMe => _rememberMe.value;
-  set rememberMe(value) => _rememberMe.value = value;
+class SignUpController extends GetxController{
+
 
   final   _obscure = true.obs;
   get obscure => _obscure.value;
@@ -15,6 +13,7 @@ class LoginController extends GetxController{
 
   TextEditingController  emailController = TextEditingController();
   TextEditingController    passwordController = TextEditingController();
+  TextEditingController    stateController = TextEditingController();
 
 
 
