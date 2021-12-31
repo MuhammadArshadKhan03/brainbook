@@ -31,18 +31,18 @@ class TextFormFieldWidget extends StatelessWidget {
       child: TextFormField(
         maxLines: 1,
         decoration: InputDecoration(
-          suffixIcon: inkWell,
+          suffixIcon: inkWell??Container(),
 
           // InkWell(onTap: (){},child: Padding(
           //   padding: const EdgeInsets.only(top: 16.0),
           //   child:  Text("Show",style: GoogleFonts.poppins(color: fontColorLight),),
           // ),),
-          prefixIcon: icon!,
+          prefixIcon: icon??Container(),
           //Icon(Icons.person_outline),
           filled: true,
           fillColor: Colors.white,
           hintText: title!,
-         // hintStyle: GoogleFonts.poppins(color: Colors.black),
+          hintStyle: TextStyle(color: Colors.grey),
 
           // --- when user does not interact with -----
           border: OutlineInputBorder(

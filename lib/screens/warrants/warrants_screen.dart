@@ -1,5 +1,6 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
+import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/listview_text.dart';
 import 'package:brainbook/screens/warrants/warrents_controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,10 +25,8 @@ class Warrants extends StatelessWidget {
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
-                child: Text(
-                  "Search warrant",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
+                child: HeadingTextWidget(text: "Search Warrants"),
+
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),

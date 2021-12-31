@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class TranslatorController extends GetxController{
 
   List SpeakList =[
-    "French",
+    "Pakistan",
     "Spanish",
     "French",
     "Spanish",
@@ -40,7 +40,7 @@ class TranslatorController extends GetxController{
 
 
   List<Widget> routes = [
-    CommonPhraseScreen()
+    CommonPhraseScreen(),
 
 
   ];

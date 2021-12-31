@@ -1,5 +1,8 @@
+import 'package:brainbook/screens/age_calculation/age_calculation_screen.dart';
+import 'package:brainbook/screens/dead_checklist/dead_checklist_screen.dart';
 import 'package:brainbook/screens/drugs_related/drugs_related_screen.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_screen.dart';
+import 'package:brainbook/screens/gang_slang/gang_slang_screen.dart';
 import 'package:brainbook/screens/less_lethal/less_lethal_screen.dart';
 import 'package:brainbook/screens/translator/translator_screen.dart';
 import 'package:brainbook/screens/warrants/warrants_screen.dart';
@@ -50,6 +53,9 @@ class HomeController extends GetxController{
     LessLethal(),
     DrugsRelated(),
     TranslatorScreen(),
+    DeadCheckListScreen(),
+    AgeCalculationScreen(),
+    GangSlangScreen(),
    Container(color: Colors.red,),
    Container(color: Colors.yellow,),
    Container(color: Colors.pink,),

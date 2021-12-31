@@ -21,7 +21,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: Icon(Icons.arrow_back),
         onPressed: () => Get.back(),
       ),
-      title:Text(title),
+      title:Text(title,style: TextStyle(fontSize: 15),),
       centerTitle: true,
     );
   }

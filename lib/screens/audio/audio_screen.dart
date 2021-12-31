@@ -8,16 +8,18 @@ import 'package:get/get.dart';
 
 import 'audio_controller.dart';
 
-class AudioScreen extends StatelessWidget {
+class AudioScreen extends GetView<AudioController> {
   AudioScreen({Key? key}) : super(key: key);
-  AudioController audioController = Get.put(AudioController());
+
+  //AudioController audioController = Get.put(AudioController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: MyAppBar(
-          title: "French",
+        backgroundColor: Colors.blue.shade200,
+        appBar:  MyAppBar(
+          title: Get.arguments[2],
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,7 +30,7 @@ class AudioScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "English",
                   style: TextStyle(fontSize: 14),
                 ),
@@ -69,7 +71,7 @@ class AudioScreen extends StatelessWidget {
             ),
              Text(
               Get.arguments[1],
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: fontColorDark),
             ),
             const SizedBox(
               height: 15,
@@ -89,7 +91,6 @@ class AudioScreen extends StatelessWidget {
               height: 20,
             ),
             Card(
-              color: Colors.blue,
               child: ListTile(
                 leading: Container(
                   height: 32,
@@ -106,31 +107,26 @@ class AudioScreen extends StatelessWidget {
                   ),
                   child: InkWell(
                     onTap: () {
-                       // audioController.speak(Get.arguments);
-                        print(audioController.sliderValue.value );
+                        controller.speak(Get.arguments[1]);
                         Timer.periodic(
                           const Duration(milliseconds: 70),
                               (timer) {
 
-                            if (audioController.sliderValue.value <= Get.arguments[1] -1) {
-                              print("cond1  ${audioController.sliderValue.value}");
-                              audioController.sliderValue.value =
-                                  audioController.sliderValue.value + 1;
-                              print("cond2  ${audioController.sliderValue.value}");
-                              print("cond2  ${Get.arguments}");
+                            if (controller.sliderValue.value <= Get.arguments[1].toString().length -1) {
+                              controller.sliderValue.value =
+                                  controller.sliderValue.value + 1;
 
                             } else {
-                              print("cond3  ${audioController.sliderValue.value}");
                               timer.cancel();
-                              audioController.sliderValue.value = 0.0;
+                              controller.sliderValue.value = 0.0;
                             }
                           },
                         );
                       },
                     child: Obx(()=>
                        Icon(
-                                    audioController.sliderValue.value >= 1
-                                    ? audioController.sliderValue.value <= 14
+                         controller.sliderValue.value >= 1
+                                    ? controller.sliderValue.value <= 14
                                     ? Icons.pause
                                     : Icons.play_arrow
                                     : Icons.play_arrow,
@@ -142,10 +138,9 @@ class AudioScreen extends StatelessWidget {
                 ),
                 title: Obx((){
                   return Slider(
-                    value: audioController.sliderValue.value,
+                    value: controller.sliderValue.value,
                     min: 0,
-                     max: 10.0,
-                     //Get.arguments.length.toDouble(),
+                     max: Get.arguments[1].length.toDouble(),
                     //divisions: 10,
                     activeColor: fontColorLight,
                     inactiveColor: Colors.grey,

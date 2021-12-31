@@ -18,7 +18,7 @@ class LoginScreen extends GetView<LoginController> {
     return SafeArea(
         child: Scaffold(
      // resizeToAvoidBottomInset: false,
-      //backgroundColor: containerColor,
+      backgroundColor: Colors.blue.shade200,
       body: Form(
         key: controller.globalKey,
         child: SingleChildScrollView(

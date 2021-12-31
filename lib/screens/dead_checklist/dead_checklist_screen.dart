@@ -1,21 +1,22 @@
-import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/listview_text.dart';
-import 'package:brainbook/screens/less_lethal/less_lethal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LessLethal extends StatelessWidget {
-  LessLethal({Key? key}) : super(key: key);
-  LessLethalController lessLethalController = Get.put(LessLethalController());
+import 'dead_checklist_controller.dart';
+
+class DeadCheckListScreen extends StatelessWidget {
+  DeadCheckListScreen({Key? key}) : super(key: key);
+
+  DeadCheckListController deadCheckListController = Get.put(DeadCheckListController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Less Lethal",),
-        // backgroundColor: containerColor,
+         backgroundColor: Colors.blue.shade200,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,21 +24,20 @@ class LessLethal extends StatelessWidget {
               const SizedBox(height: 20,),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
-                child: HeadingTextWidget(text: "Less Lethal"),
-
+                child: HeadingTextWidget(text: "These are general procedures")
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
                 child: Text(
-                  "A less lethal may be issued upon any of the following grounds: ",
+                  "Refer to your department policy regarding dead persons. ",
                 ),
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: lessLethalController.lessLethalLsit.length,
+                  itemCount: deadCheckListController.deadCheckList.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context,index){
-                    return ListViewText( text: lessLethalController.lessLethalLsit[index],);
+                    return ListViewText( text: deadCheckListController.deadCheckList[index],);
 
                   }),
             ],

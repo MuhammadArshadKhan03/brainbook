@@ -14,5 +14,7 @@ class Routes{
   static const String homeScreen = "/homeScreen";
   static const String translatorScreen = "/translatorScreen";
   static const String audioScreen = "/audioScreen";
+  static const String ageResultScreen = "/ageResultScreen";
+  static const String gangSlangDetailScreen = "/gangSlangDetailScreen";
   //static const String warrantsScreen = "/warrantsScreen";
 }

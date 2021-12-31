@@ -1,9 +1,12 @@
 import 'package:brainbook/routes/app_routes.dart';
+import 'package:brainbook/screens/age_result/age_result_screen.dart';
+import 'package:brainbook/screens/audio/audio_binding.dart';
 import 'package:brainbook/screens/audio/audio_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_screen.dart';
+import 'package:brainbook/screens/gang_slang_detail/gang_slang_detail_screen.dart';
 import 'package:brainbook/screens/home/home_screen.dart';
 import 'package:brainbook/screens/login/login_binding.dart';
 import 'package:brainbook/screens/login/login_screen.dart';
@@ -16,7 +19,6 @@ import 'package:brainbook/screens/splash/splash_screen.dart';
 import 'package:brainbook/screens/translator/translator_screen.dart';
 import 'package:brainbook/screens/verification_code/verification_code_binding.dart';
 import 'package:brainbook/screens/verification_code/verification_code_screen.dart';
-import 'package:brainbook/screens/warrants/warrants_screen.dart';
 import 'package:brainbook/screens/welcome/welcome_screen.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +36,9 @@ class AppPages{
     GetPage(name: Routes.dashBoardScreen, page: ()=>  DashBoard(),binding: DashBoardBinding()),
     GetPage(name: Routes.homeScreen, page: ()=>  Home(),),
     GetPage(name: Routes.translatorScreen, page: ()=>  TranslatorScreen(),),
-    GetPage(name: Routes.audioScreen, page: ()=>  AudioScreen(),),
+    GetPage(name: Routes.audioScreen, page: ()=>  AudioScreen(),binding: AudioBinding()),
+    GetPage(name: Routes.ageResultScreen, page: ()=>  AgeResultScreen(),),
+    GetPage(name: Routes.gangSlangDetailScreen, page: ()=>  GangSlangDetailScreen(),),
    // GetPage(name: Routes.warrantsScreen, page: ()=>  Warrants(),),
   ];
 }
