@@ -21,7 +21,7 @@ class DashBoard extends GetView<DashBoardController> {
                 gradient: linearColor
               ),
             ),
-            title:  Text(controller.currentIndex.value.toString()),
+            title:  Text(controller.title.value),
             centerTitle: true,
             actions: [
               Padding(

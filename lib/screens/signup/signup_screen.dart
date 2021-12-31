@@ -18,7 +18,7 @@ class SignUp extends GetView<SignUpController> {
     return SafeArea(
         child: Scaffold(
           //resizeToAvoidBottomInset: false,
-          backgroundColor: containerColor,
+         // backgroundColor: containerColor,
           body: SingleChildScrollView(physics:ScrollPhysics() ,
             child: Form(
               key: controller.globalKey,

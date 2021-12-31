@@ -1,4 +1,7 @@
 import 'package:brainbook/core/theme/values/colors.dart';
+import 'package:brainbook/global_widgets/appbar.dart';
+import 'package:brainbook/global_widgets/federal_card.dart';
+import 'package:brainbook/global_widgets/home_card.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,46 +13,13 @@ class FederalCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(backgroundColor: containerColor,
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: BoxDecoration(gradient: linearColor),
-        ),
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back),
-          onPressed: () => Get.back(),
-        ),
-        title: Text("Federal Codes"),
-        centerTitle: true,
-      ),
+      appBar: MyAppBar(title: "Federal Codes",),
       body: Container(
         margin: EdgeInsets.only(top: 20),
         child:GridView.builder(
-            itemCount: 8,
+            itemCount: federalCodeController.federalCoder.length,
             itemBuilder: (context, index) {
-              return Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 18.0,right: 10.0),
-                    child: InkWell(
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius:
-                            BorderRadius.circular(10)),
-                        child: Center(
-                          child: Text(federalCodeController.federalCoder[index],style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                      right: 10.0,
-                      child:  Image.asset("assets/85.png",height: 30,)
-
-                  ),
-                ],
-              );
+              return  FederalCard(text: federalCodeController.federalCoder[index],isLock: true,);
             },
             gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(
@@ -63,3 +33,5 @@ class FederalCode extends StatelessWidget {
     ));
   }
 }
+
+

@@ -1,4 +1,5 @@
 import 'package:brainbook/routes/app_routes.dart';
+import 'package:brainbook/screens/audio/audio_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_binding.dart';
@@ -12,6 +13,7 @@ import 'package:brainbook/screens/password_update/password_update_screen.dart';
 import 'package:brainbook/screens/signup/signup_binding.dart';
 import 'package:brainbook/screens/signup/signup_screen.dart';
 import 'package:brainbook/screens/splash/splash_screen.dart';
+import 'package:brainbook/screens/translator/translator_screen.dart';
 import 'package:brainbook/screens/verification_code/verification_code_binding.dart';
 import 'package:brainbook/screens/verification_code/verification_code_screen.dart';
 import 'package:brainbook/screens/warrants/warrants_screen.dart';
@@ -31,6 +33,8 @@ class AppPages{
     GetPage(name: Routes.passwordUpdateScreen, page: ()=>  PasswordUpdate(),),
     GetPage(name: Routes.dashBoardScreen, page: ()=>  DashBoard(),binding: DashBoardBinding()),
     GetPage(name: Routes.homeScreen, page: ()=>  Home(),),
+    GetPage(name: Routes.translatorScreen, page: ()=>  TranslatorScreen(),),
+    GetPage(name: Routes.audioScreen, page: ()=>  AudioScreen(),),
    // GetPage(name: Routes.warrantsScreen, page: ()=>  Warrants(),),
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:brainbook/screens/drugs_related/drugs_related_screen.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_screen.dart';
 import 'package:brainbook/screens/less_lethal/less_lethal_screen.dart';
+import 'package:brainbook/screens/translator/translator_screen.dart';
 import 'package:brainbook/screens/warrants/warrants_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class HomeController extends GetxController{
     FederalCode(),
     LessLethal(),
     DrugsRelated(),
+    TranslatorScreen(),
    Container(color: Colors.red,),
    Container(color: Colors.yellow,),
    Container(color: Colors.pink,),
