@@ -7,17 +7,20 @@ class HomeCard extends StatelessWidget {
     required this.text,
     required this.imagePath,
     this.isLock = false,
+    this.divider,
   }) : super(key: key);
 
   final void Function() onTap;
   final String text;
   final String imagePath;
   final bool isLock;
+  final Widget? divider;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
+        divider??Container(),
         Padding(
           padding: const EdgeInsets.only(
               left: 18.0, right: 10.0),

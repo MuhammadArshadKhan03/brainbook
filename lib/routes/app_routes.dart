@@ -12,5 +12,7 @@ class Routes{
   static const String passwordUpdateScreen = "/passwordUpdateScreen";
   static const String dashBoardScreen = "/dashBoardScreen";
   static const String homeScreen = "/homeScreen";
+  static const String translatorScreen = "/translatorScreen";
+  static const String audioScreen = "/audioScreen";
   //static const String warrantsScreen = "/warrantsScreen";
 }

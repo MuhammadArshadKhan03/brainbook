@@ -13,7 +13,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: containerColor,
+        backgroundColor: Colors.blue.shade200,
+       // backgroundColor: containerColor,
         body: Container(
           margin: EdgeInsets.only(top: 20),
           child: GridView.builder(

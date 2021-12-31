@@ -39,6 +39,7 @@ dependencies:
   splash_screen_view: ^3.0.0
   pin_code_fields: ^7.3.0
   pinput: ^1.2.2
+  flutter_tts: ^3.2.2
 
 dev_dependencies:
   flutter_test:

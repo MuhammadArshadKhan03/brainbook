@@ -11,6 +11,7 @@ class DashBoardController extends GetxController{
   final name = 'Lorem Ipsum';
   final email = 'Loremipsum@gmail.com';
   final currentIndex = 0.obs;
+  final title = "Home".obs;
 
   List<String> bottomItem = [
     "Home",
@@ -75,6 +76,18 @@ class DashBoardController extends GetxController{
     // }
 
     currentIndex.value = _index;
+    switch(_index) {
+      case 0: { title.value = 'Home'; }
+      break;
+      case 1: { title.value = 'Favorite'; }
+      break;
+      case 2: { title.value = 'Ask a Cop'; }
+      break;
+      case 3: { title.value = 'Note'; }
+      break;
+      case 4: { title.value = 'More'; }
+      break;
+    }
     print(currentIndex.value);
   }
 }

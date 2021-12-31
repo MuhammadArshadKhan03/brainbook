@@ -13,5 +13,11 @@ class LessLethalController extends GetxController{
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
   ];
 }
