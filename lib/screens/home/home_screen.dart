@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
                   onTap: ()=>Get.to(homeController.routes[index]),
                   text: homeController.home[index].text,
                   imagePath: homeController.home[index].image,
-                  isLock: index == 10,
+                  isLock: index == 17||index == 19||index == 20,
                 );
               },
               gridDelegate:

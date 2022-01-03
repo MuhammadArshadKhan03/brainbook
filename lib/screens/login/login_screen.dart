@@ -52,7 +52,7 @@ class LoginScreen extends GetView<LoginController> {
               TextFormFieldWidget(
                 title: "Lorem ipsum ",
                 icon: Icon(Icons.person_outlined, color: fontColorDark),
-                obscureText: false,
+                obscureText: true,
                 controller: controller.emailController,
               ),
               const SizedBox(

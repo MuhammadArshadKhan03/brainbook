@@ -2,17 +2,20 @@ import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/age_result/age_result_screen.dart';
 import 'package:brainbook/screens/audio/audio_binding.dart';
 import 'package:brainbook/screens/audio/audio_screen.dart';
+import 'package:brainbook/screens/case_law_detail/law_case_detail_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_screen.dart';
 import 'package:brainbook/screens/gang_slang_detail/gang_slang_detail_screen.dart';
+import 'package:brainbook/screens/gladys_r_admonition/gladys_r_admonition_screen.dart';
 import 'package:brainbook/screens/home/home_screen.dart';
 import 'package:brainbook/screens/login/login_binding.dart';
 import 'package:brainbook/screens/login/login_screen.dart';
 import 'package:brainbook/screens/new_password/new_password_binding.dart';
 import 'package:brainbook/screens/new_password/new_password_screen.dart';
 import 'package:brainbook/screens/password_update/password_update_screen.dart';
+import 'package:brainbook/screens/sfts_more_option/sfta_more_option_screen.dart';
 import 'package:brainbook/screens/signup/signup_binding.dart';
 import 'package:brainbook/screens/signup/signup_screen.dart';
 import 'package:brainbook/screens/splash/splash_screen.dart';
@@ -21,6 +24,8 @@ import 'package:brainbook/screens/verification_code/verification_code_binding.da
 import 'package:brainbook/screens/verification_code/verification_code_screen.dart';
 import 'package:brainbook/screens/welcome/welcome_screen.dart';
 import 'package:get/get.dart';
+
+
 
 class AppPages{
 
@@ -39,6 +44,9 @@ class AppPages{
     GetPage(name: Routes.audioScreen, page: ()=>  AudioScreen(),binding: AudioBinding()),
     GetPage(name: Routes.ageResultScreen, page: ()=>  AgeResultScreen(),),
     GetPage(name: Routes.gangSlangDetailScreen, page: ()=>  GangSlangDetailScreen(),),
+    GetPage(name: Routes.nHTSAManualScreen, page: ()=>  SFTAMoreOptionScreen(),),
+    GetPage(name: Routes.lawCaseDetailScreen, page: ()=>  CaseLawDetailScreen(),),
+    GetPage(name: Routes.gladysRAdmonitionScreen, page: ()=>  GladysRAdmonitionScreen(),),
    // GetPage(name: Routes.warrantsScreen, page: ()=>  Warrants(),),
   ];
 }

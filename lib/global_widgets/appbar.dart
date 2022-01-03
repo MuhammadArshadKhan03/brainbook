@@ -6,8 +6,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyAppBar({
     Key? key,
     required this.title,
+    this.onTap,
+    this.txtBtnTitle
   }) : super(key: key);
   final String title;
+  final void Function()? onTap;
+  final String? txtBtnTitle;
 
   @override
   Size get preferredSize => const Size.fromHeight(65);
@@ -22,6 +26,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         onPressed: () => Get.back(),
       ),
       title:Text(title,style: TextStyle(fontSize: 15),),
+
+      actions: [
+        TextButton(onPressed: onTap??null, child:Text(txtBtnTitle??"",style: TextStyle(color: Colors.white),) ,)
+      ],
       centerTitle: true,
     );
   }

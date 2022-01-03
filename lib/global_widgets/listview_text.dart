@@ -35,6 +35,7 @@ class ListViewText extends StatelessWidget {
               ,
               style: TextStyle(
                 color: textColor,
+                fontSize: 15,
                 // index == warratnsController.warrantLsit.length-1? fontColorDark:Colors.black,
               ),
             ),

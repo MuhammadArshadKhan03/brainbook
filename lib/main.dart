@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(
         fontFamily: GoogleFonts.poppins().fontFamily,
+        unselectedWidgetColor: Colors.white,
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.splashScreen,

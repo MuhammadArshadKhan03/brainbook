@@ -13,14 +13,14 @@ class TextFormFieldWidget extends StatelessWidget {
     Key? key,
     this.inkWell,
     this.icon,
-    this.title,
+   required this.title,
     this.obscureText,
-    this.controller,
+   required this.controller,
   }) : super(key: key);
 
   Widget? inkWell;
   Icon? icon;
-  String? title;
+  String title;
   bool? obscureText;
   TextEditingController? controller;
 
@@ -32,16 +32,11 @@ class TextFormFieldWidget extends StatelessWidget {
         maxLines: 1,
         decoration: InputDecoration(
           suffixIcon: inkWell??Container(),
-
-          // InkWell(onTap: (){},child: Padding(
-          //   padding: const EdgeInsets.only(top: 16.0),
-          //   child:  Text("Show",style: GoogleFonts.poppins(color: fontColorLight),),
-          // ),),
           prefixIcon: icon??Container(),
           //Icon(Icons.person_outline),
           filled: true,
           fillColor: Colors.white,
-          hintText: title!,
+          hintText: title,
           hintStyle: TextStyle(color: Colors.grey),
 
           // --- when user does not interact with -----
@@ -55,7 +50,7 @@ class TextFormFieldWidget extends StatelessWidget {
           ),
         ),
          controller: controller,
-        obscureText: obscureText!,
+        obscureText: obscureText??false,
         keyboardType: TextInputType.text,
       ),
     );

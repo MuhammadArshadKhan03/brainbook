@@ -16,5 +16,8 @@ class Routes{
   static const String audioScreen = "/audioScreen";
   static const String ageResultScreen = "/ageResultScreen";
   static const String gangSlangDetailScreen = "/gangSlangDetailScreen";
+  static const String nHTSAManualScreen = "/nHTSAManualScreen";
+  static const String lawCaseDetailScreen = "/lawCaseDetailScreen";
+  static const String gladysRAdmonitionScreen = "/gladysRAdmonitionScreen";
   //static const String warrantsScreen = "/warrantsScreen";
 }
