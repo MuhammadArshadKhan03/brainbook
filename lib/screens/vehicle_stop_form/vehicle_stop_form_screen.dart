@@ -1,7 +1,12 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'dart:ffi';
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
+import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/global_widgets/rich_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,21 +14,10 @@ import 'package:get/get.dart';
 import 'vehicle_stop_form_controller.dart';
 
 class VehicleStopFormScreen extends StatelessWidget {
-   VehicleStopFormScreen({Key? key}) : super(key: key);
+  VehicleStopFormScreen({Key? key}) : super(key: key);
 
-  VehicleStopForm vehicleStopForm = Get.put(VehicleStopForm());
-   RxBool violation = false.obs;
-   var selectedOption = "Moving".obs;
-   onChangedOption(var option){
-     selectedOption.value = option;
-   }
-
-   List<String> violationList = [
-     "Moving",
-     "Speeding",
-     "Long Violation",
-   ];
-
+  VehicleStopFormController vehicleStopFormController =
+      Get.put(VehicleStopFormController());
 
   @override
   Widget build(BuildContext context) {
@@ -34,51 +28,522 @@ class VehicleStopFormScreen extends StatelessWidget {
         txtBtnTitle: "Reset",
         onTap: () {},
       ),
-          backgroundColor: Colors.blue.shade200,
-          body: SingleChildScrollView(
-            child: Form(
-              key: vehicleStopForm.globalKey,
-              child: Column(
-                children: [
-                  SizedBox(height: 20,),
-                  HeadingTextWidget(text: "Please add form details",),
-                  SizedBox(height: 15,),
-                  TextFormFieldWidget(title: "Officer Name",controller: vehicleStopForm.officerName,),
-                  SizedBox(height: 15,),
-                  TextFormFieldWidget(title: "Location of Stop",controller: vehicleStopForm.locationStop,),
-                  SizedBox(height: 15,),
-                  TextFormFieldWidget(title: "Plate Info",controller: vehicleStopForm.plateInfo,),
-                  SizedBox(height: 15,),
-                  TextFormFieldWidget(title: "Date & Time",controller: vehicleStopForm.dateTime),
-                  SizedBox(height: 15,),
-                  Divider(height: 1,color: Colors.black,),
-                  SizedBox(height: 15,),
-                  HeadingTextWidget(text: "Violation resulting in stop:",),
-                  SizedBox(height: 15,),
-                  ListView.builder(
-                    shrinkWrap: true,
-                      itemCount: 3,
-                      itemBuilder: (context,index){
-                    return  ListTile(
-                      title: Text(violationList[index]),
-                      leading: Obx(()=>
-                          Radio(
-                            //activeColor: Colors.white,
-                            groupValue: selectedOption.value,
-                            value: violationList[index],
-                            onChanged: (value) {
-                              violation.value=false;
-                              onChangedOption(value);
-                            },toggleable: false,
-                          ),
+      backgroundColor: Colors.blue.shade200,
+      body: SingleChildScrollView(
+        child: Form(
+          key: vehicleStopFormController.globalKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              HeadingTextWidget(
+                text: "Please add form details",
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormFieldWidget(
+                title: "Officer Name",
+                controller: vehicleStopFormController.officerName,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormFieldWidget(
+                title: "Location of Stop",
+                controller: vehicleStopFormController.locationOfStop,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormFieldWidget(
+                title: "Plate Info",
+                controller: vehicleStopFormController.plateInfo,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormFieldWidget(
+                  title: "Date & Time",
+                  controller: vehicleStopFormController.dateTime),
+              SizedBox(
+                height: 15,
+              ),
+              Divider(
+                height: 1,
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Violation resulting in stop:",
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.violationList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(()=> VehicleStopListView(
+                      title: vehicleStopFormController.violationList[index],
+                      value: vehicleStopFormController.violationList[index],
+                      groupValue: vehicleStopFormController
+                                 .violationSelectedOption.value ,
+                      onChanged: (value){
+                        vehicleStopFormController.violation.value = false;
+                                vehicleStopFormController
+                                     .onChangedViolationOption(value);
+                      },
+                    )
+
+                    );
+
+                    //   ListTile(
+                    //   horizontalTitleGap: 3.0,
+                    //   title:
+                    //       Text(vehicleStopFormController.violationList[index]),
+                    //   leading: Obx(
+                    //     () => Radio(
+                    //       //activeColor: Colors.white,
+                    //       groupValue: vehicleStopFormController
+                    //           .violationSelectedOption.value,
+                    //       value: vehicleStopFormController.violationList[index],
+                    //       onChanged: (value) {
+                    //         vehicleStopFormController.violation.value = false;
+                    //         vehicleStopFormController
+                    //             .onChangedViolationOption(value);
+                    //       },
+                    //       toggleable: false,
+                    //     ),
+                    //   ),
+                    // );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Result of Stop:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.resultList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                      () => VehicleStopListView(
+                        title: vehicleStopFormController.resultList[index],
+                        groupValue: vehicleStopFormController
+                            .resultSelectedOption.value,
+                        value: vehicleStopFormController.resultList[index],
+                        onChanged: (value) {
+                          vehicleStopFormController.result.value = false;
+                          vehicleStopFormController
+                              .onChangedResultOption(value);
+                        },
                       ),
                     );
-                  })
 
-                ],
+                    //   ListTile(
+                    //   horizontalTitleGap: 3.0,
+                    //   title: Text(vehicleStopFormController.resultList[index]),
+                    //   leading: Obx(
+                    //     () => Radio(
+                    //       //activeColor: Colors.white,
+                    //       groupValue: vehicleStopFormController
+                    //           .resultSelectedOption.value,
+                    //       value: vehicleStopFormController.resultList[index],
+                    //       onChanged: (value) {
+                    //         vehicleStopFormController.result.value = false;
+                    //         vehicleStopFormController
+                    //             .onChangedResultOption(value);
+                    //       },
+                    //       toggleable: false,
+                    //     ),
+                    //   ),
+                    // );
+                  }),
+              Divider(
+                color: Colors.black,
               ),
-            ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Driver’s Race / Minority Status:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.driverStatusList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                      () => VehicleStopListView(
+                        title: vehicleStopFormController.driverStatusList[index],
+                        value: vehicleStopFormController.driverStatusList[index],
+                        groupValue: vehicleStopFormController
+                            .driverStatusSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.driverStatus.value = false;
+                          vehicleStopFormController
+                              .onChangedDriverStatusOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Driver’s Age:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.driverAgeList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.driverAgeList[index],
+                        value: vehicleStopFormController.driverAgeList[index],
+                        groupValue: vehicleStopFormController
+                            .driverAgeSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.driverAge.value = false;
+                          vehicleStopFormController
+                              .onChangedDriverAgeOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Driver’s Gender:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.driverGenderList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.driverGenderList[index],
+                        value: vehicleStopFormController.driverGenderList[index],
+                        groupValue: vehicleStopFormController
+                            .driverGenderSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.driverGender.value = false;
+                          vehicleStopFormController
+                              .onChangedDriverGenderOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Is driver a resident of Law Enforcement Agency’s Jurisdiction:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => Radio<bool>(value: false, groupValue: select1!.value,
+                              onChanged: (bool? value) {
+                            select1!.value = !select1!.value;
+                                //= null?false:true
+
+                                print(value);
+                                // select1.value = !value!;
+                                // select2.value = !value!;
+
+                              },
+                          toggleable: true,
+                          )
+
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Location of Stop:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.locationStopList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.locationStopList[index],
+                        value: vehicleStopFormController.locationStopList[index],
+                        groupValue: vehicleStopFormController
+                            .locationStopSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.locationStop.value = false;
+                          vehicleStopFormController
+                              .onChangedLocationStopOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Probable cause for search:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.probaleCauseList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.probaleCauseList[index],
+                        value: vehicleStopFormController.probaleCauseList[index],
+                        groupValue: vehicleStopFormController
+                            .probaleCauseSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.probaleCause.value = false;
+                          vehicleStopFormController
+                          .onChangedProbaleCauseOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "What was searched?:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.whatWasSearchList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.whatWasSearchList[index],
+                        value: vehicleStopFormController.whatWasSearchList[index],
+                        groupValue: vehicleStopFormController
+                            .whatWasSearchSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.whatWasSearch.value = false;
+                          vehicleStopFormController
+                              .onChangedWhatWasSearchOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Duration of search:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.durationOfSearchList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.durationOfSearchList[index],
+                        value: vehicleStopFormController.durationOfSearchList[index],
+                        groupValue: vehicleStopFormController
+                            .durationOfSearchSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.durationOfSearch.value = false;
+                          vehicleStopFormController
+                              .onChangedDurationOfSearchOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Type of Contraband discovered:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.typeOfContrabandList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.typeOfContrabandList[index],
+                        value: vehicleStopFormController.typeOfContrabandList[index],
+                        groupValue: vehicleStopFormController
+                            .typeOfContrabandSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.typeOfContraband.value = false;
+                          vehicleStopFormController
+                              .onChangedTypeOfContrabandOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "If arrest was made, Crime / Violation alleged?:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: vehicleStopFormController.arrestAllegedList.length,
+                  itemBuilder: (context, index) {
+                    return Obx(
+                          () => VehicleStopListView(
+                        title: vehicleStopFormController.arrestAllegedList[index],
+                        value: vehicleStopFormController.arrestAllegedList[index],
+                        groupValue: vehicleStopFormController
+                            .arrestAllegedSelectedOption.value,
+                        onChanged: (value) {
+                          vehicleStopFormController.arrestAlleged.value = false;
+                          vehicleStopFormController
+                              .onChangedArrestAllegedOption(value);
+                        },
+                      ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              RichTextWidget(firstTitle:"Enter the email address you want the report sent to.You will receive an email from ",secondTitle: emailAdaress,onTap: (){},),
+              SizedBox(
+                height: 15,
+              ),
+              TextFormFieldWidget(title: "Lorem ipsum", controller: null,icon: Icon(Icons.email_outlined,color: fontColorLight,),),
+              SizedBox(
+                height: 15,
+              ),
+              ButtonWidget(title: "Generate", onTap: (){},),
+              SizedBox(
+                height: 15,
+              ),
+            ],
           ),
+        ),
+      ),
     ));
+  }
+  final String emailAdaress = "lorem@gmail.com";
+ // RxBool select1 = true.obs;
+
+  // RxInt select= 0.obs;
+}
+RxBool? select1 = true.obs;
+RxBool select2 = true.obs;
+
+class VehicleStopListView extends StatelessWidget {
+  const VehicleStopListView({
+    Key? key,
+    required this.title,
+    required this.groupValue,
+    required this.value,
+    required this.onChanged,
+  }) : super(key: key);
+
+  final String title;
+  final String groupValue;
+  final String value;
+  final void Function(String?) onChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      horizontalTitleGap: 3.0,
+      title: Text(
+        title,
+      ),
+      leading: Radio(
+        groupValue: groupValue,
+        value: value,
+        onChanged: onChanged,
+        toggleable: false,
+      ),
+    );
   }
 }

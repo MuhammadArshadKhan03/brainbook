@@ -90,8 +90,9 @@ class LoginScreen extends GetView<LoginController> {
                 ),
                 leading: Obx(
                   () => Transform.scale(
-                    scale: 0.8,
+                    scale: 0.9,
                     child: Checkbox(
+                      shape: CircleBorder(),
                       value: controller.rememberMe,
                       onChanged: (value) {
                         controller.rememberMe = value;

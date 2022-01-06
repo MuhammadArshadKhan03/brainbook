@@ -50,7 +50,7 @@ class TextFormFieldWidget extends StatelessWidget {
           ),
         ),
          controller: controller,
-        obscureText: obscureText??false,
+        obscureText: obscureText??true,
         keyboardType: TextInputType.text,
       ),
     );

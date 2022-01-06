@@ -14,6 +14,7 @@ import 'package:brainbook/screens/standardized_fsts/standardized_fsts_screen.dar
 import 'package:brainbook/screens/testifying_tips/testifying_tips_screen.dart';
 import 'package:brainbook/screens/trafic_investigation/trafic_investigation_screen.dart';
 import 'package:brainbook/screens/translator/translator_screen.dart';
+import 'package:brainbook/screens/trespasser_apb/trespasser_apb_screen.dart';
 import 'package:brainbook/screens/vehicle_stop_form/vehicle_stop_form_screen.dart';
 import 'package:brainbook/screens/warrants/warrants_screen.dart';
 import 'package:brainbook/screens/window_tint_laws/window_tint_laws_screen.dart';
@@ -80,6 +81,7 @@ class HomeController extends GetxController{
     VehicleStopFormScreen(),
    Container(color: Colors.red,),
    Container(color: Colors.yellow,),
+    TrespasserAPBScreen(),
    Container(color: Colors.pink,),
    Container(color: Colors.orange,),
 
