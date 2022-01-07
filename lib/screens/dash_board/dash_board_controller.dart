@@ -22,21 +22,21 @@ class DashBoardController extends GetxController{
   ];
 
   List<String> bottomImages = [
-    "assets/HomeIcon.png",
-    "assets/44.png",
-    "assets/45.png",
-    "assets/57.png",
-    "assets/more.png",
+    "assets/startpage/HomeIcon.png",
+    "assets/startpage/44.png",
+    "assets/startpage/45.png",
+    "assets/startpage/57.png",
+    "assets/startpage/more.png",
   ];
 
   List<String> drawerImages = [
-    "assets/76.png",
-    "assets/77.png",
-    "assets/78.png",
-    "assets/79.png",
-    "assets/80.png",
-    "assets/75.png",
-    "assets/74.png",
+    "assets/startpage/76.png",
+    "assets/startpage/77.png",
+    "assets/startpage/78.png",
+    "assets/startpage/79.png",
+    "assets/startpage/80.png",
+    "assets/startpage/75.png",
+    "assets/startpage/74.png",
   ];
 
   List<String> drawerTitle = [

@@ -30,9 +30,12 @@ class TextFormFieldWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: TextFormField(
         maxLines: 1,
+        //autofocus: true,
         decoration: InputDecoration(
-          suffixIcon: inkWell??Container(),
-          prefixIcon: icon??Container(),
+            floatingLabelBehavior: FloatingLabelBehavior.always,
+
+          suffixIcon: inkWell??null,
+          prefixIcon: icon??null,
           //Icon(Icons.person_outline),
           filled: true,
           fillColor: Colors.white,
@@ -50,7 +53,7 @@ class TextFormFieldWidget extends StatelessWidget {
           ),
         ),
          controller: controller,
-        obscureText: obscureText??true,
+        obscureText: obscureText??false,
         keyboardType: TextInputType.text,
       ),
     );

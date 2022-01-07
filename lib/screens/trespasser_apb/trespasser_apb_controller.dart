@@ -3,9 +3,9 @@ import 'package:get/get.dart';
 class TrespasserAPBController extends GetxController{
 
   List<String> imageList = [
-    "assets/8.png",
-    "assets/9.png",
-    "assets/10.png",
+    "assets/startpage/8.png",
+    "assets/startpage/9.png",
+    "assets/startpage/10.png",
   ];
 
   List<String> aboutList = [

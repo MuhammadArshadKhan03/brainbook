@@ -44,7 +44,7 @@ class HomeCard extends StatelessWidget {
           right: 10.0,
           child: isLock
               ? Image.asset(
-            "assets/85.png",
+            "assets/startpage/85.png",
             height: 30,
           )
               : Container(),

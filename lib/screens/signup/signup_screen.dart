@@ -47,7 +47,7 @@ class SignUp extends GetView<SignUpController> {
                   TextFormFieldWidget(
                     title: "Lorem ipsum ",
                     icon: Icon(Icons.email_outlined, color: fontColorDark),
-                    obscureText: true,
+                    obscureText: false,
                     controller: controller.emailController,
                   ),
                   const SizedBox(

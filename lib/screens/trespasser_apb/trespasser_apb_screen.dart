@@ -4,6 +4,7 @@
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -42,6 +43,7 @@ class TrespasserAPBScreen extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (contex, index) {
                   return TrespasserCard(
+                    onTap: ()=> Get.toNamed(Routes.trespasserApbDetailsScreen,arguments: trespasserAPBController.imageList[0]),
                     image: trespasserAPBController.imageList[index],
                     title: trespasserAPBController.aboutList[1],
                     subtitle: trespasserAPBController.aboutList[2],
@@ -51,7 +53,7 @@ class TrespasserAPBScreen extends StatelessWidget {
             SizedBox(
               height: 25,
             ),
-            ButtonWidget(title: "ADD", onTap: () {})
+            ButtonWidget(title: "ADD", onTap: () =>Get.offNamed(Routes.addTrespasserDetailsScreen))
           ],
         ),
       ),

@@ -1,4 +1,5 @@
 import 'package:brainbook/routes/app_routes.dart';
+import 'package:brainbook/screens/add_trespasser_details/add_trespasser_details_screen.dart';
 import 'package:brainbook/screens/age_result/age_result_screen.dart';
 import 'package:brainbook/screens/audio/audio_binding.dart';
 import 'package:brainbook/screens/audio/audio_screen.dart';
@@ -20,6 +21,7 @@ import 'package:brainbook/screens/signup/signup_binding.dart';
 import 'package:brainbook/screens/signup/signup_screen.dart';
 import 'package:brainbook/screens/splash/splash_screen.dart';
 import 'package:brainbook/screens/translator/translator_screen.dart';
+import 'package:brainbook/screens/trespasser_apb_details/trespasser_apb_details_screen.dart';
 import 'package:brainbook/screens/verification_code/verification_code_binding.dart';
 import 'package:brainbook/screens/verification_code/verification_code_screen.dart';
 import 'package:brainbook/screens/welcome/welcome_screen.dart';
@@ -47,6 +49,8 @@ class AppPages{
     GetPage(name: Routes.nHTSAManualScreen, page: ()=>  SFTAMoreOptionScreen(),),
     GetPage(name: Routes.lawCaseDetailScreen, page: ()=>  CaseLawDetailScreen(),),
     GetPage(name: Routes.gladysRAdmonitionScreen, page: ()=>  GladysRAdmonitionScreen(),),
+    GetPage(name: Routes.trespasserApbDetailsScreen, page: ()=>  TrespasserApbDetailsScreen(),),
+    GetPage(name: Routes.addTrespasserDetailsScreen, page: ()=>  AddTrespasserDetailsScreen(),),
    // GetPage(name: Routes.warrantsScreen, page: ()=>  Warrants(),),
   ];
 }

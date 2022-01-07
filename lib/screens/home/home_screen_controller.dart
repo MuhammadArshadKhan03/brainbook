@@ -4,6 +4,7 @@ import 'package:brainbook/screens/dead_checklist/dead_checklist_screen.dart';
 import 'package:brainbook/screens/drugs_related/drugs_related_screen.dart';
 import 'package:brainbook/screens/exigent_circumstances/exigent_circumstances_screen.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_screen.dart';
+import 'package:brainbook/screens/front_plates/front_plates_screen.dart';
 import 'package:brainbook/screens/gang_slang/gang_slang_screen.dart';
 import 'package:brainbook/screens/gladys_marsy/gladys_marsy_screen.dart';
 import 'package:brainbook/screens/keys_to_castle/keys_to_castle_screen.dart';
@@ -82,6 +83,7 @@ class HomeController extends GetxController{
    Container(color: Colors.red,),
    Container(color: Colors.yellow,),
     TrespasserAPBScreen(),
+    FrontPlatesScreen(),
    Container(color: Colors.pink,),
    Container(color: Colors.orange,),
 

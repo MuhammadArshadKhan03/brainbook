@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
           navigateRoute:  WelcomeScreen(),
           duration: 6000,
           imageSize: 130,
-          imageSrc: "assets/logo.png",
+          imageSrc: "assets/startpage/logo.png",
           text: "The Ultimate App for \n             Police",
           textType: TextType.NormalText,
           textStyle: GoogleFonts.poppins(
@@ -28,16 +28,6 @@ class SplashScreen extends StatelessWidget {
           ),
           backgroundColor: containerColor.withOpacity(0.35),
         )
-
-        // Column(
-        //   children: [
-        //     Image.asset(splashImage,height: ,),
-        //     Text(
-        //       "The Ultimate App for Police",
-        //       style: GoogleFonts.poppins(color: Colors.black,fontSize: 25,fontWeight: FontWeight.bold),
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }

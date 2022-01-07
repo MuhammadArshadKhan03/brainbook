@@ -3,6 +3,15 @@ import 'package:get/get.dart';
 
 class VehicleStopFormController extends GetxController{
 
+  RxBool? agencyJurisdiction = true.obs;
+  RxBool? searchinitiated = true.obs;
+  RxBool? contrabandDiscovered = true.obs;
+  RxBool? driverArrested = true.obs;
+
+
+  final String emailAdaress = "lorem@gmail.com";
+
+
   RxBool violation = false.obs;
   var violationSelectedOption = "Moving".obs;
   onChangedViolationOption(var option){

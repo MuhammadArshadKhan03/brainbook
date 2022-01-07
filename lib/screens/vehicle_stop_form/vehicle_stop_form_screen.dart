@@ -105,26 +105,6 @@ class VehicleStopFormScreen extends StatelessWidget {
                     )
 
                     );
-
-                    //   ListTile(
-                    //   horizontalTitleGap: 3.0,
-                    //   title:
-                    //       Text(vehicleStopFormController.violationList[index]),
-                    //   leading: Obx(
-                    //     () => Radio(
-                    //       //activeColor: Colors.white,
-                    //       groupValue: vehicleStopFormController
-                    //           .violationSelectedOption.value,
-                    //       value: vehicleStopFormController.violationList[index],
-                    //       onChanged: (value) {
-                    //         vehicleStopFormController.violation.value = false;
-                    //         vehicleStopFormController
-                    //             .onChangedViolationOption(value);
-                    //       },
-                    //       toggleable: false,
-                    //     ),
-                    //   ),
-                    // );
                   }),
               Divider(
                 color: Colors.black,
@@ -157,24 +137,6 @@ class VehicleStopFormScreen extends StatelessWidget {
                       ),
                     );
 
-                    //   ListTile(
-                    //   horizontalTitleGap: 3.0,
-                    //   title: Text(vehicleStopFormController.resultList[index]),
-                    //   leading: Obx(
-                    //     () => Radio(
-                    //       //activeColor: Colors.white,
-                    //       groupValue: vehicleStopFormController
-                    //           .resultSelectedOption.value,
-                    //       value: vehicleStopFormController.resultList[index],
-                    //       onChanged: (value) {
-                    //         vehicleStopFormController.result.value = false;
-                    //         vehicleStopFormController
-                    //             .onChangedResultOption(value);
-                    //       },
-                    //       toggleable: false,
-                    //     ),
-                    //   ),
-                    // );
                   }),
               Divider(
                 color: Colors.black,
@@ -286,20 +248,21 @@ class VehicleStopFormScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 1,
                   itemBuilder: (context, index) {
-                    return Obx(
-                          () => Radio<bool>(value: false, groupValue: select1!.value,
-                              onChanged: (bool? value) {
-                            select1!.value = !select1!.value;
-                                //= null?false:true
-
-                                print(value);
-                                // select1.value = !value!;
-                                // select2.value = !value!;
-
-                              },
-                          toggleable: true,
-                          )
-
+                    return Obx(()=>
+                        ListTile(
+                          horizontalTitleGap: 3.0,
+                          title: Text(
+                            "Yes",
+                          ),
+                          leading: Radio<bool>(
+                            groupValue: vehicleStopFormController.agencyJurisdiction!.value,
+                            value: false,
+                            onChanged: (value){
+                              vehicleStopFormController.agencyJurisdiction!.value= !vehicleStopFormController.agencyJurisdiction!.value;
+                            },
+                            toggleable: true,
+                          ),
+                        ),
                     );
                   }),
               Divider(
@@ -331,6 +294,37 @@ class VehicleStopFormScreen extends StatelessWidget {
                               .onChangedLocationStopOption(value);
                         },
                       ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Was a search initiated?:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    return Obx(()=>
+                        ListTile(
+                          horizontalTitleGap: 3.0,
+                          title: Text(
+                            "Yes",
+                          ),
+                          leading: Radio<bool>(
+                            groupValue: vehicleStopFormController.searchinitiated!.value,
+                            value: false,
+                            onChanged: (value){
+                              vehicleStopFormController.searchinitiated!.value= !vehicleStopFormController.searchinitiated!.value;
+                            },
+                            toggleable: true,
+                          ),
+                        ),
                     );
                   }),
               Divider(
@@ -401,6 +395,7 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
+
               Padding(
                 padding: const EdgeInsets.only(left: 18.0),
                 child: HeadingTextWidget(
@@ -424,6 +419,37 @@ class VehicleStopFormScreen extends StatelessWidget {
                               .onChangedDurationOfSearchOption(value);
                         },
                       ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Was Contraband discovered?:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    return Obx(()=>
+                        ListTile(
+                          horizontalTitleGap: 3.0,
+                          title: Text(
+                            "Yes",
+                          ),
+                          leading: Radio<bool>(
+                            groupValue: vehicleStopFormController.contrabandDiscovered!.value,
+                            value: false,
+                            onChanged: (value){
+                              vehicleStopFormController.contrabandDiscovered!.value= !vehicleStopFormController.contrabandDiscovered!.value;
+                            },
+                            toggleable: true,
+                          ),
+                        ),
                     );
                   }),
               Divider(
@@ -460,6 +486,37 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: HeadingTextWidget(
+                  text: "Was driver arrested?:",
+                ),
+              ),
+              ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 1,
+                  itemBuilder: (context, index) {
+                    return Obx(()=>
+                        ListTile(
+                          horizontalTitleGap: 3.0,
+                          title: Text(
+                            "Yes",
+                          ),
+                          leading: Radio<bool>(
+                            groupValue: vehicleStopFormController.driverArrested!.value,
+                            value: false,
+                            onChanged: (value){
+                              vehicleStopFormController.driverArrested!.value= !vehicleStopFormController.driverArrested!.value;
+                            },
+                            toggleable: true,
+                          ),
+                        ),
+                    );
+                  }),
+              Divider(
+                color: Colors.black,
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -491,7 +548,7 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
-              RichTextWidget(firstTitle:"Enter the email address you want the report sent to.You will receive an email from ",secondTitle: emailAdaress,onTap: (){},),
+              RichTextWidget(firstTitle:"Enter the email address you want the report sent to.You will receive an email from ",secondTitle: vehicleStopFormController.emailAdaress,onTap: (){},),
               SizedBox(
                 height: 15,
               ),
@@ -509,13 +566,13 @@ class VehicleStopFormScreen extends StatelessWidget {
       ),
     ));
   }
-  final String emailAdaress = "lorem@gmail.com";
+
  // RxBool select1 = true.obs;
 
   // RxInt select= 0.obs;
 }
-RxBool? select1 = true.obs;
-RxBool select2 = true.obs;
+
+
 
 class VehicleStopListView extends StatelessWidget {
   const VehicleStopListView({
