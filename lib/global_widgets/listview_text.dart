@@ -23,7 +23,7 @@ class ListViewText extends StatelessWidget {
         // index == warratnsController.warrantLsit.length-1?Divider(height: 10,color: Colors.black,):Container(),
         ListTile(
           leading: Image.asset(
-            "assets/33.png",
+            "assets/startpage/33.png",
             height: 20,
             color: fontColorDark,
           ),

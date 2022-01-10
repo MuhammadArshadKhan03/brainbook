@@ -19,10 +19,7 @@ class MirandaScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.only(left: 18.0),
-              child: HeadingTextWidget(text: "Miranda Rights"),
-            ),
+            HeadingTextWidget(text: "Miranda Rights"),
             SizedBox(height: 10,),
             Expanded(
               child: ListView.builder(

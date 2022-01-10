@@ -24,10 +24,7 @@ class TranslatorScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(text: "Speak & Translate"),
-              ),
+              HeadingTextWidget(text: "Speak & Translate"),
               const SizedBox(
                 height: 20,
               ),
@@ -59,10 +56,7 @@ class TranslatorScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(text: "Point & Translate"),
-              ),
+              HeadingTextWidget(text: "Point & Translate"),
               const SizedBox(
                 height: 20,
               ),

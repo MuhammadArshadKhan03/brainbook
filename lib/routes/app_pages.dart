@@ -6,6 +6,8 @@ import 'package:brainbook/screens/audio/audio_screen.dart';
 import 'package:brainbook/screens/case_law_detail/law_case_detail_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_screen.dart';
 import 'package:brainbook/screens/dash_board/dash_board_binding.dart';
+import 'package:brainbook/screens/flash_card_add_details/flash_card_add_details_screen.dart';
+import 'package:brainbook/screens/flash_cards/flash_cards_screen.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_binding.dart';
 import 'package:brainbook/screens/forogt_password/forgot_password_screen.dart';
 import 'package:brainbook/screens/gang_slang_detail/gang_slang_detail_screen.dart';
@@ -16,6 +18,8 @@ import 'package:brainbook/screens/login/login_screen.dart';
 import 'package:brainbook/screens/new_password/new_password_binding.dart';
 import 'package:brainbook/screens/new_password/new_password_screen.dart';
 import 'package:brainbook/screens/password_update/password_update_screen.dart';
+import 'package:brainbook/screens/pta_tracker_add_details/pta_tracker_add_details_screen.dart';
+import 'package:brainbook/screens/pta_tracker_detail/pta_tracker_detail_screen.dart';
 import 'package:brainbook/screens/sfts_more_option/sfta_more_option_screen.dart';
 import 'package:brainbook/screens/signup/signup_binding.dart';
 import 'package:brainbook/screens/signup/signup_screen.dart';
@@ -51,6 +55,10 @@ class AppPages{
     GetPage(name: Routes.gladysRAdmonitionScreen, page: ()=>  GladysRAdmonitionScreen(),),
     GetPage(name: Routes.trespasserApbDetailsScreen, page: ()=>  TrespasserApbDetailsScreen(),),
     GetPage(name: Routes.addTrespasserDetailsScreen, page: ()=>  AddTrespasserDetailsScreen(),),
+    GetPage(name: Routes.flashCardsScreen, page: ()=>  FlashCardsScreen(),),
+    GetPage(name: Routes.flashCardAddDetailsScreen, page: ()=>  FlashCardAddDetailsScreen(),),
+    GetPage(name: Routes.pATTrackerDetailScreen, page: ()=>  PATTrackerDetailScreen(),),
+    GetPage(name: Routes.pATTrackerAddDetailsScreen, page: ()=>  PATTrackerAddDetailsScreen(),),
    // GetPage(name: Routes.warrantsScreen, page: ()=>  Warrants(),),
   ];
 }

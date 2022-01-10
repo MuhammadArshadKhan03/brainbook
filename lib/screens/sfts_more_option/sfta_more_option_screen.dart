@@ -30,10 +30,7 @@ class SFTAMoreOptionScreen extends StatelessWidget {
               height: 20,
             ),
             // ignore: prefer_const_constructors
-            Padding(
-              padding: const EdgeInsets.only(left: 18.0),
-              child: HeadingTextWidget(text: "Revised 2015"),
-            ),
+            HeadingTextWidget(text: "Revised 2015"),
             SizedBox(
               height: 20,
             ),
@@ -68,10 +65,7 @@ class SFTAMoreOptionScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 18.0),
-              child: HeadingTextWidget(text: "Revised 2018"),
-            ),
+            HeadingTextWidget(text: "Revised 2018"),
             SizedBox(
               height: 20,
             ),

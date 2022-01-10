@@ -28,10 +28,7 @@ class ExigentCircumstancesScreen extends StatelessWidget {
             children: [
               // ignore: prefer_const_constructors
               SizedBox(height: 20,),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(text: "Lorem Ipsum"),
-              ),
+              HeadingTextWidget(text: "Lorem Ipsum"),
               SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.only(left: 18.0),

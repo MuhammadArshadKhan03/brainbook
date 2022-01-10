@@ -32,12 +32,9 @@ class MarsyLawScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 return ListTile(
                   // contentPadding: EdgeInsets.only(left: 10.0),
-                  title: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: HeadingTextWidget(
-                        text: marsyLawController
-                            .HeadingList[0]),
-                  ),
+                  title: HeadingTextWidget(
+                      text: marsyLawController
+                          .HeadingList[0]),
                   subtitle: Text(
                       marsyLawController.DetailList[0]),
                 );

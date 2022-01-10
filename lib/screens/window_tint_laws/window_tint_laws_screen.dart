@@ -21,11 +21,7 @@ class WindowTintLawsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
               const SizedBox(height: 20,),
-              const Padding(
-                padding: EdgeInsets.only(left: 14.0),
-                child: HeadingTextWidget(text: "These are general procedures"),
-
-              ),
+              HeadingTextWidget(text: "These are general procedures"),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
                 child: Text(

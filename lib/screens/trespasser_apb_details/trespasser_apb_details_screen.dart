@@ -23,71 +23,81 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
           onTap: () {},
         ),
         backgroundColor: Colors.blue.shade200,
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.only(left: 18.0),
-              child: HeadingTextWidget(text: "Trespassers details"),
-            ),
-            SizedBox(height: 10,),
-            Card(
-                //color: Colors.red,
-                shape: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                    borderSide: BorderSide(color: Colors.white)),
-                margin: EdgeInsets.symmetric(
-                  horizontal: 15,
-                ),
-                child: Image.asset(
-                  Get.arguments,
-                  width: 330,
-                  height: 110,
-                )),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Text("Name"),
-                    Text("Lorem Ipsum"),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text("Name"),
-                    Text("Lorem Ipsum"),
-                  ],
-                ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(height: 20,),
+              HeadingTextWidget(text: "Trespassers details"),
+              SizedBox(height: 10,),
+              Card(
+                  //color: Colors.red,
+                  shape: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.white)),
+                  // margin: EdgeInsets.symmetric(
+                  //   horizontal: 7,
+                  // ),
+                  child: Image.asset(
+                    Get.arguments,
+                    width: 330,
+                    height: 110,
+                  )),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Name",style: TextStyle(fontWeight: FontWeight.bold),),
+                      SizedBox(height: 10,),
+                      Text(trespasserApbDetailsController.trespasserDetailsTitle[0]),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 45.0),
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text("Location",style: TextStyle(fontWeight: FontWeight.bold)),
+                        SizedBox(height: 10,),
+                        Text(trespasserApbDetailsController.trespasserDetailsTitle[1]),
+                      ],
+                    ),
+                  ),
 
-              ],
-            ),
-            SizedBox(height: 20,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Text("Name"),
-                    Text("Lorem Ipsum"),
-                  ],
-                ),
-                Column(
-                  children: [
-                    Text("Name"),
-                    Text("Lorem Ipsum"),
-                  ],
-                ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Address",style: TextStyle(fontWeight: FontWeight.bold)),
+                      SizedBox(height: 10,),
+                      Text(trespasserApbDetailsController.trespasserDetailsTitle[2]),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Police Department",style: TextStyle(fontWeight: FontWeight.bold)),
+                      SizedBox(height: 10,),
+                      Text(trespasserApbDetailsController.trespasserDetailsTitle[3]),
+                    ],
+                  ),
 
-              ],
-            ),
-            SizedBox(height: 20,),
-            Text("Other Notes"),
-            SizedBox(height: 20,),
-            Text("Lorem Ipsum"),
-          ],
+                ],
+              ),
+              SizedBox(height: 20,),
+              Text("Other Notes",style: TextStyle(fontWeight: FontWeight.bold)),
+              SizedBox(height: 10,),
+              Text(trespasserApbDetailsController.trespasserDetailsTitle[4]),
+            ],
+          ),
         ),
       ),
     );

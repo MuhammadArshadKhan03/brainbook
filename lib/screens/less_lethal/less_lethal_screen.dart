@@ -21,11 +21,7 @@ class LessLethal extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children:  [
               const SizedBox(height: 20,),
-              const Padding(
-                padding: EdgeInsets.only(left: 14.0),
-                child: HeadingTextWidget(text: "Less Lethal"),
-
-              ),
+              HeadingTextWidget(text: "Less Lethal"),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
                 child: Text(

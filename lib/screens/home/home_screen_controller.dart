@@ -1,3 +1,4 @@
+import 'package:brainbook/screens/1st_amd_provokers/1st_amd_provokers_screen.dart';
 import 'package:brainbook/screens/age_calculation/age_calculation_screen.dart';
 import 'package:brainbook/screens/case_law/case_law_screen.dart';
 import 'package:brainbook/screens/dead_checklist/dead_checklist_screen.dart';
@@ -11,7 +12,9 @@ import 'package:brainbook/screens/keys_to_castle/keys_to_castle_screen.dart';
 import 'package:brainbook/screens/less_lethal/less_lethal_screen.dart';
 import 'package:brainbook/screens/miranda/miranda_screen.dart';
 import 'package:brainbook/screens/recruits_studying/recruits_studying_screen.dart';
+import 'package:brainbook/screens/retirement_tools/retirement_tools_screen.dart';
 import 'package:brainbook/screens/standardized_fsts/standardized_fsts_screen.dart';
+import 'package:brainbook/screens/subscription_survey/subscription_survey_screen.dart';
 import 'package:brainbook/screens/testifying_tips/testifying_tips_screen.dart';
 import 'package:brainbook/screens/trafic_investigation/trafic_investigation_screen.dart';
 import 'package:brainbook/screens/translator/translator_screen.dart';
@@ -78,14 +81,18 @@ class HomeController extends GetxController{
     MirandaScreen(),
     KeysToCastleScreen(),
     ExigentCircumstancesScreen(),
-    RecruitsStudyingScreen(),
+    Container(color: Colors.red,),
     VehicleStopFormScreen(),
    Container(color: Colors.red,),
    Container(color: Colors.yellow,),
     TrespasserAPBScreen(),
     FrontPlatesScreen(),
+    Container(color: Colors.pink,),
+    RecruitsStudyingScreen(),
    Container(color: Colors.pink,),
-   Container(color: Colors.orange,),
+    SubscriptionSurveyScreen(),
+    RetirementToolsScreen(),
+    IstAmdProvokers(),
 
   ];
 

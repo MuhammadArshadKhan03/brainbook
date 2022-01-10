@@ -22,20 +22,20 @@ class TranslatorController extends GetxController{
   ];
 
   List SpeakImagesList = [
-    "assets/34.png",
-    "assets/35.png",
-    "assets/36.png",
-    "assets/37.png",
-    "assets/38.png",
-    "assets/39.png",
-    "assets/40.png",
-    "assets/41.png",
+    "assets/startpage/34.png",
+    "assets/startpage/35.png",
+    "assets/startpage/36.png",
+    "assets/startpage/37.png",
+    "assets/startpage/38.png",
+    "assets/startpage/39.png",
+    "assets/startpage/40.png",
+    "assets/startpage/41.png",
   ];
   List PointImagesList = [
-    "assets/34.png",
-    "assets/35.png",
-    "assets/36.png",
-    "assets/37.png",
+    "assets/startpage/34.png",
+    "assets/startpage/35.png",
+    "assets/startpage/36.png",
+    "assets/startpage/37.png",
   ];
 
 

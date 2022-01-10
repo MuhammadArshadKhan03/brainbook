@@ -32,11 +32,8 @@ class TrespasserAPBScreen extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            const Padding(
-              padding: EdgeInsets.only(left: 18.0),
-              child: HeadingTextWidget(
-                text: "List of Trespassers",
-              ),
+            HeadingTextWidget(
+              text: "List of Trespassers",
             ),
             ListView.builder(
                 shrinkWrap: true,

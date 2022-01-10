@@ -3,23 +3,22 @@
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
-import 'package:brainbook/routes/app_routes.dart';
+import 'package:brainbook/screens/flash_cards/flash_cards_controller.dart';
 import 'package:brainbook/screens/recruits_studying/recruits_studying_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RecruitsStudyingScreen extends StatelessWidget {
-  RecruitsStudyingScreen({Key? key}) : super(key: key);
+class FlashCardsScreen extends StatelessWidget {
+  FlashCardsScreen({Key? key}) : super(key: key);
 
-  RecruitsStudyingController recruitsStudyingController =
-      Get.put(RecruitsStudyingController());
+  FlashCardController flashCardController = Get.put(FlashCardController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(
-          title: "Recruits / Studying",
+          title:"AOA",
         ),
         backgroundColor: Colors.blue.shade200,
         body: Column(
@@ -28,19 +27,20 @@ class RecruitsStudyingScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            HeadingTextWidget(text: "Recrut Section"),
+            HeadingTextWidget(text: "Recruit Section"),
             SizedBox(
               height: 20,
             ),
             GridView.builder(
               shrinkWrap: true,
-              itemCount: recruitsStudyingController.recuritList.length,
+              itemCount: flashCardController.flashCardList.length,
               itemBuilder: (contex, index) {
                 return FederalCard(
-                  text: recruitsStudyingController.recuritList[index],
+                  text: flashCardController.flashCardList[index],
                   onTap: () => Get.to(
-                      recruitsStudyingController.recuritsROutes[index],
-                      arguments: recruitsStudyingController.recuritList[index]),
+                    flashCardController.flashCardRoutes[index],
+                    arguments: flashCardController.flashCardList[index],
+                  ),
                 );
               },
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

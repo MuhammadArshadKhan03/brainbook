@@ -21,5 +21,9 @@ class Routes{
   static const String gladysRAdmonitionScreen = "/gladysRAdmonitionScreen";
   static const String trespasserApbDetailsScreen = "/trespasserApbDetailsScreen";
   static const String addTrespasserDetailsScreen = "/addTrespasserDetailsScreen";
+  static const String flashCardsScreen = "/flashCardsScreenScreen";
+  static const String flashCardAddDetailsScreen = "/flashCardAddDetailsScreenScreen";
+  static const String pATTrackerDetailScreen = "/pATTrackerDetailScreen";
+  static const String pATTrackerAddDetailsScreen = "/pATTrackerAddDetailsScreen";
   //static const String warrantsScreen = "/warrantsScreen";
 }

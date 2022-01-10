@@ -16,20 +16,22 @@ class TextFormFieldWidget extends StatelessWidget {
    required this.title,
     this.obscureText,
    required this.controller,
+    this.maxLine
   }) : super(key: key);
 
-  Widget? inkWell;
-  Icon? icon;
-  String title;
-  bool? obscureText;
-  TextEditingController? controller;
+ final Widget? inkWell;
+ final Icon? icon;
+  final String title;
+  final bool? obscureText;
+  final TextEditingController? controller;
+  final int? maxLine;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: TextFormField(
-        maxLines: 1,
+        maxLines: maxLine??1,
         //autofocus: true,
         decoration: InputDecoration(
             floatingLabelBehavior: FloatingLabelBehavior.always,

@@ -78,11 +78,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Violation resulting in stop:",
-                ),
+              HeadingTextWidget(
+                text: "Violation resulting in stop:",
               ),
               SizedBox(
                 height: 15,
@@ -112,11 +109,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Result of Stop:",
-                ),
+              HeadingTextWidget(
+                text: "Result of Stop:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -144,11 +138,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Driver’s Race / Minority Status:",
-                ),
+              HeadingTextWidget(
+                text: "Driver’s Race / Minority Status:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -175,11 +166,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Driver’s Age:",
-                ),
+              HeadingTextWidget(
+                text: "Driver’s Age:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -206,11 +194,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Driver’s Gender:",
-                ),
+              HeadingTextWidget(
+                text: "Driver’s Gender:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -237,11 +222,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Is driver a resident of Law Enforcement Agency’s Jurisdiction:",
-                ),
+              HeadingTextWidget(
+                text: "Is driver a resident of Law Enforcement Agency’s Jurisdiction:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -271,11 +253,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Location of Stop:",
-                ),
+              HeadingTextWidget(
+                text: "Location of Stop:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -299,11 +278,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Was a search initiated?:",
-                ),
+              HeadingTextWidget(
+                text: "Was a search initiated?:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -333,11 +309,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Probable cause for search:",
-                ),
+              HeadingTextWidget(
+                text: "Probable cause for search:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -364,11 +337,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "What was searched?:",
-                ),
+              HeadingTextWidget(
+                text: "What was searched?:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -396,11 +366,8 @@ class VehicleStopFormScreen extends StatelessWidget {
                 height: 15,
               ),
 
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Duration of search:",
-                ),
+              HeadingTextWidget(
+                text: "Duration of search:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -424,11 +391,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Was Contraband discovered?:",
-                ),
+              HeadingTextWidget(
+                text: "Was Contraband discovered?:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -458,11 +422,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Type of Contraband discovered:",
-                ),
+              HeadingTextWidget(
+                text: "Type of Contraband discovered:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -486,11 +447,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "Was driver arrested?:",
-                ),
+              HeadingTextWidget(
+                text: "Was driver arrested?:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
@@ -520,11 +478,8 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 18.0),
-                child: HeadingTextWidget(
-                  text: "If arrest was made, Crime / Violation alleged?:",
-                ),
+              HeadingTextWidget(
+                text: "If arrest was made, Crime / Violation alleged?:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),

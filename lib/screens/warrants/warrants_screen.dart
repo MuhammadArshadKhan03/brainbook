@@ -23,11 +23,7 @@ class Warrants extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 14.0),
-                child: HeadingTextWidget(text: "Search Warrants"),
-
-              ),
+              HeadingTextWidget(text: "Search Warrants"),
               const Padding(
                 padding: EdgeInsets.only(left: 14.0),
                 child: Text(

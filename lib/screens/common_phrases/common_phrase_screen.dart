@@ -30,9 +30,7 @@ class CommonPhraseScreen extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const Padding(
-                  padding: EdgeInsets.only(left: 18.0),
-                  child: HeadingTextWidget(text: "Common phrases")),
+              HeadingTextWidget(text: "Common phrases"),
               const SizedBox(
                 height: 25,
               ),
