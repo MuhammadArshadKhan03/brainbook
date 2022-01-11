@@ -8,17 +8,23 @@ class ButtonWidget extends StatelessWidget {
     Key? key,
     required this.title,
     required this.onTap,
+    this.padding,
+    this.borderRadiusGeometry,
+    this.borderRadiusGeometry2,
   }) : super(key: key);
 
   String title;
   VoidCallback? onTap;
+  EdgeInsetsGeometry? padding;
+  BorderRadiusGeometry? borderRadiusGeometry;
+  BorderRadiusGeometry? borderRadiusGeometry2;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 16),
       child: Container(
-        decoration: BoxDecoration(gradient: linearColor,borderRadius: BorderRadius.circular(10)),
+        decoration: BoxDecoration(gradient: linearColor,borderRadius: borderRadiusGeometry??BorderRadius.circular(10)),
         child: ElevatedButton(
           onPressed: onTap,
           child: Text(
@@ -30,9 +36,9 @@ class ButtonWidget extends StatelessWidget {
             //  primary:,
              primary: Colors.transparent,
             // onPrimary: Colors.transparent,
-              padding: const EdgeInsets.symmetric(vertical: 16,),
+              padding: padding?? EdgeInsets.symmetric(vertical: 16,),
               shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
+              RoundedRectangleBorder(borderRadius: borderRadiusGeometry2??BorderRadius.circular(10))),
         ),
       ),
     );

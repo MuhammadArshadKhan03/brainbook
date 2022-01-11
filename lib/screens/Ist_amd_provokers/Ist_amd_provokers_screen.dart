@@ -6,7 +6,7 @@ import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '1st_amd_provokers_controller.dart';
+import 'Ist_amd_provokers_controller.dart';
 
 class IstAmdProvokers extends StatelessWidget {
    IstAmdProvokers({Key? key}) : super(key: key);
@@ -42,9 +42,9 @@ class IstAmdProvokers extends StatelessWidget {
                     crossAxisCount: 2,
                   ),
                   itemCount: istAmdProvokersController.optionList.length,
-                  itemBuilder: (context, indux) {
+                  itemBuilder: (context, index) {
                     return FederalCard(
-                      text: istAmdProvokersController.optionList[indux],
+                      text: istAmdProvokersController.optionList[index],
                     );
                   }),
             ],

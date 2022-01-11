@@ -1,4 +1,4 @@
-import 'package:brainbook/screens/1st_amd_provokers/1st_amd_provokers_screen.dart';
+import 'package:brainbook/screens/Ist_amd_provokers/Ist_amd_provokers_screen.dart';
 import 'package:brainbook/screens/age_calculation/age_calculation_screen.dart';
 import 'package:brainbook/screens/case_law/case_law_screen.dart';
 import 'package:brainbook/screens/dead_checklist/dead_checklist_screen.dart';
