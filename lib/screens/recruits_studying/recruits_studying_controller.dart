@@ -1,3 +1,4 @@
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/flash_cards/flash_cards_screen.dart';
 import 'package:brainbook/screens/pat_tracker_list/pat_tracker_list_screen.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +11,13 @@ class RecruitsStudyingController extends GetxController{
   "Forum",
   "PAT tracker",
   ];
-  List<Widget> recuritsROutes = [
-    FlashCardsScreen(),
-    Container(color: Colors.blue,),
-    PATTrackerScreen(),
+  List<String> recuritsROutes = [
+    Routes.flashCardsScreen,
+    "This is empty",
+    Routes.pATTrackerListScreen
+    // FlashCardsScreen(),
+    // Container(color: Colors.blue,),
+    // PATTrackerScreen(),
   ];
 
 

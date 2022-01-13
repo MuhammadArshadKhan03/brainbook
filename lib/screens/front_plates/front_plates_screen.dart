@@ -10,12 +10,11 @@ import 'package:get/get.dart';
 
 import 'front_plates_controller.dart';
 
-class FrontPlatesScreen extends StatelessWidget {
+class FrontPlatesScreen extends GetView<FrontPlatesController> {
   FrontPlatesScreen({Key? key}) : super(key: key);
   static const int? $bull = 0x2022;
 
-  FrontPlatesController frontPlatesController =
-      Get.put(FrontPlatesController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +55,7 @@ class FrontPlatesScreen extends StatelessWidget {
                     GridView.builder(
                         shrinkWrap: true,
                         padding: EdgeInsets.only(left: 10),
-                        itemCount: frontPlatesController.requiredLIst.length,
+                        itemCount: controller.requiredLIst.length,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           childAspectRatio: 4,
                           crossAxisCount: 3,
@@ -65,7 +64,7 @@ class FrontPlatesScreen extends StatelessWidget {
                         ),
                         itemBuilder: (context, indux) {
                           return FrontPlateRichText(
-                            text: frontPlatesController.requiredLIst[indux],
+                            text: controller.requiredLIst[indux],
                           );
                         }),
                   ],
@@ -100,7 +99,7 @@ class FrontPlatesScreen extends StatelessWidget {
                     GridView.builder(
                         shrinkWrap: true,
                         padding: EdgeInsets.only(left: 10),
-                        itemCount: frontPlatesController.notRequiredLIst.length,
+                        itemCount: controller.notRequiredLIst.length,
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           childAspectRatio: 4,
                           crossAxisCount: 3,
@@ -108,7 +107,7 @@ class FrontPlatesScreen extends StatelessWidget {
                           crossAxisSpacing: 1.0,
                         ),
                         itemBuilder: (context, index) {
-                          return FrontPlateRichText(text: frontPlatesController.notRequiredLIst[index],);
+                          return FrontPlateRichText(text: controller.notRequiredLIst[index],);
                         }),
                   ],
                 ),

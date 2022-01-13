@@ -7,11 +7,9 @@ import 'package:get/get.dart';
 
 import 'standardized_fsts_controller.dart';
 
-class StandardizedFST extends StatelessWidget {
+class StandardizedFST extends GetView<StandardizedFSTController> {
   StandardizedFST({Key? key}) : super(key: key);
 
-  StandardizedFSTController standardizedFSTController =
-      Get.put(StandardizedFSTController());
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +28,10 @@ class StandardizedFST extends StatelessWidget {
                   return ListTile(
                     // contentPadding: EdgeInsets.only(left: 10.0),
                     title: HeadingTextWidget(
-                        text: standardizedFSTController
+                        text: controller
                             .standardizedFSTHeadingList[index]),
                     subtitle: Text(
-                        standardizedFSTController.standardizedFSTDetailList[0]),
+                        controller.standardizedFSTDetailList[0]),
                   );
                 }),
             const Divider(
@@ -63,12 +61,12 @@ class StandardizedFST extends StatelessWidget {
                 itemCount: 2,
                 itemBuilder: (context, index) {
                   return FederalCard(
-                    text: standardizedFSTController.moreOptionList[index],
+                    text: controller.moreOptionList[index],
                     onTap: () =>
                         index == 1
                             ? Get.toNamed(Routes.nHTSAManualScreen,
                                 arguments:
-                                    standardizedFSTController.moreOptionList[1])
+                                controller.moreOptionList[1])
                             : null,
                   );
                 })

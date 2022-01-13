@@ -6,9 +6,9 @@ import 'package:brainbook/screens/federal_codes/federal_code_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class FederalCode extends StatelessWidget {
+class FederalCode extends GetView<FederalCodeController> {
    FederalCode({Key? key}) : super(key: key);
-  FederalCodeController federalCodeController = Get.put(FederalCodeController());
+  //FederalCodeController federalCodeController = Get.put(FederalCodeController());
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +17,9 @@ class FederalCode extends StatelessWidget {
       body: Container(
         margin: EdgeInsets.only(top: 20),
         child:GridView.builder(
-            itemCount: federalCodeController.federalCoder.length,
+            itemCount: controller.federalCoder.length,
             itemBuilder: (context, index) {
-              return  FederalCard(text: federalCodeController.federalCoder[index],isLock: true,);
+              return  FederalCard(text: controller.federalCoder[index],isLock: true,);
             },
             gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(

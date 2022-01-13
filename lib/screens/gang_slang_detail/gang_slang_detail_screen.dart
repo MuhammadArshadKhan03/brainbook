@@ -7,10 +7,9 @@ import 'package:get/get.dart';
 
 import 'gang_slang_detail_controller.dart';
 
-class GangSlangDetailScreen extends StatelessWidget {
+class GangSlangDetailScreen extends GetView<GangDetailController> {
   GangSlangDetailScreen({Key? key}) : super(key: key);
 
-  GangDetailController gangDetailController = Get.put(GangDetailController());
 
   @override
   Widget build(BuildContext context) {
@@ -45,27 +44,6 @@ class GangSlangDetailScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            // ListView.builder(
-            //   shrinkWrap: true,
-            //   //physics: BouncingScrollPhysics(),
-            //   itemCount: 2,
-            // itemBuilder: (context,index){
-            //   return Column(
-            //     children: [
-            //       index == gangDetailController.gangDetailListSubtitle.length-1?Divider(height: 1,color: Colors.black,):Container(),
-            //       ListTile(
-            //   minVerticalPadding: 20.0,
-            //         title:Text(gangDetailController.gangDetailListtile[index],),
-            //       subtitle: Padding(
-            //         padding: const EdgeInsets.only(top: 18.0),
-            //         child: Text(gangDetailController.gangDetailListSubtitle[index],style: TextStyle(color: fontColorDark),),
-            //       ),
-            //       ),
-            //       index == gangDetailController.gangDetailListSubtitle.length-1?Divider(height: 1,color: Colors.black,):Container(),
-            //
-            //     ],
-            //   );
-            // })
             Padding(
               padding:  EdgeInsets.only(right: 180.0),
               child: Text("Common Usage",),
@@ -76,7 +54,7 @@ class GangSlangDetailScreen extends StatelessWidget {
             Padding(
               padding:  EdgeInsets.only(right: 180.0),
               child: Text(
-                gangDetailController.gangDetailListSubtitle[0],
+                controller.gangDetailListSubtitle[0],
                 style: TextStyle(color: fontColorDark),
               ),
             ), const SizedBox(
@@ -98,7 +76,7 @@ class GangSlangDetailScreen extends StatelessWidget {
             Padding(
               padding:  EdgeInsets.only(right: 15.0),
               child: Text(
-                gangDetailController.gangDetailListSubtitle[1],
+                controller.gangDetailListSubtitle[1],
                 style: TextStyle(color: fontColorDark),
               ),
             ),

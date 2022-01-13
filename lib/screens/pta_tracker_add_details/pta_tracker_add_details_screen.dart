@@ -11,10 +11,9 @@ import 'package:get/get.dart';
 
 import 'pta_tracker_add_details_controller.dart';
 
-class PATTrackerAddDetailsScreen extends StatelessWidget {
+class PATTrackerAddDetailsScreen extends GetView<PATTrackerAddDetailController> {
    PATTrackerAddDetailsScreen({Key? key}) : super(key: key);
 
-   PATTrackerAddDetailController patTrackerAddDetailController = Get.put(PATTrackerAddDetailController());
 
   @override
   Widget build(BuildContext context) {
@@ -24,31 +23,31 @@ class PATTrackerAddDetailsScreen extends StatelessWidget {
           title: "PAT Tracker",
           txtBtnTitle: "Clear",
           onTap: () {
-            patTrackerAddDetailController.clearController();
+            controller.clearController();
           },
         ),
         backgroundColor: Colors.blue.shade200,
         body: SingleChildScrollView(
           child: Form(
-           key: patTrackerAddDetailController.globalKey,
+           key: controller.globalKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 HeadingTextWidget(text: "PAT tracker details"),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Running Time", controller: patTrackerAddDetailController.runningTime),
+                TextFormFieldWidget(title: "Running Time", controller: controller.runningTime),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Pushups", controller: patTrackerAddDetailController.pushups),
+                TextFormFieldWidget(title: "Pushups", controller: controller.pushups),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Other Activity time", controller: patTrackerAddDetailController.otherActvity),
+                TextFormFieldWidget(title: "Other Activity time", controller: controller.otherActvity),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Situps", controller: patTrackerAddDetailController.situps),
+                TextFormFieldWidget(title: "Situps", controller: controller.situps),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Obstacle course time", controller: patTrackerAddDetailController.obstacleCourse),
+                TextFormFieldWidget(title: "Obstacle course time", controller: controller.obstacleCourse),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Date time required", controller: patTrackerAddDetailController.dateTimeReq),
+                TextFormFieldWidget(title: "Date time required", controller: controller.dateTimeReq),
                 SizedBox(height: 10,),
-                TextFormFieldWidget(title: "Pullups", controller: patTrackerAddDetailController.pullups),
+                TextFormFieldWidget(title: "Pullups", controller: controller.pullups),
                 SizedBox(height: 10,),
                 ButtonWidget(title: "SAVE", onTap: (){}),
                 SizedBox(height: 10,),

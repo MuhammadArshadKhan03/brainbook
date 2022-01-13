@@ -6,10 +6,9 @@ import 'package:get/get.dart';
 import 'gladys_r_admonition_controller.dart';
 
 
-class GladysRAdmonitionScreen extends StatelessWidget {
+class GladysRAdmonitionScreen extends GetView<GladysRAdmonitionController> {
   GladysRAdmonitionScreen({Key? key}) : super(key: key);
 
-  GladysRAdmonitionController gladysRAdmonitionController = Get.put(GladysRAdmonitionController());
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +27,10 @@ class GladysRAdmonitionScreen extends StatelessWidget {
                 return ListTile(
                   // contentPadding: EdgeInsets.only(left: 10.0),
                   title: HeadingTextWidget(
-                      text: gladysRAdmonitionController
+                      text: controller
                           .HeadingList[0]),
                   subtitle: Text(
-                      gladysRAdmonitionController.DetailList[0]),
+                      controller.DetailList[0]),
                 );
               }),
         ),

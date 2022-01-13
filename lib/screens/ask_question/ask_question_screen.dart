@@ -8,11 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'ask_question_controller.dart';
 
-class AskQuestionScreen extends StatelessWidget {
+class AskQuestionScreen extends GetView<AskQuestionController> {
   AskQuestionScreen({Key? key}) : super(key: key);
 
-  AskQuestionController askQuestionController =
-      Get.put(AskQuestionController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +21,7 @@ class AskQuestionScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.blue.shade200,
         body: Form(
-          key: askQuestionController.globalkey,
+          key: controller.globalkey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -38,7 +36,7 @@ class AskQuestionScreen extends StatelessWidget {
                 title:
                     "Those bags aren’t a bad idea, but a normal duffel bag is good enough. Some agencie",
                 maxLine: 3,
-                controller: askQuestionController.askquestion,
+                controller: controller.askquestion,
               ),
               SizedBox(
                 height: 20,

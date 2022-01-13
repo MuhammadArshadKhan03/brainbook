@@ -1,13 +1,15 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/screens/add_response/add_response_screen.dart';
-import 'package:brainbook/screens/ask_a_cop/ask_a_cop_screen.dart';
+import 'package:brainbook/global_widgets/ask_cop_card.dart';
+import 'package:brainbook/routes/app_routes.dart';
+import 'package:brainbook/screens/response/response_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 
-class ResponseScreen extends StatelessWidget {
+import 'widgets/rating_stars.dart';
+
+class ResponseScreen extends GetView<ResponseController> {
   const ResponseScreen({Key? key}) : super(key: key);
 
   @override
@@ -67,7 +69,7 @@ class ResponseScreen extends StatelessWidget {
               bottom: 20.0,
               right: 12.0,
               child: InkWell(
-                 onTap: ()=>Get.to(AddResponseScreen()),
+                 onTap: ()=>Get.toNamed(Routes.addResponseScreen),
                 child: Image.asset(
                   'assets/startpage/48.png',
                   height: 70.0,
@@ -82,28 +84,4 @@ class ResponseScreen extends StatelessWidget {
 }
 
 
-class RattingBar extends StatelessWidget {
-  const RattingBar({
-    Key? key,
-  }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return RatingBar.builder(
-      initialRating: 3,
-      minRating: 1,
-      direction: Axis.horizontal,
-      allowHalfRating: true,
-      itemCount: 5,
-      itemSize: 18.0,
-      // itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-      itemBuilder: (context, _) => Icon(
-        Icons.star,
-        color: Colors.amber,
-      ),
-      onRatingUpdate: (rating) {
-        print(rating);
-      },
-    );
-  }
-}

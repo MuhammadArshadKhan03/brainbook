@@ -12,11 +12,10 @@ import 'package:get/get.dart';
 import 'pat_tracker_list_controller.dart';
 
 
-class PATTrackerScreen extends StatelessWidget {
-  PATTrackerScreen({Key? key}) : super(key: key);
+class PATTrackerListScreen extends GetView<PATTrackerListController> {
+  PATTrackerListScreen({Key? key}) : super(key: key);
 
-  PATTrackerController patTrackerController =
-  Get.put(PATTrackerController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +37,10 @@ class PATTrackerScreen extends StatelessWidget {
             ),
             ListView.builder(
               shrinkWrap: true,
-              itemCount: patTrackerController.pATdateTimeList.length,
+              itemCount: controller.pATdateTimeList.length,
               itemBuilder: (context, index) {
                 return DeleteCard(
-                  text: patTrackerController.pATdateTimeList[index],
+                  text: controller.pATdateTimeList[index],
                   onTapDelete: () {},
                   onTapCard: ()=>Get.toNamed(Routes.pATTrackerDetailScreen),
                 );

@@ -8,10 +8,9 @@ import 'package:get/get.dart';
 
 import 'Ist_amd_provokers_controller.dart';
 
-class IstAmdProvokers extends StatelessWidget {
+class IstAmdProvokers extends GetView<IstAmdProvokersController> {
    IstAmdProvokers({Key? key}) : super(key: key);
 
-   IstAmdProvokersController istAmdProvokersController = Get.put(IstAmdProvokersController());
 
   @override
   Widget build(BuildContext context) {
@@ -41,10 +40,10 @@ class IstAmdProvokers extends StatelessWidget {
                     mainAxisSpacing: 20,
                     crossAxisCount: 2,
                   ),
-                  itemCount: istAmdProvokersController.optionList.length,
+                  itemCount: controller.optionList.length,
                   itemBuilder: (context, index) {
                     return FederalCard(
-                      text: istAmdProvokersController.optionList[index],
+                      text: controller.optionList[index],
                     );
                   }),
             ],

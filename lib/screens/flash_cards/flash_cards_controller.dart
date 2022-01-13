@@ -1,3 +1,4 @@
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/flash_cards_list/flash_cards_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,12 +13,13 @@ class FlashCardController extends GetxController{
     "Flashcard 5",
   ];
 
-  List<Widget> flashCardRoutes = [
-    FlashCardsListScreen(),
-    Container(color: Colors.blue,),
-    Container(color: Colors.blue,),
-    Container(color: Colors.blue,),
-    Container(color: Colors.blue,),
+  List<String> flashCardRoutes = [
+    Routes.flashCardsListScreen
+    // FlashCardsListScreen(),
+    // Container(color: Colors.blue,),
+    // Container(color: Colors.blue,),
+    // Container(color: Colors.blue,),
+    // Container(color: Colors.blue,),
 
   ];
 }

@@ -8,11 +8,9 @@ import 'package:brainbook/screens/recruits_studying/recruits_studying_controller
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class RecruitsStudyingScreen extends StatelessWidget {
+class RecruitsStudyingScreen extends GetView<RecruitsStudyingController> {
   RecruitsStudyingScreen({Key? key}) : super(key: key);
 
-  RecruitsStudyingController recruitsStudyingController =
-      Get.put(RecruitsStudyingController());
 
   @override
   Widget build(BuildContext context) {
@@ -34,13 +32,13 @@ class RecruitsStudyingScreen extends StatelessWidget {
             ),
             GridView.builder(
               shrinkWrap: true,
-              itemCount: recruitsStudyingController.recuritList.length,
+              itemCount: controller.recuritList.length,
               itemBuilder: (contex, index) {
                 return FederalCard(
-                  text: recruitsStudyingController.recuritList[index],
-                  onTap: () => Get.to(
-                      recruitsStudyingController.recuritsROutes[index],
-                      arguments: recruitsStudyingController.recuritList[index]),
+                  text: controller.recuritList[index],
+                  onTap: () => Get.toNamed(
+                      controller.recuritsROutes[index],
+                      arguments: controller.recuritList[index]),
                 );
               },
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

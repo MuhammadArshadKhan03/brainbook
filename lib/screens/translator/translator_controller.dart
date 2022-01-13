@@ -1,3 +1,4 @@
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/common_phrases/common_phrase_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -39,8 +40,9 @@ class TranslatorController extends GetxController{
   ];
 
 
-  List<Widget> routes = [
-    CommonPhraseScreen(),
+  List<String> routes = [
+    Routes.commonPhraseScreen
+    //CommonPhraseScreen(),
 
 
   ];

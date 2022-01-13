@@ -9,10 +9,9 @@ import 'package:get/get.dart';
 
 import 'add_response_controller.dart';
 
-class AddResponseScreen extends StatelessWidget {
+class AddResponseScreen extends GetView<AddResponseController> {
    AddResponseScreen({Key? key}) : super(key: key);
 
-   AddResponseController addResponseController =Get.put(AddResponseController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class AddResponseScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.blue.shade200,
         body: Form(
-          key: addResponseController.globalKey,
+          key: controller.globalKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -32,7 +31,7 @@ class AddResponseScreen extends StatelessWidget {
               SizedBox(height: 20,),
               TextFormFieldWidget(title: "Those bags aren’t a bad idea, but a normal duffel bag is good enough. Some agencie",
               maxLine: 3,
-                controller: addResponseController.addresponse,
+                controller: controller.addresponse,
               ),
               SizedBox(height: 20,),
               ButtonWidget(title: "POST", onTap: (){}),

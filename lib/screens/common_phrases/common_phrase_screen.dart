@@ -9,11 +9,9 @@ import 'package:get/get.dart';
 import 'common_phrase_controller.dart';
 import 'widgets/common_phrase_card.dart';
 
-class CommonPhraseScreen extends StatelessWidget {
+class CommonPhraseScreen extends GetView<CommonPhraseController> {
   CommonPhraseScreen({Key? key}) : super(key: key);
 
-  CommonPhraseController commonPhraseController =
-      Get.put(CommonPhraseController());
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +35,14 @@ class CommonPhraseScreen extends StatelessWidget {
               GridView.builder(
                   shrinkWrap: true,
                   physics: const BouncingScrollPhysics(),
-                  itemCount: commonPhraseController.title.length,
+                  itemCount: controller.title.length,
                   itemBuilder: (context, index) {
                     return CommonPhraseCard(
-                      title: commonPhraseController.title[index].title,
-                      subtitle: commonPhraseController.title[index].subTitle,
+                      title: controller.title[index].title,
+                      subtitle: controller.title[index].subTitle,
                       arguments: [
-                        commonPhraseController.title[index].title,
-                        commonPhraseController.title[index].subTitle,
+                        controller.title[index].title,
+                        controller.title[index].subTitle,
                         Get.arguments,
                       ],
                     );

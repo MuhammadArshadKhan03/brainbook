@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 import 'window_tint_laws_controller.dart';
 
-class WindowTintLawsScreen extends StatelessWidget {
+class WindowTintLawsScreen extends GetView<WindowTintLawsController> {
   WindowTintLawsScreen({Key? key}) : super(key: key);
-  WindowTintLawsController windowTintLawsController = Get.put(WindowTintLawsController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,10 @@ class WindowTintLawsScreen extends StatelessWidget {
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount:windowTintLawsController.windowTintLawsLsit.length,
+                  itemCount:controller.windowTintLawsLsit.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context,index){
-                    return ListViewText( text: windowTintLawsController.windowTintLawsLsit[index],);
+                    return ListViewText( text: controller.windowTintLawsLsit[index],);
 
                   }),
             ],

@@ -2,9 +2,11 @@
 
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/screens/miranda/miranda_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class MirandaScreen extends StatelessWidget {
+class MirandaScreen extends GetView<MirandaController> {
   const MirandaScreen({Key? key}) : super(key: key);
 
   @override

@@ -7,10 +7,9 @@ import 'package:get/get.dart';
 
 import 'case_law_controller.dart';
 
-class CaseLawScreen extends StatelessWidget {
+class CaseLawScreen extends GetView<CaseLawController> {
   CaseLawScreen({Key? key}) : super(key: key);
 
-  CaseLawController caseLawController = Get.put(CaseLawController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +22,12 @@ class CaseLawScreen extends StatelessWidget {
         body: Container(
           margin: EdgeInsets.only(top: 20),
           child: GridView.builder(
-            itemCount: caseLawController.caseLawList.length,
+            itemCount: controller.caseLawList.length,
             itemBuilder: (context, index) {
               return FederalCard(
-                text: caseLawController.caseLawList[index],
+                text: controller.caseLawList[index],
                 isLock: index != 0,
-                onTap: ()=> index == 0 ? Get.toNamed(Routes.lawCaseDetailScreen,arguments:caseLawController.caseLawList[index] ) : null,
+                onTap: ()=> index == 0 ? Get.toNamed(Routes.lawCaseDetailScreen,arguments:controller.caseLawList[index] ) : null,
               );
             },
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

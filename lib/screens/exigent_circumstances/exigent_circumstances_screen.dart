@@ -8,11 +8,9 @@ import 'package:get/get.dart';
 
 import 'exigent_circumstances_controller.dart';
 
-class ExigentCircumstancesScreen extends StatelessWidget {
+class ExigentCircumstancesScreen extends GetView<ExigentCircumstanceController> {
   ExigentCircumstancesScreen({Key? key}) : super(key: key);
 
-  ExigentCircumstanceController exigentCircumstanceController =
-      Get.put(ExigentCircumstanceController());
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +30,7 @@ class ExigentCircumstancesScreen extends StatelessWidget {
               SizedBox(height: 20,),
               Padding(
                 padding: const EdgeInsets.only(left: 18.0),
-                child: Text(exigentCircumstanceController.exigentDerail),
+                child: Text(controller.exigentDerail),
               ),
               SizedBox(height: 20,),
               ListView.builder(
@@ -41,7 +39,7 @@ class ExigentCircumstancesScreen extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return ListViewText(
-                    text: exigentCircumstanceController.exigentList[0],
+                    text: controller.exigentList[0],
                   );
                 },
               )

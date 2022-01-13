@@ -27,7 +27,7 @@ class SplashScreen extends StatelessWidget {
               fontSize: 22.0
           ),
           backgroundColor: containerColor.withOpacity(0.35),
-        )
+        ),
       ),
     );
   }

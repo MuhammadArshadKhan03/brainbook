@@ -6,11 +6,9 @@ import 'package:get/get.dart';
 
 import 'gladys_marsy_controller.dart';
 
-class GladysMarsyScreen extends StatelessWidget {
+class GladysMarsyScreen extends GetView<GladysMarsyController> {
   GladysMarsyScreen({Key? key}) : super(key: key);
 
-  GladysMarsyController gladysMarsyController =
-      Get.put(GladysMarsyController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +24,8 @@ class GladysMarsyScreen extends StatelessWidget {
             itemCount: 2,
             itemBuilder: (contex, index) {
               return FederalCard(
-                onTap: ()=>Get.to(gladysMarsyController.routes[index],arguments:gladysMarsyController.gladysMarsy[index] ),
-                  text: gladysMarsyController.gladysMarsy[index]);
+                onTap: ()=>Get.toNamed(controller.routes[index],arguments:controller.gladysMarsy[index] ),
+                  text: controller.gladysMarsy[index]);
             },
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisExtent: 60,

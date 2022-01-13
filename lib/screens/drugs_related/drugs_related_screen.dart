@@ -6,11 +6,9 @@ import 'package:get/get.dart';
 
 import 'drugs_related_controller.dart';
 
-class DrugsRelated extends StatelessWidget {
+class DrugsRelated extends GetView<DrugsRelatedController> {
   DrugsRelated({Key? key}) : super(key: key);
 
-  DrugsRelatedController drugsRelatedController =
-      Get.put(DrugsRelatedController());
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +24,7 @@ class DrugsRelated extends StatelessWidget {
             itemCount: 8,
             itemBuilder: (context, index) {
               return FederalCard(
-                text: drugsRelatedController.draugsList[index],
+                text: controller.draugsList[index],
                 isLock: index == 0 || index == 1 || index == 5,
               );
             },

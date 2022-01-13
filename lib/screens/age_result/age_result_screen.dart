@@ -7,10 +7,9 @@ import 'package:get/get.dart';
 
 import 'age_result_controller.dart';
 
-class AgeResultScreen extends StatelessWidget {
+class AgeResultScreen extends GetView<AgeResultController> {
    AgeResultScreen({Key? key}) : super(key: key);
 
-   AgeResult ageResult = Get.put(AgeResult());
 
   @override
   Widget build(BuildContext context) {
@@ -25,18 +24,18 @@ class AgeResultScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 30,),
             const Padding(
-              padding: EdgeInsets.only(right: 168.0),
+              padding: EdgeInsets.only(right: 140.0),
               child: HeadingTextWidget(text: "Here are the results",),
             ),
             const SizedBox(height: 30,),
             Expanded(
               child: ListView.builder(
                 shrinkWrap: true,
-                  itemCount: ageResult.ageresult.length,
+                  itemCount: controller.ageresult.length,
                   itemBuilder: (context,index){
                 return Column(children:[
                   const SizedBox(height: 20,),
-                  HeadingTextWidget(text: ageResult.ageresult[index],color: index == 1 || index ==3,textColor: fontColorDark,)
+                  HeadingTextWidget(text: controller.ageresult[index],color: index == 1 || index ==3,textColor: fontColorDark,)
                 ]);
               }),
             ),

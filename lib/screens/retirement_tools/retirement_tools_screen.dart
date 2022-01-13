@@ -7,11 +7,9 @@ import 'package:get/get.dart';
 
 import 'retirement_tools_controller.dart';
 
-class RetirementToolsScreen extends StatelessWidget {
+class RetirementToolsScreen extends GetView<RetirementToolsController> {
   RetirementToolsScreen({Key? key}) : super(key: key);
 
-  RetirementToolsController retirementToolsController =
-      Get.put(RetirementToolsController());
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +32,10 @@ class RetirementToolsScreen extends StatelessWidget {
                   mainAxisSpacing: 20,
                   crossAxisCount: 2,
                 ),
-                itemCount: retirementToolsController.retiremnetToolsList.length,
+                itemCount: controller.retiremnetToolsList.length,
                 itemBuilder: (context, indux) {
                   return FederalCard(
-                    text: retirementToolsController.retiremnetToolsList[indux],
+                    text: controller.retiremnetToolsList[indux],
                   );
                 })
           ],

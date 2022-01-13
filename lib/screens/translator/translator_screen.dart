@@ -5,9 +5,9 @@ import 'package:brainbook/screens/translator/translator_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TranslatorScreen extends StatelessWidget {
+class TranslatorScreen extends GetView<TranslatorController> {
   TranslatorScreen({Key? key}) : super(key: key);
-  TranslatorController translatorController = Get.put(TranslatorController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +31,13 @@ class TranslatorScreen extends StatelessWidget {
               GridView.builder(
                   physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: translatorController.SpeakList.length,
+                  itemCount: controller.SpeakList.length,
                   itemBuilder: (context, index) {
                     return HomeCard(
-                      onTap: () => Get.to(translatorController.routes[index],
-                          arguments: translatorController.SpeakList[index]),
-                      text: translatorController.SpeakList[index],
-                      imagePath: translatorController.SpeakImagesList[index],
+                      onTap: () => Get.toNamed(controller.routes[index],
+                          arguments: controller.SpeakList[index]),
+                      text: controller.SpeakList[index],
+                      imagePath: controller.SpeakImagesList[index],
                       isLock: index != 0,
                     );
                   },
@@ -63,12 +63,12 @@ class TranslatorScreen extends StatelessWidget {
               GridView.builder(
                   physics: const BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: translatorController.PointList.length,
+                  itemCount: controller.PointList.length,
                   itemBuilder: (context, index) {
                     return HomeCard(
                       onTap: () {},
-                      text: translatorController.PointList[index],
-                      imagePath: translatorController.PointImagesList[index],
+                      text: controller.PointList[index],
+                      imagePath: controller.PointImagesList[index],
                     );
                   },
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

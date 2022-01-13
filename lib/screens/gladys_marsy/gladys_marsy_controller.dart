@@ -1,3 +1,4 @@
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/gladys_r_admonition/gladys_r_admonition_screen.dart';
 import 'package:brainbook/screens/marsys_law/marsys_law_screen.dart';
 import 'package:flutter/material.dart';
@@ -9,9 +10,11 @@ class GladysMarsyController extends GetxController{
     "Gladys R",
     "Marsy`s Law"
   ];
-  List<Widget> routes = [
-    GladysRAdmonitionScreen(),
-    MarsyLawScreen(),
+  List<String> routes = [
+    Routes.gladysAdmonitionScreen,
+    Routes.marsyLawScreen,
+    // GladysRAdmonitionScreen(),
+    // MarsyLawScreen(),
   ];
 
 }

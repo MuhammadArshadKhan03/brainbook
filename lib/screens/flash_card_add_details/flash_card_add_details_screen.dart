@@ -10,10 +10,9 @@ import 'package:get/get.dart';
 
 import 'flash_card_add_details_controller.dart';
 
-class FlashCardAddDetailsScreen extends StatelessWidget {
+class FlashCardAddDetailsScreen extends GetView<FlashCardAddDetailsController> {
    FlashCardAddDetailsScreen({Key? key}) : super(key: key);
 
-   FlashCardAddDetailsController flashCardAddDetailsController = Get.put(FlashCardAddDetailsController());
 
   @override
   Widget build(BuildContext context) {
@@ -23,21 +22,21 @@ class FlashCardAddDetailsScreen extends StatelessWidget {
         title: "Flashcards",
         txtBtnTitle: "Clear",
         onTap: () {
-          flashCardAddDetailsController.clearController();
+          controller.clearController();
         },
       ),
           backgroundColor: Colors.blue.shade200,
           body: Form(
-            key: flashCardAddDetailsController.globalKey,
+            key: controller.globalKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 SizedBox(height: 20,),
                 HeadingTextWidget(text: "Add details"),
                 SizedBox(height: 20,),
-                TextFormFieldWidget(title: "code", controller: flashCardAddDetailsController.codeController),
+                TextFormFieldWidget(title: "code", controller: controller.codeController),
                 SizedBox(height: 20,),
-                TextFormFieldWidget(title: "Description", controller: flashCardAddDetailsController.descriptionController,maxLine: 5,),
+                TextFormFieldWidget(title: "Description", controller: controller.descriptionController,maxLine: 5,),
                 SizedBox(height: 20,),
                 ButtonWidget(title: "SAVE", onTap: ()=>Get.back())
               ],

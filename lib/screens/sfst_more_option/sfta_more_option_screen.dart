@@ -6,13 +6,12 @@ import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'sfts_more_option_controller.dart';
+import 'sfst_more_option_controller.dart';
 
-class SFTAMoreOptionScreen extends StatelessWidget {
-  SFTAMoreOptionScreen({Key? key}) : super(key: key);
+class SFSTMoreOptionScreen extends GetView<SFSTMoreOptionController> {
+  SFSTMoreOptionScreen({Key? key}) : super(key: key);
 
-  SFTSMoreOptionController sftsMoreOptionController =
-      Get.put(SFTSMoreOptionController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +54,7 @@ class SFTAMoreOptionScreen extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (context, index) {
                   return FederalCard(
-                    text: sftsMoreOptionController.revised2015[index],
+                    text: controller.revised2015[index],
                   );
                 }),
             const SizedBox(

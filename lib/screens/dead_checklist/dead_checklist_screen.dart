@@ -6,16 +6,15 @@ import 'package:get/get.dart';
 
 import 'dead_checklist_controller.dart';
 
-class DeadCheckListScreen extends StatelessWidget {
+class DeadCheckListScreen extends GetView<DeadCheckListController> {
   DeadCheckListScreen({Key? key}) : super(key: key);
 
-  DeadCheckListController deadCheckListController = Get.put(DeadCheckListController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: MyAppBar(title: "Less Lethal",),
+        appBar: MyAppBar(title: "Dead Checklist",),
          backgroundColor: Colors.blue.shade200,
         body: SingleChildScrollView(
           child: Column(
@@ -31,10 +30,10 @@ class DeadCheckListScreen extends StatelessWidget {
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: deadCheckListController.deadCheckList.length,
+                  itemCount: controller.deadCheckList.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context,index){
-                    return ListViewText( text: deadCheckListController.deadCheckList[index],);
+                    return ListViewText( text: controller.deadCheckList[index],);
 
                   }),
             ],

@@ -6,9 +6,9 @@ import 'package:brainbook/screens/less_lethal/less_lethal_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LessLethal extends StatelessWidget {
+class LessLethal extends GetView<LessLethalController> {
   LessLethal({Key? key}) : super(key: key);
-  LessLethalController lessLethalController = Get.put(LessLethalController());
+ // LessLethalController lessLethalController = Get.put(LessLethalController());
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,10 @@ class LessLethal extends StatelessWidget {
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: lessLethalController.lessLethalLsit.length,
+                  itemCount: controller.lessLethalLsit.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context,index){
-                    return ListViewText( text: lessLethalController.lessLethalLsit[index],);
+                    return ListViewText( text: controller.lessLethalLsit[index],);
 
                   }),
             ],

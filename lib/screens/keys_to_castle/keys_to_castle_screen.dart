@@ -7,10 +7,9 @@ import 'keys_to_castle_controller.dart';
 
 
 
-class KeysToCastleScreen extends StatelessWidget {
+class KeysToCastleScreen extends GetView<KeysToCastleController> {
   KeysToCastleScreen({Key? key}) : super(key: key);
 
-  KeysToCastleController keysToCastleController = Get.put(KeysToCastleController());
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +28,10 @@ class KeysToCastleScreen extends StatelessWidget {
                 return ListTile(
                   // contentPadding: EdgeInsets.only(left: 10.0),
                   title: HeadingTextWidget(
-                      text: keysToCastleController
+                      text: controller
                           .HeadingList[0]),
                   subtitle: Text(
-                      keysToCastleController.DetailList[0]),
+                      controller.DetailList[0]),
                 );
               }),
         ),

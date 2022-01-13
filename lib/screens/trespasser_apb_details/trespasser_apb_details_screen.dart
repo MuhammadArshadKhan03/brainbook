@@ -7,10 +7,9 @@ import 'package:get/get.dart';
 
 import 'trespasser_apb_details_controller.dart';
 
-class TrespasserApbDetailsScreen extends StatelessWidget {
+class TrespasserApbDetailsScreen extends GetView<TrespasserApbDetailsController> {
    TrespasserApbDetailsScreen({Key? key}) : super(key: key);
 
-  TrespasserApbDetailsController trespasserApbDetailsController = Get.put(TrespasserApbDetailsController());
 
 
   @override
@@ -53,7 +52,7 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
                     children: [
                       Text("Name",style: TextStyle(fontWeight: FontWeight.bold),),
                       SizedBox(height: 10,),
-                      Text(trespasserApbDetailsController.trespasserDetailsTitle[0]),
+                      Text(controller.trespasserDetailsTitle[0]),
                     ],
                   ),
                   Padding(
@@ -62,7 +61,7 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
                       children: [
                         Text("Location",style: TextStyle(fontWeight: FontWeight.bold)),
                         SizedBox(height: 10,),
-                        Text(trespasserApbDetailsController.trespasserDetailsTitle[1]),
+                        Text(controller.trespasserDetailsTitle[1]),
                       ],
                     ),
                   ),
@@ -78,7 +77,7 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
                     children: [
                       Text("Address",style: TextStyle(fontWeight: FontWeight.bold)),
                       SizedBox(height: 10,),
-                      Text(trespasserApbDetailsController.trespasserDetailsTitle[2]),
+                      Text(controller.trespasserDetailsTitle[2]),
                     ],
                   ),
                   Column(
@@ -86,7 +85,7 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
                     children: [
                       Text("Police Department",style: TextStyle(fontWeight: FontWeight.bold)),
                       SizedBox(height: 10,),
-                      Text(trespasserApbDetailsController.trespasserDetailsTitle[3]),
+                      Text(controller.trespasserDetailsTitle[3]),
                     ],
                   ),
 
@@ -95,7 +94,7 @@ class TrespasserApbDetailsScreen extends StatelessWidget {
               SizedBox(height: 20,),
               Text("Other Notes",style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(height: 10,),
-              Text(trespasserApbDetailsController.trespasserDetailsTitle[4]),
+              Text(controller.trespasserDetailsTitle[4]),
             ],
           ),
         ),

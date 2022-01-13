@@ -10,10 +10,10 @@ import 'package:get/get.dart';
 
 import 'favorites_controller.dart';
 
-class FavoritesScreen extends GetView<DashBoardController> {
+class FavoritesScreen extends GetView<FavoritesController> {
    FavoritesScreen({Key? key}) : super(key: key);
 
-   FavoritesController favoritesController = Get.put(FavoritesController());
+   //FavoritesController favoritesController = Get.put(FavoritesController());
 
    final bool fav = false;
 
@@ -50,11 +50,11 @@ class FavoritesScreen extends GetView<DashBoardController> {
                       itemCount: 2,
                       itemBuilder: (context, index) {
                         return DeleteCard(
-                          text: favoritesController.favListTitle[index],
+                          text: controller.favListTitle[index],
                           onTapDelete: () {},
                           onTapCard: () {},
                           subtitile: Text(
-                            favoritesController.favListSubtitle[index],
+                            controller.favListSubtitle[index],
                             style: TextStyle(color: fontColorLight),
                           ),
                         );
@@ -74,11 +74,11 @@ class FavoritesScreen extends GetView<DashBoardController> {
                       itemCount: 2,
                       itemBuilder: (context, index) {
                         return DeleteCard(
-                          text: favoritesController.favListTitle[index],
+                          text: controller.favListTitle[index],
                           onTapDelete: () {},
                           onTapCard: () {},
                           subtitile: Text(
-                            favoritesController.favListSubtitle[index],
+                            controller.favListSubtitle[index],
                             style: TextStyle(color: fontColorLight),
                           ),
                         );

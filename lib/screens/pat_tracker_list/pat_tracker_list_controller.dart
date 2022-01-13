@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class PATTrackerController extends GetxController{
+class PATTrackerListController extends GetxController{
 
   List<String>  pATdateTimeList = [
     "17-Dec-2021 6:00 PM",

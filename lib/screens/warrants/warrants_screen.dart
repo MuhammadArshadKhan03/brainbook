@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
@@ -7,9 +9,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class Warrants extends StatelessWidget {
+class Warrants extends GetView<WarratnsController> {
   Warrants({Key? key}) : super(key: key);
-  WarratnsController warratnsController = Get.put(WarratnsController());
+
+  //WarratnsController warratnsController = Get.put(WarratnsController());
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +35,14 @@ class Warrants extends StatelessWidget {
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: warratnsController.warrantLsit.length,
+                  itemCount: controller.warrantLsit.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     return ListViewText(
-                     /// warratnsController: warratnsController,
-                      text: warratnsController.warrantLsit[index],
-                      textColor:index == warratnsController.warrantLsit.length-1? fontColorDark:Colors.black,
-                        divider:index == warratnsController.warrantLsit.length-1?Divider(height: 10,color: Colors.black,):Container(),
+
+                      text: controller.warrantLsit[index],
+                      textColor:index == controller.warrantLsit.length-1? fontColorDark:Colors.black,
+                        divider:index == controller.warrantLsit.length-1?Divider(height: 10,color: Colors.black,):Container(),
                     );
                   }),
             ],

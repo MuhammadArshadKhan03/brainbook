@@ -4,7 +4,6 @@ import 'package:brainbook/core/theme/values/text_style.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/rich_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
-import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

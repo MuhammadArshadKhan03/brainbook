@@ -11,11 +11,10 @@ import 'package:get/get.dart';
 
 import 'flash_cards_list_controller.dart';
 
-class FlashCardsListScreen extends StatelessWidget {
+class FlashCardsListScreen extends GetView<FlashCardListController> {
   FlashCardsListScreen({Key? key}) : super(key: key);
 
-  FlashCardListController flashCardListController =
-      Get.put(FlashCardListController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,10 +36,10 @@ class FlashCardsListScreen extends StatelessWidget {
             ),
             ListView.builder(
               shrinkWrap: true,
-              itemCount: flashCardListController.flashCardList.length,
+              itemCount: controller.flashCardList.length,
               itemBuilder: (context, index) {
                 return DeleteCard(
-                  text: flashCardListController.flashCardList[index],
+                  text: controller.flashCardList[index],
                   onTapDelete: () {},
                   onTapCard: (){},
                 );

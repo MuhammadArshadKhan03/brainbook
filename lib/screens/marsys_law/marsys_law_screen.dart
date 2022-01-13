@@ -11,10 +11,10 @@ import 'marsys_law_controller.dart';
 import 'marsys_law_controller.dart';
 
 
-class MarsyLawScreen extends StatelessWidget {
+class MarsyLawScreen extends GetView<MarsyLawController> {
   MarsyLawScreen({Key? key}) : super(key: key);
 
-  MarsyLawController marsyLawController = Get.put(MarsyLawController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -33,10 +33,10 @@ class MarsyLawScreen extends StatelessWidget {
                 return ListTile(
                   // contentPadding: EdgeInsets.only(left: 10.0),
                   title: HeadingTextWidget(
-                      text: marsyLawController
+                      text: controller
                           .HeadingList[0]),
                   subtitle: Text(
-                      marsyLawController.DetailList[0]),
+                      controller.DetailList[0]),
                 );
               }),
         ),

@@ -2,9 +2,11 @@
 
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/screens/pta_tracker_detail/pta_tracker_detail_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class PATTrackerDetailScreen extends StatelessWidget {
+class PATTrackerDetailScreen extends GetView<PtaTrackerDetailController> {
   const PATTrackerDetailScreen({Key? key}) : super(key: key);
 
   @override

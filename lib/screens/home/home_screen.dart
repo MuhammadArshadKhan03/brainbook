@@ -1,13 +1,14 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/home_card.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'home_screen_controller.dart';
 
-class Home extends StatelessWidget {
+class Home extends GetView<HomeController> {
    Home({Key? key}) : super(key: key);
-  HomeController homeController = Get.put(HomeController());
+ // HomeController homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -19,12 +20,12 @@ class Home extends StatelessWidget {
           margin: EdgeInsets.only(top: 20),
           child: GridView.builder(
               shrinkWrap: true,
-              itemCount:homeController.home.length,
+              itemCount:controller.home.length,
               itemBuilder: (context, index) {
                 return HomeCard(
-                  onTap: ()=>Get.to(homeController.routes[index]),
-                  text: homeController.home[index].text,
-                  imagePath: homeController.home[index].image,
+                  onTap: ()=>Get.toNamed(controller.routes[index]),
+                  text: controller.home[index].text,
+                  imagePath: controller.home[index].image,
                   isLock: index == 17||index == 19||index == 20,
                 );
               },

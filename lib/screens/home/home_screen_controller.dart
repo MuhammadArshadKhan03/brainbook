@@ -1,29 +1,4 @@
-import 'package:brainbook/screens/Ist_amd_provokers/Ist_amd_provokers_screen.dart';
-import 'package:brainbook/screens/age_calculation/age_calculation_screen.dart';
-import 'package:brainbook/screens/case_law/case_law_screen.dart';
-import 'package:brainbook/screens/dead_checklist/dead_checklist_screen.dart';
-import 'package:brainbook/screens/drugs_related/drugs_related_screen.dart';
-import 'package:brainbook/screens/exigent_circumstances/exigent_circumstances_screen.dart';
-import 'package:brainbook/screens/federal_codes/federal_code_screen.dart';
-import 'package:brainbook/screens/front_plates/front_plates_screen.dart';
-import 'package:brainbook/screens/gang_slang/gang_slang_screen.dart';
-import 'package:brainbook/screens/gladys_marsy/gladys_marsy_screen.dart';
-import 'package:brainbook/screens/keys_to_castle/keys_to_castle_screen.dart';
-import 'package:brainbook/screens/less_lethal/less_lethal_screen.dart';
-import 'package:brainbook/screens/miranda/miranda_screen.dart';
-import 'package:brainbook/screens/recruits_studying/recruits_studying_screen.dart';
-import 'package:brainbook/screens/retirement_tools/retirement_tools_screen.dart';
-import 'package:brainbook/screens/standardized_fsts/standardized_fsts_screen.dart';
-import 'package:brainbook/screens/subscription_survey/subscription_survey_screen.dart';
-import 'package:brainbook/screens/testifying_tips/testifying_tips_screen.dart';
-import 'package:brainbook/screens/trafic_investigation/trafic_investigation_screen.dart';
-import 'package:brainbook/screens/translator/translator_screen.dart';
-import 'package:brainbook/screens/trespasser_apb/trespasser_apb_screen.dart';
-import 'package:brainbook/screens/vehicle_stop_form/vehicle_stop_form_screen.dart';
-import 'package:brainbook/screens/warrants/warrants_screen.dart';
-import 'package:brainbook/screens/window_tint_laws/window_tint_laws_screen.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController{
@@ -63,36 +38,36 @@ class HomeController extends GetxController{
 
   ];
 
-  List<Widget> routes = [
-    Warrants(),
-    FederalCode(),
-    LessLethal(),
-    DrugsRelated(),
-    TranslatorScreen(),
-    DeadCheckListScreen(),
-    AgeCalculationScreen(),
-    GangSlangScreen(),
-    TraficInvestigationScreen(),
-    TestifyingTipsScreen(),
-    WindowTintLawsScreen(),
-    StandardizedFST(),
-    CaseLawScreen(),
-    GladysMarsyScreen(),
-    MirandaScreen(),
-    KeysToCastleScreen(),
-    ExigentCircumstancesScreen(),
-    Container(color: Colors.red,),
-    VehicleStopFormScreen(),
-   Container(color: Colors.red,),
-   Container(color: Colors.yellow,),
-    TrespasserAPBScreen(),
-    FrontPlatesScreen(),
-    Container(color: Colors.pink,),
-    RecruitsStudyingScreen(),
-   Container(color: Colors.pink,),
-    SubscriptionSurveyScreen(),
-    RetirementToolsScreen(),
-    IstAmdProvokers(),
+  List<String> routes = [
+    Routes.warrantsScreen,
+    Routes.federalCodeScreen,
+    Routes.lessLethalScreen,
+    Routes.drugsRelatedScreen,
+    Routes.translatorScreen,
+    Routes.deadCheckListScreen,
+    Routes.ageCalculationScreen,
+    Routes.gangSlangScreen,
+    Routes.traficInvestigationScreen,
+    Routes.testifyingTipsScreen,
+    Routes.windowTintLawsScreen,
+    Routes.standardizedFST,
+    Routes.caseLawScreen,
+    Routes.gladysMarsyScreen,
+    Routes.mirandaScreen,
+    Routes.keysToCastleScreen,
+    Routes.exigentCircumstancesScreen,
+   " Container(color: Colors.red,),",
+    Routes.vehicleStopFormScreen,
+    " Container(color: Colors.red,),",
+    " Container(color: Colors.red,),",
+    Routes.trespasserAPBScreen,
+    Routes.frontPlatesScreen,
+    " Container(color: Colors.red,),",
+    Routes.recruitsStudyingScreen,
+    " Container(color: Colors.red,),",
+    Routes.subscriptionSurveyScreen,
+    Routes.retirementToolsScreen,
+    Routes.firstAmdProvokers,
 
   ];
 

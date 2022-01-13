@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 import 'testifying_tips_controller.dart';
 
-class TestifyingTipsScreen extends StatelessWidget {
+class TestifyingTipsScreen extends GetView<TestifyingTipsController> {
   TestifyingTipsScreen({Key? key}) : super(key: key);
-  TestifyingTipsController testifyingTipsController = Get.put(TestifyingTipsController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,10 @@ class TestifyingTipsScreen extends StatelessWidget {
               ),
               ListView.builder(
                   shrinkWrap: true,
-                  itemCount: testifyingTipsController.testifyingTipsLsit.length,
+                  itemCount: controller.testifyingTipsLsit.length,
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context,index){
-                    return ListViewText( text: testifyingTipsController.testifyingTipsLsit[index],);
+                    return ListViewText( text: controller.testifyingTipsLsit[index],);
 
                   }),
             ],

@@ -10,11 +10,10 @@ import 'package:get/get.dart';
 
 import 'subscription_survey_controller.dart';
 
-class SubscriptionSurveyScreen extends StatelessWidget {
+class SubscriptionSurveyScreen extends GetView<SubscriptionSurveyController> {
   SubscriptionSurveyScreen({Key? key}) : super(key: key);
 
-  SubcriptionSurveyController subcriptionSurveyController =
-      Get.put(SubcriptionSurveyController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class SubscriptionSurveyScreen extends StatelessWidget {
         backgroundColor: Colors.blue.shade200,
         body: SingleChildScrollView(
           child: Form(
-            key: subcriptionSurveyController.globalKey,
+            key: controller.globalKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -37,19 +36,19 @@ class SubscriptionSurveyScreen extends StatelessWidget {
                 ListView.builder(
                     physics: BouncingScrollPhysics(),
                     shrinkWrap: true,
-                    itemCount: subcriptionSurveyController.resubscribeList.length,
+                    itemCount: controller.resubscribeList.length,
                     itemBuilder: (context, index) {
                       return Obx(() => VehicleStopListView(
-                            title: subcriptionSurveyController
+                            title: controller
                                 .resubscribeList[index],
-                            value: subcriptionSurveyController
+                            value: controller
                                 .resubscribeList[index],
-                            groupValue: subcriptionSurveyController
+                            groupValue: controller
                                 .resubscribeSelectedOption.value,
                             onChanged: (value) {
-                              subcriptionSurveyController.resubscribe.value =
+                              controller.resubscribe.value =
                                   false;
-                              subcriptionSurveyController
+                              controller
                                   .onChangedresubscribeOption(value);
                             },
                           ));
@@ -60,7 +59,7 @@ class SubscriptionSurveyScreen extends StatelessWidget {
                 ),
                 TextFormFieldWidget(
                   title: "Write Something",
-                  controller: subcriptionSurveyController.writesomething1,
+                  controller: controller.writesomething1,
                   maxLine: 3,
                 ),
                 SizedBox(
@@ -78,7 +77,7 @@ class SubscriptionSurveyScreen extends StatelessWidget {
                 ),
                 TextFormFieldWidget(
                   title: "Email",
-                  controller: subcriptionSurveyController.email,
+                  controller: controller.email,
                   icon: Icon(Icons.email_outlined),
                 ),
                 SizedBox(
@@ -86,7 +85,7 @@ class SubscriptionSurveyScreen extends StatelessWidget {
                 ),
                 TextFormFieldWidget(
                   title: "Write Something",
-                  controller: subcriptionSurveyController.writesomething2,
+                  controller: controller.writesomething2,
                   maxLine: 3,
                 ),
                 SizedBox(

@@ -8,10 +8,10 @@ import 'package:brainbook/screens/recruits_studying/recruits_studying_controller
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class FlashCardsScreen extends StatelessWidget {
+class FlashCardsScreen extends GetView<FlashCardController> {
   FlashCardsScreen({Key? key}) : super(key: key);
 
-  FlashCardController flashCardController = Get.put(FlashCardController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +33,13 @@ class FlashCardsScreen extends StatelessWidget {
             ),
             GridView.builder(
               shrinkWrap: true,
-              itemCount: flashCardController.flashCardList.length,
+              itemCount: controller.flashCardList.length,
               itemBuilder: (contex, index) {
                 return FederalCard(
-                  text: flashCardController.flashCardList[index],
-                  onTap: () => Get.to(
-                    flashCardController.flashCardRoutes[index],
-                    arguments: flashCardController.flashCardList[index],
+                  text: controller.flashCardList[index],
+                  onTap: () => Get.toNamed(
+                    controller.flashCardRoutes[index],
+                    arguments: controller.flashCardList[index],
                   ),
                 );
               },

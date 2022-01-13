@@ -1,15 +1,14 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:brainbook/global_widgets/elevated_button.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/ask_a_cop/ask_a_cop_screen.dart';
 import 'package:brainbook/screens/farorites/favorites_screen.dart';
 import 'package:brainbook/screens/home/home_screen.dart';
-import 'package:brainbook/screens/login/login_screen.dart';
-import 'package:brainbook/screens/signup/signup_screen.dart';
+import 'package:brainbook/screens/more/more_screen.dart';
+import 'package:brainbook/screens/notebook/notebook_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'favorite_screen.dart';
 
 class DashBoardController extends GetxController {
   final name = 'Lorem Ipsum';
@@ -53,51 +52,36 @@ class DashBoardController extends GetxController {
     "Logout",
   ];
 
-  RxList<Widget> pages = [
+  List<String> drawerRoutes = [
+    Routes.profileScreen,
+    Routes.settingsScreen,
+    Routes.profileScreen,
+    Routes.profileScreen,
+    Routes.profileScreen,
+    Routes.profileScreen,
+    Routes.profileScreen,
+    // Container(color: Colors.blue,),
+    // Container(color: Colors.red,),
+    // Container(color: Colors.orange,),
+    // Container(color: Colors.white,),
+    // Container(color: Colors.black,),
+    // Container(color: Colors.green,),
+    // Container(color: Colors.purple,),
+  ];
+
+  List<Widget> pages = [
     Home(),
     FavoritesScreen(),
     AskACopScreen(),
-    Container(
-      color: Colors.orange,
-    ),
-    Container(
-      color: Colors.red,
-    ),
-    // Favorite(),
-    // HomeScreen(),
-    // FavoriteScreen(),
-    // AskACopScreen(),
-    // NoteBookScreen(),
-    // MoreScreen(),
-  ].obs;
+    NoteBookScreen(),
+    MoreOptionScreen(),
+  ];
 
-  // Widget get currentPage => pages[currentIndex.value];
-  //
-  // void changePage(int _index) {
-  //   if(_index==2){
-  //     print(_index);
-  //     Get.dialog(
-  //         CumtomDialog()
-  //     );
-  //
-  //     //currentIndex.value = _index;
-  //   }
-  //   currentIndex.value = _index;
-  // }
 
   Widget get currentPage => pages[currentIndex.value];
 
   void changePage(int _index) {
-    // if(_index==2){
-    //   print(_index);
-    //   // Get.dialog(
-    //   //    // CumtomDialog()
-    //   // );
-    //
-    //   //currentIndex.value = _index;
-    // }
-
-    currentIndex.value = _index;
+        currentIndex.value = _index;
     switch (_index) {
       case 0:
         {
@@ -160,40 +144,11 @@ class CumtomDialog extends StatelessWidget {
                   BoxDecoration(borderRadius: BorderRadius.circular(20)),
               child: ButtonWidget(
                 title: "Ok",
-                onTap: () {},
+                onTap: ()=>Get.back(),
                 padding: EdgeInsets.symmetric(vertical: 10),
                 borderRadiusGeometry: BorderRadius.circular(20),
                 borderRadiusGeometry2: BorderRadius.circular(20),
               )),
-          // Container(
-          //   height: 100.h,
-          //   width: 300.w,
-          //   decoration: BoxDecoration(
-          //     gradient: const LinearGradient(
-          //         begin: Alignment.centerLeft,
-          //         end: Alignment.centerRight,
-          //         colors: [
-          //           Color(0xff6fa8dc),
-          //           Color(0xff3e72a2),
-          //           Color(0xff073763),
-          //         ]),
-          //     borderRadius: BorderRadius.circular(30.r),
-          //   ),
-          //   child: InkWell(
-          //     // highlightColor: Colors.grey[200],
-          //     onTap: () => Get.back(),
-          //     child: const Center(
-          //       child: Text(
-          //         "OK",
-          //         style: TextStyle(
-          //           fontSize: 18.0,
-          //           color: Colors.white,
-          //           fontWeight: FontWeight.bold,
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
           SizedBox(height: 25),
         ],
       ),

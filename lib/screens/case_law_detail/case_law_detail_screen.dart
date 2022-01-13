@@ -5,10 +5,9 @@ import 'package:get/get.dart';
 
 import 'case_law_detail_controller.dart';
 
-class CaseLawDetailScreen extends StatelessWidget {
+class CaseLawDetailScreen extends GetView<CaseLawDetailController> {
   CaseLawDetailScreen({Key? key}) : super(key: key);
 
-  CaseLawDetailController lawCaseDetailController = Get.put(CaseLawDetailController());
 
   @override
   Widget build(BuildContext context) {
@@ -29,11 +28,11 @@ class CaseLawDetailScreen extends StatelessWidget {
                   title: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: HeadingTextWidget(
-                        text: lawCaseDetailController
+                        text: controller
                             .HeadingList[index]),
                   ),
                   subtitle: Text(
-                      lawCaseDetailController.DetailList[0]),
+                      controller.DetailList[0]),
                 );
               }),
         ),

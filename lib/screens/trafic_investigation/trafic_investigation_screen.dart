@@ -6,11 +6,10 @@ import 'package:get/get.dart';
 
 import 'trafic_investigation_controller.dart';
 
-class TraficInvestigationScreen extends StatelessWidget {
+class TraficInvestigationScreen extends GetView<TraficInvestigationController> {
   TraficInvestigationScreen({Key? key}) : super(key: key);
 
-  TraficInvestigationController traficInvestigationController =
-      Get.put(TraficInvestigationController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +22,11 @@ class TraficInvestigationScreen extends StatelessWidget {
       body: Container(
         margin: EdgeInsets.only(top: 20),
         child: GridView.builder(
-            itemCount: traficInvestigationController.investigationList.length,
+            itemCount: controller.investigationList.length,
             itemBuilder: (context, index) {
               return FederalCard(
                 onTap: (){},
-                text: traficInvestigationController.investigationList[index],
+                text: controller.investigationList[index],
                 isLock: false,
               );
             },

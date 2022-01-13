@@ -13,11 +13,8 @@ import 'package:get/get.dart';
 
 import 'vehicle_stop_form_controller.dart';
 
-class VehicleStopFormScreen extends StatelessWidget {
+class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
   VehicleStopFormScreen({Key? key}) : super(key: key);
-
-  VehicleStopFormController vehicleStopFormController =
-      Get.put(VehicleStopFormController());
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +28,7 @@ class VehicleStopFormScreen extends StatelessWidget {
       backgroundColor: Colors.blue.shade200,
       body: SingleChildScrollView(
         child: Form(
-          key: vehicleStopFormController.globalKey,
+          key: controller.globalKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -46,28 +43,27 @@ class VehicleStopFormScreen extends StatelessWidget {
               ),
               TextFormFieldWidget(
                 title: "Officer Name",
-                controller: vehicleStopFormController.officerName,
+                controller: controller.officerName,
               ),
               SizedBox(
                 height: 15,
               ),
               TextFormFieldWidget(
                 title: "Location of Stop",
-                controller: vehicleStopFormController.locationOfStop,
+                controller: controller.locationOfStop,
               ),
               SizedBox(
                 height: 15,
               ),
               TextFormFieldWidget(
                 title: "Plate Info",
-                controller: vehicleStopFormController.plateInfo,
+                controller: controller.plateInfo,
               ),
               SizedBox(
                 height: 15,
               ),
               TextFormFieldWidget(
-                  title: "Date & Time",
-                  controller: vehicleStopFormController.dateTime),
+                  title: "Date & Time", controller: controller.dateTime),
               SizedBox(
                 height: 15,
               ),
@@ -87,21 +83,17 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.violationList.length,
+                  itemCount: controller.violationList.length,
                   itemBuilder: (context, index) {
-                    return Obx(()=> VehicleStopListView(
-                      title: vehicleStopFormController.violationList[index],
-                      value: vehicleStopFormController.violationList[index],
-                      groupValue: vehicleStopFormController
-                                 .violationSelectedOption.value ,
-                      onChanged: (value){
-                        vehicleStopFormController.violation.value = false;
-                                vehicleStopFormController
-                                     .onChangedViolationOption(value);
-                      },
-                    )
-
-                    );
+                    return Obx(() => VehicleStopListView(
+                          title: controller.violationList[index],
+                          value: controller.violationList[index],
+                          groupValue: controller.violationSelectedOption.value,
+                          onChanged: (value) {
+                            controller.violation.value = false;
+                            controller.onChangedViolationOption(value);
+                          },
+                        ));
                   }),
               Divider(
                 color: Colors.black,
@@ -115,22 +107,19 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.resultList.length,
+                  itemCount: controller.resultList.length,
                   itemBuilder: (context, index) {
                     return Obx(
                       () => VehicleStopListView(
-                        title: vehicleStopFormController.resultList[index],
-                        groupValue: vehicleStopFormController
-                            .resultSelectedOption.value,
-                        value: vehicleStopFormController.resultList[index],
+                        title: controller.resultList[index],
+                        groupValue: controller.resultSelectedOption.value,
+                        value: controller.resultList[index],
                         onChanged: (value) {
-                          vehicleStopFormController.result.value = false;
-                          vehicleStopFormController
-                              .onChangedResultOption(value);
+                          controller.result.value = false;
+                          controller.onChangedResultOption(value);
                         },
                       ),
                     );
-
                   }),
               Divider(
                 color: Colors.black,
@@ -144,18 +133,16 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.driverStatusList.length,
+                  itemCount: controller.driverStatusList.length,
                   itemBuilder: (context, index) {
                     return Obx(
                       () => VehicleStopListView(
-                        title: vehicleStopFormController.driverStatusList[index],
-                        value: vehicleStopFormController.driverStatusList[index],
-                        groupValue: vehicleStopFormController
-                            .driverStatusSelectedOption.value,
+                        title: controller.driverStatusList[index],
+                        value: controller.driverStatusList[index],
+                        groupValue: controller.driverStatusSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.driverStatus.value = false;
-                          vehicleStopFormController
-                              .onChangedDriverStatusOption(value);
+                          controller.driverStatus.value = false;
+                          controller.onChangedDriverStatusOption(value);
                         },
                       ),
                     );
@@ -172,18 +159,16 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.driverAgeList.length,
+                  itemCount: controller.driverAgeList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.driverAgeList[index],
-                        value: vehicleStopFormController.driverAgeList[index],
-                        groupValue: vehicleStopFormController
-                            .driverAgeSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.driverAgeList[index],
+                        value: controller.driverAgeList[index],
+                        groupValue: controller.driverAgeSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.driverAge.value = false;
-                          vehicleStopFormController
-                              .onChangedDriverAgeOption(value);
+                          controller.driverAge.value = false;
+                          controller.onChangedDriverAgeOption(value);
                         },
                       ),
                     );
@@ -200,18 +185,16 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.driverGenderList.length,
+                  itemCount: controller.driverGenderList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.driverGenderList[index],
-                        value: vehicleStopFormController.driverGenderList[index],
-                        groupValue: vehicleStopFormController
-                            .driverGenderSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.driverGenderList[index],
+                        value: controller.driverGenderList[index],
+                        groupValue: controller.driverGenderSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.driverGender.value = false;
-                          vehicleStopFormController
-                              .onChangedDriverGenderOption(value);
+                          controller.driverGender.value = false;
+                          controller.onChangedDriverGenderOption(value);
                         },
                       ),
                     );
@@ -223,28 +206,30 @@ class VehicleStopFormScreen extends StatelessWidget {
                 height: 15,
               ),
               HeadingTextWidget(
-                text: "Is driver a resident of Law Enforcement Agency’s Jurisdiction:",
+                text:
+                    "Is driver a resident of Law Enforcement Agency’s Jurisdiction:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: 1,
                   itemBuilder: (context, index) {
-                    return Obx(()=>
-                        ListTile(
-                          horizontalTitleGap: 3.0,
-                          title: Text(
-                            "Yes",
-                          ),
-                          leading: Radio<bool>(
-                            groupValue: vehicleStopFormController.agencyJurisdiction!.value,
-                            value: false,
-                            onChanged: (value){
-                              vehicleStopFormController.agencyJurisdiction!.value= !vehicleStopFormController.agencyJurisdiction!.value;
-                            },
-                            toggleable: true,
-                          ),
+                    return Obx(
+                      () => ListTile(
+                        horizontalTitleGap: 3.0,
+                        title: Text(
+                          "Yes",
                         ),
+                        leading: Radio<bool>(
+                          groupValue: controller.agencyJurisdiction!.value,
+                          value: false,
+                          onChanged: (value) {
+                            controller.agencyJurisdiction!.value =
+                                !controller.agencyJurisdiction!.value;
+                          },
+                          toggleable: true,
+                        ),
+                      ),
                     );
                   }),
               Divider(
@@ -259,18 +244,16 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.locationStopList.length,
+                  itemCount: controller.locationStopList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.locationStopList[index],
-                        value: vehicleStopFormController.locationStopList[index],
-                        groupValue: vehicleStopFormController
-                            .locationStopSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.locationStopList[index],
+                        value: controller.locationStopList[index],
+                        groupValue: controller.locationStopSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.locationStop.value = false;
-                          vehicleStopFormController
-                              .onChangedLocationStopOption(value);
+                          controller.locationStop.value = false;
+                          controller.onChangedLocationStopOption(value);
                         },
                       ),
                     );
@@ -286,21 +269,22 @@ class VehicleStopFormScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 1,
                   itemBuilder: (context, index) {
-                    return Obx(()=>
-                        ListTile(
-                          horizontalTitleGap: 3.0,
-                          title: Text(
-                            "Yes",
-                          ),
-                          leading: Radio<bool>(
-                            groupValue: vehicleStopFormController.searchinitiated!.value,
-                            value: false,
-                            onChanged: (value){
-                              vehicleStopFormController.searchinitiated!.value= !vehicleStopFormController.searchinitiated!.value;
-                            },
-                            toggleable: true,
-                          ),
+                    return Obx(
+                      () => ListTile(
+                        horizontalTitleGap: 3.0,
+                        title: Text(
+                          "Yes",
                         ),
+                        leading: Radio<bool>(
+                          groupValue: controller.searchinitiated!.value,
+                          value: false,
+                          onChanged: (value) {
+                            controller.searchinitiated!.value =
+                                !controller.searchinitiated!.value;
+                          },
+                          toggleable: true,
+                        ),
+                      ),
                     );
                   }),
               Divider(
@@ -315,18 +299,16 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.probaleCauseList.length,
+                  itemCount: controller.probaleCauseList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.probaleCauseList[index],
-                        value: vehicleStopFormController.probaleCauseList[index],
-                        groupValue: vehicleStopFormController
-                            .probaleCauseSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.probaleCauseList[index],
+                        value: controller.probaleCauseList[index],
+                        groupValue: controller.probaleCauseSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.probaleCause.value = false;
-                          vehicleStopFormController
-                          .onChangedProbaleCauseOption(value);
+                          controller.probaleCause.value = false;
+                          controller.onChangedProbaleCauseOption(value);
                         },
                       ),
                     );
@@ -343,18 +325,17 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.whatWasSearchList.length,
+                  itemCount: controller.whatWasSearchList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.whatWasSearchList[index],
-                        value: vehicleStopFormController.whatWasSearchList[index],
-                        groupValue: vehicleStopFormController
-                            .whatWasSearchSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.whatWasSearchList[index],
+                        value: controller.whatWasSearchList[index],
+                        groupValue:
+                            controller.whatWasSearchSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.whatWasSearch.value = false;
-                          vehicleStopFormController
-                              .onChangedWhatWasSearchOption(value);
+                          controller.whatWasSearch.value = false;
+                          controller.onChangedWhatWasSearchOption(value);
                         },
                       ),
                     );
@@ -365,25 +346,23 @@ class VehicleStopFormScreen extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-
               HeadingTextWidget(
                 text: "Duration of search:",
               ),
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.durationOfSearchList.length,
+                  itemCount: controller.durationOfSearchList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.durationOfSearchList[index],
-                        value: vehicleStopFormController.durationOfSearchList[index],
-                        groupValue: vehicleStopFormController
-                            .durationOfSearchSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.durationOfSearchList[index],
+                        value: controller.durationOfSearchList[index],
+                        groupValue:
+                            controller.durationOfSearchSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.durationOfSearch.value = false;
-                          vehicleStopFormController
-                              .onChangedDurationOfSearchOption(value);
+                          controller.durationOfSearch.value = false;
+                          controller.onChangedDurationOfSearchOption(value);
                         },
                       ),
                     );
@@ -399,21 +378,22 @@ class VehicleStopFormScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 1,
                   itemBuilder: (context, index) {
-                    return Obx(()=>
-                        ListTile(
-                          horizontalTitleGap: 3.0,
-                          title: Text(
-                            "Yes",
-                          ),
-                          leading: Radio<bool>(
-                            groupValue: vehicleStopFormController.contrabandDiscovered!.value,
-                            value: false,
-                            onChanged: (value){
-                              vehicleStopFormController.contrabandDiscovered!.value= !vehicleStopFormController.contrabandDiscovered!.value;
-                            },
-                            toggleable: true,
-                          ),
+                    return Obx(
+                      () => ListTile(
+                        horizontalTitleGap: 3.0,
+                        title: Text(
+                          "Yes",
                         ),
+                        leading: Radio<bool>(
+                          groupValue: controller.contrabandDiscovered!.value,
+                          value: false,
+                          onChanged: (value) {
+                            controller.contrabandDiscovered!.value =
+                                !controller.contrabandDiscovered!.value;
+                          },
+                          toggleable: true,
+                        ),
+                      ),
                     );
                   }),
               Divider(
@@ -428,18 +408,17 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.typeOfContrabandList.length,
+                  itemCount: controller.typeOfContrabandList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.typeOfContrabandList[index],
-                        value: vehicleStopFormController.typeOfContrabandList[index],
-                        groupValue: vehicleStopFormController
-                            .typeOfContrabandSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.typeOfContrabandList[index],
+                        value: controller.typeOfContrabandList[index],
+                        groupValue:
+                            controller.typeOfContrabandSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.typeOfContraband.value = false;
-                          vehicleStopFormController
-                              .onChangedTypeOfContrabandOption(value);
+                          controller.typeOfContraband.value = false;
+                          controller.onChangedTypeOfContrabandOption(value);
                         },
                       ),
                     );
@@ -455,21 +434,22 @@ class VehicleStopFormScreen extends StatelessWidget {
                   shrinkWrap: true,
                   itemCount: 1,
                   itemBuilder: (context, index) {
-                    return Obx(()=>
-                        ListTile(
-                          horizontalTitleGap: 3.0,
-                          title: Text(
-                            "Yes",
-                          ),
-                          leading: Radio<bool>(
-                            groupValue: vehicleStopFormController.driverArrested!.value,
-                            value: false,
-                            onChanged: (value){
-                              vehicleStopFormController.driverArrested!.value= !vehicleStopFormController.driverArrested!.value;
-                            },
-                            toggleable: true,
-                          ),
+                    return Obx(
+                      () => ListTile(
+                        horizontalTitleGap: 3.0,
+                        title: Text(
+                          "Yes",
                         ),
+                        leading: Radio<bool>(
+                          groupValue: controller.driverArrested!.value,
+                          value: false,
+                          onChanged: (value) {
+                            controller.driverArrested!.value =
+                                !controller.driverArrested!.value;
+                          },
+                          toggleable: true,
+                        ),
+                      ),
                     );
                   }),
               Divider(
@@ -484,18 +464,17 @@ class VehicleStopFormScreen extends StatelessWidget {
               ListView.builder(
                   physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
-                  itemCount: vehicleStopFormController.arrestAllegedList.length,
+                  itemCount: controller.arrestAllegedList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                          () => VehicleStopListView(
-                        title: vehicleStopFormController.arrestAllegedList[index],
-                        value: vehicleStopFormController.arrestAllegedList[index],
-                        groupValue: vehicleStopFormController
-                            .arrestAllegedSelectedOption.value,
+                      () => VehicleStopListView(
+                        title: controller.arrestAllegedList[index],
+                        value: controller.arrestAllegedList[index],
+                        groupValue:
+                            controller.arrestAllegedSelectedOption.value,
                         onChanged: (value) {
-                          vehicleStopFormController.arrestAlleged.value = false;
-                          vehicleStopFormController
-                              .onChangedArrestAllegedOption(value);
+                          controller.arrestAlleged.value = false;
+                          controller.onChangedArrestAllegedOption(value);
                         },
                       ),
                     );
@@ -503,15 +482,30 @@ class VehicleStopFormScreen extends StatelessWidget {
               Divider(
                 color: Colors.black,
               ),
-              RichTextWidget(firstTitle:"Enter the email address you want the report sent to.You will receive an email from ",secondTitle: vehicleStopFormController.emailAdaress,onTap: (){},),
+              RichTextWidget(
+                firstTitle:
+                    "Enter the email address you want the report sent to.You will receive an email from ",
+                secondTitle: controller.emailAdaress,
+                onTap: () {},
+              ),
               SizedBox(
                 height: 15,
               ),
-              TextFormFieldWidget(title: "Lorem ipsum", controller: null,icon: Icon(Icons.email_outlined,color: fontColorLight,),),
+              TextFormFieldWidget(
+                title: "Lorem ipsum",
+                controller: null,
+                icon: Icon(
+                  Icons.email_outlined,
+                  color: fontColorLight,
+                ),
+              ),
               SizedBox(
                 height: 15,
               ),
-              ButtonWidget(title: "Generate", onTap: (){},),
+              ButtonWidget(
+                title: "Generate",
+                onTap: () {},
+              ),
               SizedBox(
                 height: 15,
               ),
@@ -522,12 +516,10 @@ class VehicleStopFormScreen extends StatelessWidget {
     ));
   }
 
- // RxBool select1 = true.obs;
+// RxBool select1 = true.obs;
 
-  // RxInt select= 0.obs;
+// RxInt select= 0.obs;
 }
-
-
 
 class VehicleStopListView extends StatelessWidget {
   const VehicleStopListView({

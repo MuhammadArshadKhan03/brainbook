@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-class SubcriptionSurveyController extends GetxController{
+class SubscriptionSurveyController extends GetxController{
 
   RxBool resubscribe = false.obs;
   var resubscribeSelectedOption = "Yes".obs;

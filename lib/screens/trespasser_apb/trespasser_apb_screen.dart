@@ -12,11 +12,9 @@ import 'package:get/get.dart';
 import 'trespasser_apb_controller.dart';
 import 'widget/trespasser_card.dart';
 
-class TrespasserAPBScreen extends StatelessWidget {
+class TrespasserAPBScreen extends GetView<TrespasserAPBController> {
   TrespasserAPBScreen({Key? key}) : super(key: key);
 
-  TrespasserAPBController trespasserAPBController =
-      Get.put(TrespasserAPBController());
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +38,11 @@ class TrespasserAPBScreen extends StatelessWidget {
                 itemCount: 3,
                 itemBuilder: (contex, index) {
                   return TrespasserCard(
-                    onTap: ()=> Get.toNamed(Routes.trespasserApbDetailsScreen,arguments: trespasserAPBController.imageList[0]),
-                    image: trespasserAPBController.imageList[index],
-                    title: trespasserAPBController.aboutList[1],
-                    subtitle: trespasserAPBController.aboutList[2],
-                    heading: trespasserAPBController.aboutList[0],
+                    onTap: ()=> Get.toNamed(Routes.trespasserApbDetailsScreen,arguments: controller.imageList[0]),
+                    image: controller.imageList[index],
+                    title: controller.aboutList[1],
+                    subtitle: controller.aboutList[2],
+                    heading: controller.aboutList[0],
                   );
                 }),
             SizedBox(

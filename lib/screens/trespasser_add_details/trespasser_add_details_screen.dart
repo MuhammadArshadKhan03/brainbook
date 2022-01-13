@@ -10,12 +10,11 @@ import 'package:brainbook/screens/trespasser_apb/trespasser_apb_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'add_trespasser_details_controller.dart';
+import 'trespasser_add_details_controller.dart';
 
-class AddTrespasserDetailsScreen extends StatelessWidget {
+class AddTrespasserDetailsScreen extends GetView<AddTrespasserDetailsController> {
   AddTrespasserDetailsScreen({Key? key}) : super(key: key);
-  AddTrespasserDetailsController addTrespasserDetailsController =
-      Get.put(AddTrespasserDetailsController());
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +26,7 @@ class AddTrespasserDetailsScreen extends StatelessWidget {
         backgroundColor: Colors.blue.shade200,
         body: SingleChildScrollView(
           child: Form(
-            key: addTrespasserDetailsController.globalKey,
+            key: controller.globalKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -37,49 +36,49 @@ class AddTrespasserDetailsScreen extends StatelessWidget {
                 ),
                 TextFormFieldWidget(
                   title: "Trespass Authorizer",
-                  controller: addTrespasserDetailsController.trespassAuth,
+                  controller: controller.trespassAuth,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Location Name",
-                  controller: addTrespasserDetailsController.locationName,
+                  controller: controller.locationName,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Address",
-                  controller: addTrespasserDetailsController.address,
+                  controller: controller.address,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Date & Time",
-                  controller: addTrespasserDetailsController.dateTime,
+                  controller: controller.dateTime,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Police Department",
-                  controller: addTrespasserDetailsController.policeDept,
+                  controller: controller.policeDept,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Trespasser Name",
-                  controller: addTrespasserDetailsController.trespassName,
+                  controller: controller.trespassName,
                 ),
                 SizedBox(
                   height: 15,
                 ),
                 TextFormFieldWidget(
                   title: "Other Notes",
-                  controller: addTrespasserDetailsController.otherNotes,
+                  controller: controller.otherNotes,
                 ),
                 SizedBox(
                   height: 15,
@@ -116,8 +115,8 @@ class AddTrespasserDetailsScreen extends StatelessWidget {
                 SizedBox(height: 15),
                 ButtonWidget(
                   title: "SAVE",
-                  onTap: () => Get.off(
-                    TrespasserAPBScreen(),
+                  onTap: () => Get.offNamed(
+                    Routes.trespasserAPBScreen
                   ),
                 ),
                 SizedBox(height: 15),
