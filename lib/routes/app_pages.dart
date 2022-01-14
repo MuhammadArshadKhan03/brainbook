@@ -26,6 +26,10 @@ import 'package:brainbook/screens/drugs_related/drugs_related_binding.dart';
 import 'package:brainbook/screens/drugs_related/drugs_related_screen.dart';
 import 'package:brainbook/screens/exigent_circumstances/exigent_circumstances_binding.dart';
 import 'package:brainbook/screens/exigent_circumstances/exigent_circumstances_screen.dart';
+import 'package:brainbook/screens/faqs/faqs_binding.dart';
+import 'package:brainbook/screens/faqs/faqs_screen.dart';
+import 'package:brainbook/screens/faqs_detail/faqs_detail_binding.dart';
+import 'package:brainbook/screens/faqs_detail/faqs_detail_screen.dart';
 import 'package:brainbook/screens/farorites/favorites_screen.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_binding.dart';
 import 'package:brainbook/screens/federal_codes/federal_code_screen.dart';
@@ -47,6 +51,8 @@ import 'package:brainbook/screens/gladys_marsy/gladys_marsy_binding.dart';
 import 'package:brainbook/screens/gladys_marsy/gladys_marsy_screen.dart';
 import 'package:brainbook/screens/gladys_r_admonition/gladys_admonition_binding.dart';
 import 'package:brainbook/screens/gladys_r_admonition/gladys_r_admonition_screen.dart';
+import 'package:brainbook/screens/go_offline/go_offline_binding.dart';
+import 'package:brainbook/screens/go_offline/go_offline_screen.dart';
 import 'package:brainbook/screens/home/home_screen.dart';
 import 'package:brainbook/screens/important_information/important_info_binding.dart';
 import 'package:brainbook/screens/important_information/important_information_screen.dart';
@@ -73,6 +79,8 @@ import 'package:brainbook/screens/notebook/notebook_screen.dart';
 import 'package:brainbook/screens/password_update/password_update_screen.dart';
 import 'package:brainbook/screens/pat_tracker_list/pat_tracker_list_binding.dart';
 import 'package:brainbook/screens/pat_tracker_list/pat_tracker_list_screen.dart';
+import 'package:brainbook/screens/privacy_policy/privacy_policy_binding.dart';
+import 'package:brainbook/screens/privacy_policy/privacy_policy_screen.dart';
 import 'package:brainbook/screens/profile/profile_binding.dart';
 import 'package:brainbook/screens/profile/profile_screen.dart';
 import 'package:brainbook/screens/pta_tracker_add_details/pat_tracker_add_detail_binding.dart';
@@ -89,6 +97,8 @@ import 'package:brainbook/screens/retirement_tools/retirement_tools_binding.dart
 import 'package:brainbook/screens/retirement_tools/retirement_tools_screen.dart';
 import 'package:brainbook/screens/settings/settings_binding.dart';
 import 'package:brainbook/screens/settings/settings_screen.dart';
+import 'package:brainbook/screens/settings_distance_unit/settings_distance_unit_binding.dart';
+import 'package:brainbook/screens/settings_distance_unit/settings_distance_unit_screen.dart';
 import 'package:brainbook/screens/settings_location/settings_location_binding.dart';
 import 'package:brainbook/screens/settings_location/settings_location_screen.dart';
 import 'package:brainbook/screens/sfst_more_option/sfst_more_option_binding.dart';
@@ -103,6 +113,8 @@ import 'package:brainbook/screens/subscribe/subscribe_binding.dart';
 import 'package:brainbook/screens/subscribe/subscribe_screen.dart';
 import 'package:brainbook/screens/subscription_survey/subscription_survey_binding.dart';
 import 'package:brainbook/screens/subscription_survey/subscription_survey_screen.dart';
+import 'package:brainbook/screens/support/support_binding.dart';
+import 'package:brainbook/screens/support/support_screen.dart';
 import 'package:brainbook/screens/switch_state/switch_state_binding.dart';
 import 'package:brainbook/screens/switch_state/switch_state_screen.dart';
 import 'package:brainbook/screens/switch_state_change/switch_state_change_binding.dart';
@@ -209,5 +221,11 @@ class AppPages{
     GetPage(name: Routes.profileScreen, page: ()=>  ProfileScreen(),binding: ProfileBinding()),
     GetPage(name: Routes.settingsScreen, page: ()=>  SettingsScreen(),binding: SettingsBinding()),
     GetPage(name: Routes.settingsLocationScreen, page: ()=>  SettingsLocationScreen(),binding: SettingsLocationBinding()),
+    GetPage(name: Routes.settingsDistanceUnitScreen, page: ()=>  SettingsDistanceUnitScreen(),binding: SettingsDistanceUnitBinding()),
+    GetPage(name: Routes.fAQsScreen, page: ()=>  FAQsScreen(),binding: FAQsBinding()),
+    GetPage(name: Routes.fAQsDetailScreen, page: ()=>  FAQsDetailScreen(),binding: FAQsDetailBinding()),
+    GetPage(name: Routes.goOfflineScreen, page: ()=>  GoOfflineScreen(),binding: GoOfflineBinding()),
+    GetPage(name: Routes.supportScreen, page: ()=>  SupportScreen(),binding: SupportBinding()),
+    GetPage(name: Routes.privacyPolicyScreen, page: ()=>  PrivacyPolicyScreen(),binding: PrivacyPolicyBinding()),
   ];
 }

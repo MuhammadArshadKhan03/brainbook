@@ -7,9 +7,8 @@ class HeadingTextWidget extends StatelessWidget {
     required this.text,
     this.textColor,
     this.color = false,
-
   }) : super(key: key);
-final Color? textColor;
+  final Color? textColor;
   final String text;
   final bool color;
 
@@ -17,7 +16,13 @@ final Color? textColor;
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 18.0),
-      child: Text(text,style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,color: color?textColor:Colors.black),),
+      child: Text(
+        text,
+        style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: color ? textColor : Colors.black),
+      ),
     );
   }
 }

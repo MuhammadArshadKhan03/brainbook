@@ -72,4 +72,10 @@ class Routes{
   static const String profileScreen = "/profileScreen";
   static const String settingsScreen = "/settingsScreen";
   static const String settingsLocationScreen = "/settingsLocationScreen";
+  static const String settingsDistanceUnitScreen = "/settingsDistanceUnitScreen";
+  static const String fAQsScreen = "/fAQsScreen";
+  static const String fAQsDetailScreen = "/fAQsDetailScreen";
+  static const String goOfflineScreen = "/goOfflineScreen";
+  static const String supportScreen = "/supportScreen";
+  static const String privacyPolicyScreen = "/privacyPolicyScreen";
 }

@@ -47,7 +47,7 @@ class NavigationDrawerScreen extends GetView<DashBoardController> {
                               : Colors.black),
                     ),
                     hoverColor: Colors.white70,
-                     onTap: ()=>Get.toNamed(controller.drawerRoutes[index]),
+                     onTap: ()=>Get.toNamed(controller.drawerRoutes[index],),
                   ),
                 );
               },

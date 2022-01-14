@@ -11,6 +11,7 @@ class ButtonWidget extends StatelessWidget {
     this.padding,
     this.borderRadiusGeometry,
     this.borderRadiusGeometry2,
+    this.icon
   }) : super(key: key);
 
   String title;
@@ -18,6 +19,7 @@ class ButtonWidget extends StatelessWidget {
   EdgeInsetsGeometry? padding;
   BorderRadiusGeometry? borderRadiusGeometry;
   BorderRadiusGeometry? borderRadiusGeometry2;
+   Icon? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +29,15 @@ class ButtonWidget extends StatelessWidget {
         decoration: BoxDecoration(gradient: linearColor,borderRadius: borderRadiusGeometry??BorderRadius.circular(10)),
         child: ElevatedButton(
           onPressed: onTap,
-          child: Text(
-            title,
-            style: TextStyle(fontSize: 18),
+          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(child: icon??null,),
+              SizedBox(width: 6,),
+              Text(
+                title,
+                style: TextStyle(fontSize: 18),
+              ),
+            ],
           ),
 
           style: ElevatedButton.styleFrom(

@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class GangSlangController extends GetxController{
+
+  GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  TextEditingController search = TextEditingController();
 
   List<String> gangList = [
     "AFFA",

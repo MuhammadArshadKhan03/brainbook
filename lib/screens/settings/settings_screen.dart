@@ -40,14 +40,15 @@ class SettingsScreen extends GetView<SettingsController> {
                 color: Colors.black,
               ),
               title: InkWell(
-                  //onTap: ()=> Get.toNamed(),
+                  onTap: ()=> Get.toNamed(Routes.settingsDistanceUnitScreen),
                   child: Text(
                    "Distance units",
                   )),
-              trailing: Text(
-                   "Kilometers/Meters",
-                  style: TextStyle(color:Colors.black54, fontSize: 14)),
-            ),
+              trailing:
+               Text("Kilometers/Meters",
+                    style: TextStyle(color:Colors.black54, fontSize: 14)),
+              ),
+
             ListTile(
               leading: const Icon(
                 Icons.fastfood,

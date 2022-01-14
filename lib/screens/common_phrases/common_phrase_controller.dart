@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 class CommonPhraseController extends GetxController{
 
+  GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  TextEditingController search = TextEditingController();
+
   List<Player> title = [
     Player(title: "Against the wall", subTitle: "Contre le mur"),
     Player(title: "Answer", subTitle: "Répondez."),

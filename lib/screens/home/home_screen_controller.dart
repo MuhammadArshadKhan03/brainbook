@@ -1,7 +1,64 @@
 import 'package:brainbook/routes/app_routes.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController{
+
+   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  //final GlobalKey homeScreenFormController1 = GlobalKey<FormState>();
+
+  TextEditingController stateController = TextEditingController();
+
+   RxBool? hello = false.obs;
+
+   String city = "";
+
+
+  List<String> Cities = [
+    "New York",
+    "California",
+    "Georgia",
+    "New Mexico",
+
+  ];
+
+   final currentIndex = 0.obs;
+
+   Widget get currentPage => pages[currentIndex.value];
+
+   List<Widget> pages = [
+     Container(color: Colors.blue,),
+     Container(color: Colors.red,),
+     Container(color: Colors.yellow,),
+     Container(color: Colors.orange,),
+   ];
+   final title = "New York".obs;
+   void changePage(int _index) {
+     currentIndex.value = _index;
+     switch (_index) {
+       case 0:
+         {
+           title.value = 'New York';
+         }
+         break;
+       case 1:
+         {
+           title.value = 'California';
+         }
+         break;
+       case 2:
+         {
+           title.value = 'Georgia';
+         }
+         break;
+       case 3:
+         {
+           title.value = 'New Mexico';
+         }
+         break;
+     }
+     print(currentIndex.value);
+   }
 
 
 
