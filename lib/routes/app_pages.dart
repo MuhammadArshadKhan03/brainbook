@@ -12,10 +12,16 @@ import 'package:brainbook/screens/ask_question/ask_question_binding.dart';
 import 'package:brainbook/screens/ask_question/ask_question_screen.dart';
 import 'package:brainbook/screens/audio/audio_binding.dart';
 import 'package:brainbook/screens/audio/audio_screen.dart';
+import 'package:brainbook/screens/bellwood_pd/bellwood_pd_binding.dart';
+import 'package:brainbook/screens/bellwood_pd/bellwood_pd_screen.dart';
 import 'package:brainbook/screens/case_law/case_law_binding.dart';
 import 'package:brainbook/screens/case_law/case_law_screen.dart';
 import 'package:brainbook/screens/case_law_detail/case_law_detail_binding.dart';
 import 'package:brainbook/screens/case_law_detail/case_law_detail_screen.dart';
+import 'package:brainbook/screens/chicago_pd/chicago_pd_binding.dart';
+import 'package:brainbook/screens/chicago_pd/chicago_pd_screen.dart';
+import 'package:brainbook/screens/cicero_pd/cicero_pd_binding.dart';
+import 'package:brainbook/screens/cicero_pd/cicero_pd_screen.dart';
 import 'package:brainbook/screens/common_phrases/common_phrase_screen.dart';
 import 'package:brainbook/screens/common_phrases/common_phrases_binding.dart';
 import 'package:brainbook/screens/dash_board/dash_board_screen.dart';
@@ -58,8 +64,12 @@ import 'package:brainbook/screens/important_information/important_info_binding.d
 import 'package:brainbook/screens/important_information/important_information_screen.dart';
 import 'package:brainbook/screens/keys_to_castle/keys_to_castle_binding.dart';
 import 'package:brainbook/screens/keys_to_castle/keys_to_castle_screen.dart';
+import 'package:brainbook/screens/lake_country/lake_country_binding.dart';
+import 'package:brainbook/screens/lake_country/lake_country_screen.dart';
 import 'package:brainbook/screens/less_lethal/less_lethal_binding.dart';
 import 'package:brainbook/screens/less_lethal/less_lethal_screen.dart';
+import 'package:brainbook/screens/lewis_university_pd/lewis_university_pd_binding.dart';
+import 'package:brainbook/screens/lewis_university_pd/lewis_university_pd_screen.dart';
 import 'package:brainbook/screens/location_add_details/location_add_detail_binding.dart';
 import 'package:brainbook/screens/location_add_details/location_add_details_screen.dart';
 import 'package:brainbook/screens/location_more_information/location_more_info_binding.dart';
@@ -87,7 +97,7 @@ import 'package:brainbook/screens/pta_tracker_add_details/pat_tracker_add_detail
 import 'package:brainbook/screens/pta_tracker_add_details/pta_tracker_add_details_screen.dart';
 import 'package:brainbook/screens/pta_tracker_detail/pta_tracker_detail_binding.dart';
 import 'package:brainbook/screens/pta_tracker_detail/pta_tracker_detail_screen.dart';
-import 'package:brainbook/screens/recruits_studying/recruits_studying.dart';
+import 'package:brainbook/screens/recruits_studying/recruits_studying_binding.dart';
 import 'package:brainbook/screens/recruits_studying/recruits_studying_screen.dart';
 import 'package:brainbook/screens/redeem_card/redeem_card_binding.dart';
 import 'package:brainbook/screens/redeem_card/redeem_card_screen.dart';
@@ -144,6 +154,8 @@ import 'package:brainbook/screens/warrants/warrants_screen.dart';
 import 'package:brainbook/screens/welcome/welcome_screen.dart';
 import 'package:brainbook/screens/window_tint_laws/window_tint_laws_binding.dart';
 import 'package:brainbook/screens/window_tint_laws/window_tint_laws_screen.dart';
+import 'package:brainbook/screens/your_department/your_department_binding.dart';
+import 'package:brainbook/screens/your_department/your_department_screen.dart';
 import 'package:get/get.dart';
 
 
@@ -227,5 +239,11 @@ class AppPages{
     GetPage(name: Routes.goOfflineScreen, page: ()=>  GoOfflineScreen(),binding: GoOfflineBinding()),
     GetPage(name: Routes.supportScreen, page: ()=>  SupportScreen(),binding: SupportBinding()),
     GetPage(name: Routes.privacyPolicyScreen, page: ()=>  PrivacyPolicyScreen(),binding: PrivacyPolicyBinding()),
+    GetPage(name: Routes.yourDeptScreen, page: ()=>  YourDeptScreen(),binding: YourDeptBinding()),
+    GetPage(name: Routes.bellwoodPDScreen, page: ()=>  BellwoodPDScreen(),binding: BellwoodPDBinding()),
+    GetPage(name: Routes.lakeCountryScreen, page: ()=>  LakeCountryScreen(),binding: LakeCountryBinding()),
+    GetPage(name: Routes.chicagoPDScreen, page: ()=>  ChicagoPDScreen(),binding: ChicagoPDBinding()),
+    GetPage(name: Routes.lewisUniversityPDScreen, page: ()=>  LewisUniversityPDScreen(),binding: LewisUniversityPDBinding()),
+    GetPage(name: Routes.ciceroPDScreen, page: ()=>  CiceroPDScreen(),binding: CiceroPDBinding()),
   ];
 }

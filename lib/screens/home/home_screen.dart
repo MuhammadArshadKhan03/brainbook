@@ -91,24 +91,7 @@ class Home extends GetView<HomeController> {
                Container(
                   height: 470,
                   child: Obx(()=> controller.pages[controller.Cities.indexOf(val.value)]),
-                  // GridView.builder(
-                  //     physics: BouncingScrollPhysics(),
-                  //     shrinkWrap: true,
-                  //     itemCount: controller.home.length,
-                  //     itemBuilder: (context, index) {
-                  //       return HomeCard(
-                  //         onTap: () => Get.toNamed(controller.routes[index]),
-                  //         text: controller.home[index].text,
-                  //         imagePath: controller.home[index].image,
-                  //         isLock: index == 17 || index == 19 || index == 20,
-                  //       );
-                  //     },
-                  //     gridDelegate:
-                  //         const SliverGridDelegateWithFixedCrossAxisCount(
-                  //       mainAxisExtent: 60,
-                  //       mainAxisSpacing: 5,
-                  //       crossAxisCount: 2,
-                  //     ),),
+
                 ),
 
             ],

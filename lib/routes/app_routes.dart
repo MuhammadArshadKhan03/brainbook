@@ -78,4 +78,10 @@ class Routes{
   static const String goOfflineScreen = "/goOfflineScreen";
   static const String supportScreen = "/supportScreen";
   static const String privacyPolicyScreen = "/privacyPolicyScreen";
+  static const String yourDeptScreen = "/yourDeptScreen";
+  static const String bellwoodPDScreen = "/bellwoodPDScreen";
+  static const String lakeCountryScreen = "/lakeCountryScreen";
+  static const String chicagoPDScreen = "/chicagoPDScreen";
+  static const String lewisUniversityPDScreen = "/lewisUniversityPDScreen";
+  static const String ciceroPDScreen = "/ciceroPDScreen";
 }

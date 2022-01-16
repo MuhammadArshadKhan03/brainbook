@@ -2,6 +2,8 @@ import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'widgets/states.dart';
+
 class HomeController extends GetxController{
 
    GlobalKey<FormState> globalKey = GlobalKey<FormState>();
@@ -15,87 +17,87 @@ class HomeController extends GetxController{
 
 
   List<String> Cities = [
-    "New York",
     "California",
-    "Georgia",
-    "New Mexico",
+    "Illinois",
+    "LASD",
+    "New York",
 
   ];
 
-   final currentIndex = 0.obs;
-
-   Widget get currentPage => pages[currentIndex.value];
+   // final currentIndex = 0.obs;
+   //
+   // Widget get currentPage => pages[currentIndex.value];
 
    List<Widget> pages = [
-     Container(color: Colors.blue,),
-     Container(color: Colors.red,),
+     StateMainHomePage(),
+     IllinoisHomePage(),
      Container(color: Colors.yellow,),
      Container(color: Colors.orange,),
    ];
-   final title = "New York".obs;
-   void changePage(int _index) {
-     currentIndex.value = _index;
-     switch (_index) {
-       case 0:
-         {
-           title.value = 'New York';
-         }
-         break;
-       case 1:
-         {
-           title.value = 'California';
-         }
-         break;
-       case 2:
-         {
-           title.value = 'Georgia';
-         }
-         break;
-       case 3:
-         {
-           title.value = 'New Mexico';
-         }
-         break;
-     }
-     print(currentIndex.value);
-   }
+   // final title = "New York".obs;
+   // void changePage(int _index) {
+   //   currentIndex.value = _index;
+   //   switch (_index) {
+   //     case 0:
+   //       {
+   //         title.value = 'New York';
+   //       }
+   //       break;
+   //     case 1:
+   //       {
+   //         title.value = 'California';
+   //       }
+   //       break;
+   //     case 2:
+   //       {
+   //         title.value = 'Georgia';
+   //       }
+   //       break;
+   //     case 3:
+   //       {
+   //         title.value = 'New Mexico';
+   //       }
+   //       break;
+   //   }
+   //   print(currentIndex.value);
+   // }
 
 
 
-  List<Home> home = [
-    Home(image:"assets/mainhomepage/1.png", text: "Warrants",),
-    Home(image: "assets/mainhomepage/2.png", text: "Federal Codes",),
-    Home(image: "assets/mainhomepage/3.png", text: "Less Lethal",),
-    Home(image: "assets/mainhomepage/4.png", text: "Drugs Related",),
-    Home(image: "assets/mainhomepage/5.png", text: "Translator",),
-    Home(image: "assets/mainhomepage/6.png", text: "Dead Chechlist",),
-    Home(image: "assets/mainhomepage/7.png", text: "Age Calculator",),
-    Home(image: "assets/mainhomepage/8.png", text: "Gang Slang",),
-    Home(image: "assets/mainhomepage/9.png", text: "Trafic Investigation",),
-    Home(image: "assets/mainhomepage/10.png", text: "Testifying Tips",),
-    Home(image: "assets/mainhomepage/11.png", text: "Window Tint laws",),
-    Home(image: "assets/mainhomepage/12.png", text: "SFST’s",),
-    Home(image: "assets/mainhomepage/13.png", text: "Case Law",),
-    Home(image: "assets/mainhomepage/14.png", text: "Gladys R./Marsy`s",),
-    Home(image: "assets/mainhomepage/15.png", text: "Miranda",),
-    Home(image: "assets/mainhomepage/16.png", text: "Keys to Castle",),
-    Home(image: "assets/mainhomepage/17.png", text: "Exigent Circs",),
-    Home(image: "assets/mainhomepage/18.png", text: "Placards",),
-    Home(image: "assets/mainhomepage/19.png", text: "Vechicle Stop Form",),
-    Home(image: "assets/mainhomepage/20.png", text: "VIN Decoder",),
-    Home(image: "assets/mainhomepage/21.png", text: "K-9 Report",),
-    Home(image: "assets/mainhomepage/22.png", text: "Trespasser APB",),
-    Home(image: "assets/mainhomepage/23.png", text: "Front Plates",),
-    Home(image: "assets/mainhomepage/24.png", text: "Amber Alerts",),
-    Home(image: "assets/mainhomepage/25.png", text: "Recruits/Studing",),
-    Home(image: "assets/mainhomepage/26.png", text: "FBI Most Wanted",),
-    Home(image: "assets/mainhomepage/27.png", text: "Subscripition Survey",),
-    Home(image: "assets/mainhomepage/28.png", text: "Retirement Tools",),
-    Home(image: "assets/mainhomepage/29.png", text: "1st Amd `Provokers`",),
+  List<MainHomePage> mainHomePage = [
+    MainHomePage(image:"assets/mainhomepage/1.png", text: "Warrants",),
+    MainHomePage(image: "assets/mainhomepage/2.png", text: "Federal Codes",),
+    MainHomePage(image: "assets/mainhomepage/3.png", text: "Less Lethal",),
+    MainHomePage(image: "assets/mainhomepage/4.png", text: "Drugs Related",),
+    MainHomePage(image: "assets/mainhomepage/5.png", text: "Translator",),
+    MainHomePage(image: "assets/mainhomepage/6.png", text: "Dead Chechlist",),
+    MainHomePage(image: "assets/mainhomepage/7.png", text: "Age Calculator",),
+    MainHomePage(image: "assets/mainhomepage/8.png", text: "Gang Slang",),
+    MainHomePage(image: "assets/mainhomepage/9.png", text: "Trafic Investigation",),
+    MainHomePage(image: "assets/mainhomepage/10.png", text: "Testifying Tips",),
+    MainHomePage(image: "assets/mainhomepage/11.png", text: "Window Tint laws",),
+    MainHomePage(image: "assets/mainhomepage/12.png", text: "SFST’s",),
+    MainHomePage(image: "assets/mainhomepage/13.png", text: "Case Law",),
+    MainHomePage(image: "assets/mainhomepage/14.png", text: "Gladys R./Marsy`s",),
+    MainHomePage(image: "assets/mainhomepage/15.png", text: "Miranda",),
+    MainHomePage(image: "assets/mainhomepage/16.png", text: "Keys to Castle",),
+    MainHomePage(image: "assets/mainhomepage/17.png", text: "Exigent Circs",),
+    MainHomePage(image: "assets/mainhomepage/18.png", text: "Placards",),
+    MainHomePage(image: "assets/mainhomepage/19.png", text: "Vechicle Stop Form",),
+    MainHomePage(image: "assets/mainhomepage/20.png", text: "VIN Decoder",),
+    MainHomePage(image: "assets/mainhomepage/21.png", text: "K-9 Report",),
+    MainHomePage(image: "assets/mainhomepage/22.png", text: "Trespasser APB",),
+    MainHomePage(image: "assets/mainhomepage/23.png", text: "Front Plates",),
+    MainHomePage(image: "assets/mainhomepage/24.png", text: "Amber Alerts",),
+    MainHomePage(image: "assets/mainhomepage/25.png", text: "Recruits/Studing",),
+    MainHomePage(image: "assets/mainhomepage/26.png", text: "FBI Most Wanted",),
+    MainHomePage(image: "assets/mainhomepage/27.png", text: "Subscripition Survey",),
+    MainHomePage(image: "assets/mainhomepage/28.png", text: "Retirement Tools",),
+    MainHomePage(image: "assets/mainhomepage/29.png", text: "1st Amd `Provokers`",),
 
   ];
 
-  List<String> routes = [
+  List<String> mainPageRoutes = [
     Routes.warrantsScreen,
     Routes.federalCodeScreen,
     Routes.lessLethalScreen,
@@ -128,12 +130,92 @@ class HomeController extends GetxController{
 
   ];
 
+
+   List<IllinoisPage> illinoisPage = [
+     IllinoisPage(image: "assets/illinoishomepage/2.png", text: "ISP Districts",),
+     IllinoisPage(image: "assets/illinoishomepage/3.png", text: "Common Codes",),
+     IllinoisPage(image: "assets/illinoishomepage/4.png", text: "Less Lethal",),
+     IllinoisPage(image: "assets/illinoishomepage/5.png", text: "Drugs Related",),
+     IllinoisPage(image: "assets/illinoishomepage/6.png", text: "Translator",),
+     IllinoisPage(image: "assets/illinoishomepage/7.png", text: "Common Traffic",),
+     IllinoisPage(image: "assets/illinoishomepage/8.png", text: "Age Calculator",),
+     IllinoisPage(image: "assets/illinoishomepage/9.png", text: "Gang Slang",),
+     IllinoisPage(image: "assets/illinoishomepage/10.png", text: "Trafic Investigation",),
+     IllinoisPage(image: "assets/illinoishomepage/11.png", text: "Testifying Tips",),
+     IllinoisPage(image: "assets/illinoishomepage/12.png", text: "Window Tint laws",),
+     IllinoisPage(image: "assets/illinoishomepage/13.png", text: "SFST’s",),
+     IllinoisPage(image: "assets/illinoishomepage/14.png", text: "Case Law",),
+     IllinoisPage(image: "assets/illinoishomepage/15.png", text: "Gladys R./Marsy`s",),
+     IllinoisPage(image: "assets/illinoishomepage/16.png", text: "Miranda",),
+     IllinoisPage(image: "assets/illinoishomepage/17.png", text: "Keys to Castle",),
+     IllinoisPage(image: "assets/illinoishomepage/18.png", text: "Exigent Circs",),
+     IllinoisPage(image: "assets/illinoishomepage/19.png", text: "Weapons",),
+     IllinoisPage(image: "assets/illinoishomepage/20.png", text: "Vechicle Stop Form",),
+     IllinoisPage(image: "assets/illinoishomepage/21.png", text: "Domestic Violence",),
+     IllinoisPage(image: "assets/illinoishomepage/22.png", text: "Theft",),
+     IllinoisPage(image: "assets/illinoishomepage/23.png", text: "Trespasser APB",),
+     IllinoisPage(image: "assets/illinoishomepage/24.png", text: "Crime Elements",),
+     IllinoisPage(image: "assets/illinoishomepage/25.png", text: "Amber Alerts",),
+     IllinoisPage(image: "assets/illinoishomepage/26.png", text: "School Related",),
+     IllinoisPage(image: "assets/illinoishomepage/27.png", text: "FBI Most Wanted",),
+     IllinoisPage(image: "assets/illinoishomepage/28.png", text: "UCR Codes",),
+     IllinoisPage(image: "assets/illinoishomepage/29.png", text: "Retirement Tools",),
+     IllinoisPage(image: "assets/illinoishomepage/30.png", text: "VIN Codes",),
+     IllinoisPage(image: "assets/illinoishomepage/31.png", text: "AOIC Codes",),
+     IllinoisPage(image: "assets/illinoishomepage/32.png", text: "Federal Codes",),
+
+   ];
+
+   List<String> illinoisPageRoutes = [
+     Routes.yourDeptScreen,
+     Routes.federalCodeScreen,
+     Routes.lessLethalScreen,
+     Routes.drugsRelatedScreen,
+     Routes.translatorScreen,
+     Routes.deadCheckListScreen,
+     Routes.ageCalculationScreen,
+     Routes.gangSlangScreen,
+     Routes.traficInvestigationScreen,
+     Routes.testifyingTipsScreen,
+     Routes.windowTintLawsScreen,
+     Routes.standardizedFST,
+     Routes.caseLawScreen,
+     Routes.gladysMarsyScreen,
+     Routes.mirandaScreen,
+     Routes.keysToCastleScreen,
+     Routes.exigentCircumstancesScreen,
+     " Container(color: Colors.red,),",
+     Routes.vehicleStopFormScreen,
+     " Container(color: Colors.red,),",
+     " Container(color: Colors.red,),",
+     Routes.trespasserAPBScreen,
+     Routes.frontPlatesScreen,
+     " Container(color: Colors.red,),",
+     Routes.recruitsStudyingScreen,
+     " Container(color: Colors.red,),",
+     Routes.subscriptionSurveyScreen,
+     Routes.retirementToolsScreen,
+     Routes.firstAmdProvokers,
+
+   ];
+
+
+
 }
 
-class Home {
+
+class MainHomePage {
   void Function()? onTap;
   final String image;
   final String text;
 
-  Home({required this.image, required this.text,this.onTap});
+  MainHomePage({required this.image, required this.text,this.onTap});
+}
+
+class IllinoisPage {
+  void Function()? onTap;
+  final String image;
+  final String text;
+
+  IllinoisPage({required this.image, required this.text,this.onTap});
 }

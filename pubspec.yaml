@@ -68,6 +68,7 @@ flutter:
   assets:
     - assets/startpage/
     - assets/mainhomepage/
+    - assets/illinoishomepage/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
