@@ -52,11 +52,11 @@ class IllinoisHomePage extends GetView<HomeController> {
       itemCount: controller.illinoisPage.length,
       itemBuilder: (context, index) {
       return HomeCard(
-      onTap: () {},
-          //Get.toNamed(controller.mainPageRoutes[index]),
+      onTap: ()=>
+         index==5||index==20||index==22||index==23||index==24||index==25||index==26||index==28||index==29?null: Get.toNamed(controller.illinoisPageRoutes[index]),
       text: controller.illinoisPage[index].text,
       imagePath: controller.illinoisPage[index].image,
-      isLock: index == 5 || index == 17 || index == 20 || index == 22,
+      isLock: index == 5 || index == 20 || index == 22,
       );
       },
       gridDelegate:

@@ -81,7 +81,7 @@ class Home extends GetView<HomeController> {
                               enabledBorder: InputBorder.none,
                               border: OutlineInputBorder(
                                   borderSide: BorderSide.none,
-                                  borderRadius: BorderRadius.circular(12))),
+                                  borderRadius: BorderRadius.circular(12),),),
                         ),
                       ),
                     ),
@@ -90,8 +90,8 @@ class Home extends GetView<HomeController> {
               ),
                Container(
                   height: 470,
-                  child: Obx(()=> controller.pages[controller.Cities.indexOf(val.value)]),
-
+                  child: Obx(()=> controller.Cities.indexOf(val.value)==-1? controller.pages[0]:
+                  controller.pages[controller.Cities.indexOf(val.value)]),
                 ),
 
             ],

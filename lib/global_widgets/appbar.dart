@@ -28,7 +28,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       title:Text(title,style: TextStyle(fontSize: 15),),
 
       actions: [
-        TextButton(onPressed: onTap??null, child:Text(txtBtnTitle??"",style: TextStyle(color: Colors.white),) ,)
+        TextButton(onPressed: onTap??null, child:Text(txtBtnTitle??"",style: TextStyle(color: Colors.white),) ,),
       ],
       centerTitle: true,
     );

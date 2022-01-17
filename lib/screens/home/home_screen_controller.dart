@@ -34,33 +34,6 @@ class HomeController extends GetxController{
      Container(color: Colors.yellow,),
      Container(color: Colors.orange,),
    ];
-   // final title = "New York".obs;
-   // void changePage(int _index) {
-   //   currentIndex.value = _index;
-   //   switch (_index) {
-   //     case 0:
-   //       {
-   //         title.value = 'New York';
-   //       }
-   //       break;
-   //     case 1:
-   //       {
-   //         title.value = 'California';
-   //       }
-   //       break;
-   //     case 2:
-   //       {
-   //         title.value = 'Georgia';
-   //       }
-   //       break;
-   //     case 3:
-   //       {
-   //         title.value = 'New Mexico';
-   //       }
-   //       break;
-   //   }
-   //   print(currentIndex.value);
-   // }
 
 
 
@@ -167,12 +140,12 @@ class HomeController extends GetxController{
    ];
 
    List<String> illinoisPageRoutes = [
-     Routes.yourDeptScreen,
-     Routes.federalCodeScreen,
+     Routes.iSPDistrictsScreen,
+     Routes.commonCodesScreen,
      Routes.lessLethalScreen,
      Routes.drugsRelatedScreen,
      Routes.translatorScreen,
-     Routes.deadCheckListScreen,
+     "Routes.deadCheckListScreen,",
      Routes.ageCalculationScreen,
      Routes.gangSlangScreen,
      Routes.traficInvestigationScreen,
@@ -184,18 +157,20 @@ class HomeController extends GetxController{
      Routes.mirandaScreen,
      Routes.keysToCastleScreen,
      Routes.exigentCircumstancesScreen,
-     " Container(color: Colors.red,),",
+     Routes.weaponsScreen,
      Routes.vehicleStopFormScreen,
+     Routes.domesticViolenceScreen,
      " Container(color: Colors.red,),",
+      Routes.trespasserAPBScreen,
+     "Routes.frontPlatesScreen,",
      " Container(color: Colors.red,),",
-     Routes.trespasserAPBScreen,
-     Routes.frontPlatesScreen,
-     " Container(color: Colors.red,),",
-     Routes.recruitsStudyingScreen,
-     " Container(color: Colors.red,),",
-     Routes.subscriptionSurveyScreen,
+     "Routes.recruitsStudyingScreen,",
+     "Routes.recruitsStudyingScreen,",
+     "Routes.recruitsStudyingScreen,",
      Routes.retirementToolsScreen,
-     Routes.firstAmdProvokers,
+    " Routes.subscriptionSurveyScreen,",
+    " Routes.retirementToolsScreen,",
+     Routes.federalCodeScreen,
 
    ];
 

@@ -4,7 +4,7 @@ import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/faqs/faqs_controller.dart';
-import 'package:brainbook/screens/gang_slang/widgets/gang_card.dart';
+import 'package:brainbook/screens/main/gang_slang/widgets/gang_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

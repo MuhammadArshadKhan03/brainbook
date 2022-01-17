@@ -84,4 +84,23 @@ class Routes{
   static const String chicagoPDScreen = "/chicagoPDScreen";
   static const String lewisUniversityPDScreen = "/lewisUniversityPDScreen";
   static const String ciceroPDScreen = "/ciceroPDScreen";
+  static const String napervilleScreen = "/napervilleScreen";
+  static const String cookCountyScreen = "/cookCountyScreen";
+  static const String springfieldScreen = "/springfieldScreen";
+  static const String dupageCountyScreen = "/dupageCountyScreen";
+  static const String rockfordPDScreen = "/rockfordPDScreen";
+  static const String grayslakePDScreen = "/grayslakePDScreen";
+  static const String romeopvillePDScreen = "/romeopvillePDScreen";
+  static const String hometownPDScreen = "/hometownPDScreen";
+  static const String willCountyScreen = "/willCountyScreen";
+  static const String jolietPDScreen = "/jolietPDScreen";
+  static const String iSPDistrictsScreen = "/iSPDistrictsScreen";
+  static const String iSPDistrictDetailsScreen = "/iSPDistrictDetailsScreen";
+  static const String commonCodesScreen = "/commonCodesScreen";
+  static const String alcoholScreen = "/alcoholScreen";
+  static const String alcoholDetailScreen = "/alcoholDetailScreen";
+  static const String weaponsScreen = "/weaponsScreen";
+  static const String weaponDetailScreen = "/weaponDetailScreen";
+  static const String domesticViolenceScreen = "/domesticViolenceScreen";
+
 }
