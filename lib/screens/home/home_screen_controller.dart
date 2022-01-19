@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,9 +21,8 @@ class HomeController extends GetxController{
   List<String> Cities = [
     "California",
     "Illinois",
-    "LASD",
     "New York",
-
+    "LASD",
   ];
 
    // final currentIndex = 0.obs;
@@ -31,8 +32,8 @@ class HomeController extends GetxController{
    List<Widget> pages = [
      StateMainHomePage(),
      IllinoisHomePage(),
-     Container(color: Colors.yellow,),
-     Container(color: Colors.orange,),
+     NewYorkHomePage(),
+     LASDHomePage(),
    ];
 
 
@@ -176,6 +177,205 @@ class HomeController extends GetxController{
 
 
 
+   List<NewYorkPage> newYorkPage = [
+     NewYorkPage(image:"assets/newyorkhomepage/2.png", text: "Warrants",),
+     NewYorkPage(image: "assets/newyorkhomepage/3.png", text: "Federal Codes",),
+     NewYorkPage(image: "assets/newyorkhomepage/4.png", text: "Less Lethal",),
+     NewYorkPage(image: "assets/newyorkhomepage/5.png", text: "Drugs Related",),
+     NewYorkPage(image: "assets/newyorkhomepage/6.png", text: "Translator",),
+     NewYorkPage(image: "assets/newyorkhomepage/7.png", text: "NYC Summons",),
+     NewYorkPage(image: "assets/newyorkhomepage/8.png", text: "Age Calculator",),
+     NewYorkPage(image: "assets/newyorkhomepage/9.png", text: "Gang Slang",),
+     NewYorkPage(image: "assets/newyorkhomepage/10.png", text: "Trafic Investigation",),
+     NewYorkPage(image: "assets/newyorkhomepage/11.png", text: "Testifying Tips",),
+     NewYorkPage(image: "assets/newyorkhomepage/12.png", text: "Window Tint laws",),
+     NewYorkPage(image: "assets/newyorkhomepage/13.png", text: "SFST’s",),
+     NewYorkPage(image: "assets/newyorkhomepage/14.png", text: "Case Law",),
+     NewYorkPage(image: "assets/newyorkhomepage/15.png", text: "Gladys R./Marsy`s",),
+     NewYorkPage(image: "assets/newyorkhomepage/16.png", text: "Miranda",),
+     NewYorkPage(image: "assets/newyorkhomepage/17.png", text: "Keys to Castle",),
+     NewYorkPage(image: "assets/newyorkhomepage/18.png", text: "Exigent Circs",),
+     NewYorkPage(image: "assets/newyorkhomepage/19.png", text: "NYC Transit",),
+     NewYorkPage(image: "assets/newyorkhomepage/20.png", text: "Vechicle Stop Form",),
+     NewYorkPage(image: "assets/newyorkhomepage/21.png", text: "Common VTL",),
+     NewYorkPage(image: "assets/newyorkhomepage/22.png", text: "Read Full Laws",),
+     NewYorkPage(image: "assets/newyorkhomepage/23.png", text: "Trespasser APB",),
+     NewYorkPage(image: "assets/newyorkhomepage/24.png", text: "Front Plates",),
+     NewYorkPage(image: "assets/newyorkhomepage/25.png", text: "Amber Alerts",),
+     NewYorkPage(image: "assets/newyorkhomepage/26.png", text: "Testimonies",),
+     NewYorkPage(image: "assets/newyorkhomepage/27.png", text: "FBI Most Wanted",),
+     NewYorkPage(image: "assets/newyorkhomepage/28.png", text: "Subscripition Survey",),
+     NewYorkPage(image: "assets/newyorkhomepage/29.png", text: "Retirement Tools",),
+     NewYorkPage(image: "assets/newyorkhomepage/30.png", text: "Other Codes",),
+     NewYorkPage(image: "assets/newyorkhomepage/31.png", text: "NY State Police",),
+     NewYorkPage(image: "assets/newyorkhomepage/32.png", text: "NYCRR",),
+     NewYorkPage(image: "assets/newyorkhomepage/33.png", text: "NY Agencies",),
+     NewYorkPage(image: "assets/newyorkhomepage/34.png", text: "TBTA Bridges & Tunnels",),
+     NewYorkPage(image: "assets/newyorkhomepage/35.png", text: "NY Sheriff’s",),
+     NewYorkPage(image: "assets/newyorkhomepage/36.png", text: "Precincts Map",),
+     NewYorkPage(image: "assets/newyorkhomepage/37.png", text: "Mile Markers",),
+
+
+   ];
+
+
+   List<String> newYorkPageRoutes = [
+     Routes.warrantsScreen,
+     Routes.federalCodeScreen,
+     Routes.lessLethalScreen,
+     Routes.drugsRelatedScreen,
+     Routes.translatorScreen,
+     Routes.nYCSummonsScreen,
+     Routes.ageCalculationScreen,
+     Routes.gangSlangScreen,
+     Routes.traficInvestigationScreen,
+     Routes.testifyingTipsScreen,
+     Routes.windowTintLawsScreen,
+     Routes.standardizedFST,
+     Routes.caseLawScreen,
+     Routes.gladysMarsyScreen,
+     Routes.mirandaScreen,
+     Routes.keysToCastleScreen,
+     Routes.exigentCircumstancesScreen,
+     Routes.nYCTransitScreen,
+     Routes.vehicleStopFormScreen,
+     Routes.commonVTLScreen,
+     Routes.readFullLawsScreen,
+     Routes.trespasserAPBScreen,
+     Routes.frontPlatesScreen,
+     " Container(color: Colors.red,),",
+     Routes.testimoniesScreen,
+     " Container(color: Colors.red,),",
+     Routes.subscriptionSurveyScreen,
+     Routes.retirementToolsScreen,
+     Routes.otherCodesScreen,
+     Routes.nYStatePoliceScreen,
+   "  Routes.nYStatePoliceScreen,",
+     Routes.nYAgenciesScreen,
+     "  Routes.nYStatePoliceScreen,",
+     Routes.nYSherrifScreen,
+     "  Routes.nYStatePoliceScreen,",
+     Routes.mileMarkersScreen,
+
+   ];
+
+
+
+   List<LASDPage> lASDPage = [
+     LASDPage(image:"assets/lasdhomepage/1.png", text: "Field ID",),
+     LASDPage(image: "assets/lasdhomepage/2.png", text: "SHAD-49",),
+     LASDPage(image: "assets/lasdhomepage/3.png", text: "Stations",),
+     LASDPage(image: "assets/lasdhomepage/4.png", text: "Miranda",),
+     LASDPage(image: "assets/lasdhomepage/5.png", text: "MDC - CAD",),
+     LASDPage(image: "assets/lasdhomepage/6.png", text: "Court #’s",),
+     LASDPage(image: "assets/lasdhomepage/7.png", text: "Drugs Related",),
+     LASDPage(image: "assets/lasdhomepage/8.png", text: "Department #’s",),
+     LASDPage(image: "assets/lasdhomepage/9.png", text: "Common CVC Codes",),
+     LASDPage(image: "assets/lasdhomepage/10.png", text: "Custody #’s",),
+     LASDPage(image: "assets/lasdhomepage/11.png", text: "Other Common Codes",),
+     LASDPage(image: "assets/lasdhomepage/12.png", text: "County Codes",),
+     LASDPage(image: "assets/lasdhomepage/13.png", text: "Broadcasts",),
+     LASDPage(image: "assets/lasdhomepage/14.png", text: "Stat Codes",),
+     LASDPage(image: "assets/lasdhomepage/15.png", text: "Vehicle Theft",),
+     LASDPage(image: "assets/lasdhomepage/16.png", text: "Radio Codes",),
+     LASDPage(image: "assets/lasdhomepage/17.png", text: "Policy",),
+     LASDPage(image: "assets/lasdhomepage/18.png", text: "Phonetics",),
+     LASDPage(image: "assets/lasdhomepage/19.png", text: "Court Codes",),
+     LASDPage(image: "assets/lasdhomepage/20.png", text: "CHP-180 Narratives",),
+     LASDPage(image: "assets/lasdhomepage/21.png", text: "Crime Elements",),
+     LASDPage(image: "assets/lasdhomepage/22.png", text: "Dead Checklist",),
+     LASDPage(image: "assets/lasdhomepage/23.png", text: "RD’s",),
+     LASDPage(image: "assets/lasdhomepage/24.png", text: "SACR",),
+     LASDPage(image: "assets/lasdhomepage/25.png", text: "Warrants",),
+     LASDPage(image: "assets/lasdhomepage/26.png", text: "Domestic Violence",),
+     LASDPage(image: "assets/lasdhomepage/27.png", text: "Exigent Circs",),
+     LASDPage(image: "assets/lasdhomepage/28.png", text: "Gladys R./Marsy’s",),
+     LASDPage(image: "assets/lasdhomepage/29.png", text: "4 keys to Castle",),
+     LASDPage(image: "assets/lasdhomepage/30.png", text: "Ball Schedule",),
+     LASDPage(image: "assets/lasdhomepage/31.png", text: "Case Law",),
+     LASDPage(image: "assets/lasdhomepage/32.png", text: "EPO",),
+     LASDPage(image: "assets/lasdhomepage/33.png", text: "CHP Officers",),
+     LASDPage(image: "assets/lasdhomepage/34.png", text: "Case Assignment",),
+     LASDPage(image: "assets/lasdhomepage/35.png", text: "Pursuits",),
+     LASDPage(image: "assets/lasdhomepage/36.png", text: "Missing Critical",),
+     LASDPage(image: "assets/lasdhomepage/37.png", text: "SFST’s",),
+     LASDPage(image: "assets/lasdhomepage/38.png", text: "Testifying Tips",),
+     LASDPage(image: "assets/lasdhomepage/39.png", text: "Sample Reports",),
+     LASDPage(image: "assets/lasdhomepage/40.png", text: "WIC Codes",),
+     LASDPage(image: "assets/lasdhomepage/40.png", text: "Read Full Codes",),
+     LASDPage(image: "assets/lasdhomepage/42.png", text: "City Abbreviations",),
+     LASDPage(image: "assets/lasdhomepage/43.png", text: "Stat Code Book",),
+     LASDPage(image: "assets/lasdhomepage/44.png", text: "Translators",),
+     LASDPage(image: "assets/lasdhomepage/45.png", text: "Traffic Investigations",),
+     LASDPage(image: "assets/lasdhomepage/46.png", text: "Custody Info",),
+     LASDPage(image: "assets/lasdhomepage/47.png", text: "Age Calculator",),
+     LASDPage(image: "assets/lasdhomepage/48.png", text: "Less Lethal",),
+     LASDPage(image: "assets/lasdhomepage/49.png", text: "APX 8000",),
+     LASDPage(image: "assets/lasdhomepage/50.png", text: "Gang Slang",),
+     LASDPage(image: "assets/lasdhomepage/51.png", text: "Force Options",),
+     LASDPage(image: "assets/lasdhomepage/52.png", text: "Federal Codes",),
+     LASDPage(image: "assets/lasdhomepage/53.png", text: "Placards",),
+     LASDPage(image: "assets/lasdhomepage/54.png", text: "Weapons",),
+     LASDPage(image: "assets/lasdhomepage/55.png", text: "Tressoasser APB",),
+     LASDPage(image: "assets/lasdhomepage/56.png", text: "Windows Tint Laws",),
+     LASDPage(image: "assets/lasdhomepage/57.png", text: "FBI Most Wanted",),
+     LASDPage(image: "assets/lasdhomepage/58.png", text: "Tow Authority",),
+     LASDPage(image: "assets/lasdhomepage/59.png", text: "Front Plates",),
+     LASDPage(image: "assets/lasdhomepage/60.png", text: "Amber Alerts",),
+     LASDPage(image: "assets/lasdhomepage/61.png", text: "Retirement Tools",),
+     LASDPage(image: "assets/lasdhomepage/62.png", text: "MISD Exceptions",),
+     LASDPage(image: "assets/lasdhomepage/63.png", text: "Field OPS",),
+     LASDPage(image: "assets/lasdhomepage/64.png", text: "Crowd Disbursement",),
+     LASDPage(image: "assets/lasdhomepage/65.png", text: "Order the Book",),
+     LASDPage(image: "assets/lasdhomepage/66.png", text: "Brady Bill",),
+
+
+   ];
+
+
+   List<String> lASDPageRoutes = [
+     Routes.warrantsScreen,
+     Routes.federalCodeScreen,
+     Routes.lessLethalScreen,
+     Routes.drugsRelatedScreen,
+     Routes.translatorScreen,
+     Routes.nYCSummonsScreen,
+     Routes.ageCalculationScreen,
+     Routes.gangSlangScreen,
+     Routes.traficInvestigationScreen,
+     Routes.testifyingTipsScreen,
+     Routes.windowTintLawsScreen,
+     Routes.standardizedFST,
+     Routes.caseLawScreen,
+     Routes.gladysMarsyScreen,
+     Routes.mirandaScreen,
+     Routes.keysToCastleScreen,
+     Routes.exigentCircumstancesScreen,
+     Routes.nYCTransitScreen,
+     Routes.vehicleStopFormScreen,
+     Routes.commonVTLScreen,
+     Routes.readFullLawsScreen,
+     Routes.trespasserAPBScreen,
+     Routes.frontPlatesScreen,
+     " Container(color: Colors.red,),",
+     Routes.testimoniesScreen,
+     " Container(color: Colors.red,),",
+     Routes.subscriptionSurveyScreen,
+     Routes.retirementToolsScreen,
+     Routes.otherCodesScreen,
+     Routes.nYStatePoliceScreen,
+     "  Routes.nYStatePoliceScreen,",
+     Routes.nYAgenciesScreen,
+     "  Routes.nYStatePoliceScreen,",
+     Routes.nYSherrifScreen,
+     "  Routes.nYStatePoliceScreen,",
+     Routes.mileMarkersScreen,
+
+   ];
+
+
+
+
 }
 
 
@@ -193,4 +393,20 @@ class IllinoisPage {
   final String text;
 
   IllinoisPage({required this.image, required this.text,this.onTap});
+}
+
+class NewYorkPage {
+  void Function()? onTap;
+  final String image;
+  final String text;
+
+  NewYorkPage({required this.image, required this.text,this.onTap});
+}
+
+class LASDPage {
+  void Function()? onTap;
+  final String image;
+  final String text;
+
+  LASDPage({required this.image, required this.text,this.onTap});
 }

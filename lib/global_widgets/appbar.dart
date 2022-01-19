@@ -1,17 +1,21 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({
+  MyAppBar({
     Key? key,
     required this.title,
     this.onTap,
-    this.txtBtnTitle
+    this.txtBtnTitle,
+    this.image = false,
   }) : super(key: key);
   final String title;
   final void Function()? onTap;
   final String? txtBtnTitle;
+  final bool image;
 
   @override
   Size get preferredSize => const Size.fromHeight(65);
@@ -25,13 +29,24 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: Icon(Icons.arrow_back),
         onPressed: () => Get.back(),
       ),
-      title:Text(title,style: TextStyle(fontSize: 15),),
-
+      title: Text(
+        title,
+        style: TextStyle(fontSize: 15),
+      ),
       actions: [
-        TextButton(onPressed: onTap??null, child:Text(txtBtnTitle??"",style: TextStyle(color: Colors.white),) ,),
+        TextButton(
+            onPressed: onTap ?? null,
+            child: image
+                ? Image.asset(
+                    "assets/startpage/43.png",
+                    scale: 4,
+                  )
+                : Text(
+                    txtBtnTitle ?? "",
+                    style: TextStyle(color: Colors.white),
+                  )),
       ],
       centerTitle: true,
     );
   }
-
 }

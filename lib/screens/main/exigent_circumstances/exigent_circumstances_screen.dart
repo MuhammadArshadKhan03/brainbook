@@ -16,7 +16,7 @@ class ExigentCircumstancesScreen extends GetView<ExigentCircumstanceController> 
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: const MyAppBar(
+        appBar:  MyAppBar(
           title: "Exigent Circumstances",
         ),
         backgroundColor: Colors.blue.shade200,

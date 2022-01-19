@@ -17,7 +17,7 @@ class AlcoholDetailScreen extends GetView<AlcoholDetailController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(
-          title: Get.arguments,
+          title: Get.arguments,image: true,
         ),
         backgroundColor: Colors.blue.shade200,
         body: Column(

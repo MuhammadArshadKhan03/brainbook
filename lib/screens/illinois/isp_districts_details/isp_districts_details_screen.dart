@@ -14,7 +14,7 @@ class ISPDistrictDetailsScreen extends GetView<ISPDistrictsDetailsController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(
-          title: Get.arguments,
+          title: Get.arguments,image: true,
         ),
         backgroundColor: Colors.blue.shade200,
         body: Column(

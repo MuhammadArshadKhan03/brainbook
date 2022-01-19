@@ -1,6 +1,3 @@
-
-
-
 class Routes{
   static const String splashScreen = "/";
   static const String welcomeScreen = "/welcomeScreen";
@@ -11,11 +8,6 @@ class Routes{
   static const String newPasswordScreen = "/newPasswordScreen";
   static const String passwordUpdateScreen = "/passwordUpdateScreen";
   static const String dashBoardScreen = "/dashBoardScreen";
-  // static const String homeScreen = "/homeScreen";
-  // static const String favoritesScreen = "/favoritesScreen";
-  // static const String askACopScreen = "/askACopScreen";
-  // static const String noteBookScreen = "/noteBookScreen";
-  // static const String moreOptionScreen = "/moreOptionScreen";
   static const String translatorScreen = "/translatorScreen";
   static const String commonPhraseScreen = "/commonPhraseScreen";
   static const String audioScreen = "/audioScreen";
@@ -102,5 +94,36 @@ class Routes{
   static const String weaponsScreen = "/weaponsScreen";
   static const String weaponDetailScreen = "/weaponDetailScreen";
   static const String domesticViolenceScreen = "/domesticViolenceScreen";
+  static const String yourDeptNewYorkScreen = "/yourDeptNewYorkScreen";
+  static const String dSNYScreen = "/dSNYScreen";
+  static const String dSNYListScreen = "/dSNYListScreen";
+  static const String dSNYListDetailScreen = "/dSNYListDetailScreen";
+  static const String dOCScreen = "/dOCScreen";
+  static const String nYPDScreen = "/nYPDScreen";
+  static const String nassauCountyScreen = "/nassauCountyScreen";
+  static const String portAuthorityScreen = "/portAuthorityScreen";
+  static const String suffolkCountyScreen = "/suffolkCountyScreen";
+  static const String taxiLimoScreen = "/taxiLimoScreen";
+  static const String yonkersScreen = "/yonkersScreen";
+  static const String nYCSummonsScreen = "/nYCSummonsScreen";
+  static const String oATHECBSummonsScreen = "/oATHECBSummonsScreen";
+  static const String bandCCategoryScreen = "/bandCCategoryScreen";
+  static const String courtLocationScreen = "/courtLocationScreen";
+  static const String nYCTransitScreen = "/nYCTransitScreen";
+  static const String rulesRegulationScreen = "/rulesRegulationScreen";
+  static const String commonVTLScreen = "/commonVTLScreen";
+  static const String newYorkAlcoholScreen = "/newYorkAlcoholScreen";
+  static const String readFullLawsScreen = "/readFullLawsScreen";
+  static const String testimoniesScreen = "/testimoniesScreen";
+  static const String cellPhonesScreen = "/cellPhonesScreen";
+  static const String otherCodesScreen = "/otherCodesScreen";
+  static const String colorCodesScreen = "/colorCodesScreen";
+  static const String nYStatePoliceScreen = "/nYStatePoliceScreen";
+  static const String nYStateDetailScreen = "/nYStateDetailScreen";
+  static const String nYAgenciesScreen = "/nYAgenciesScreen";
+  static const String nYAgenciesDetailScreen = "/nYAgenciesDetailScreen";
+  static const String nYSherrifScreen = "/nYSherrifScreen";
+  static const String nYSherrifDetailScreen = "/nYSherrifDetailScreen";
+  static const String mileMarkersScreen = "/mileMarkersScreen";
 
 }

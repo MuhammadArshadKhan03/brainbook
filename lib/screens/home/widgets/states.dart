@@ -71,6 +71,81 @@ class IllinoisHomePage extends GetView<HomeController> {
   }
 }
 
+class NewYorkHomePage extends GetView<HomeController> {
+  const NewYorkHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: 6,),
+          YourDepartmentCard(onTap: ()=>Get.toNamed(Routes.yourDeptNewYorkScreen),),
+          // HomeCard(onTap: (){},text: "Your Department",imagePath: "assets/illinoishomepage/1.png",),
+          SizedBox(height: 6,),
+          GridView.builder(
+            physics: BouncingScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: controller.newYorkPage.length,
+            itemBuilder: (context, index) {
+              return HomeCard(
+                onTap: ()=>
+                index==23||index==25||index==30||index==32||index==34?null: Get.toNamed(controller.newYorkPageRoutes[index]),
+                text: controller.newYorkPage[index].text,
+                imagePath: controller.newYorkPage[index].image,
+                isLock:  index == 34,
+              );
+            },
+            gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisExtent: 60,
+              mainAxisSpacing: 5,
+              crossAxisCount: 2,
+            ),),
+        ],
+      ),
+    );
+  }
+}
+
+
+class LASDHomePage extends GetView<HomeController> {
+  const LASDHomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(height: 6,),
+          GridView.builder(
+            physics: BouncingScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: controller.lASDPage.length,
+            itemBuilder: (context, index) {
+              return HomeCard(
+                onTap: (){},
+                //index==0||index==7||index==8||index==32||index==34?null: Get.toNamed(controller.newYorkPageRoutes[index]),
+                text: controller.lASDPage[index].text,
+                imagePath: controller.lASDPage[index].image,
+                isLock:  index == 0 || index == 5 || index == 17 || index == 20 || index == 22,
+              );
+            },
+            gridDelegate:
+            const SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisExtent: 60,
+              mainAxisSpacing: 5,
+              crossAxisCount: 2,
+            ),),
+        ],
+      ),
+    );
+  }
+}
+
+
+
+
 class YourDepartmentCard extends StatelessWidget {
   const YourDepartmentCard({
     Key? key,

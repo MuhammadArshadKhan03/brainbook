@@ -33,7 +33,6 @@ import 'package:brainbook/screens/illinois/romeoville_pd/romeoville_pd_screen.da
 import 'package:brainbook/screens/illinois/springfield/springfield_binding.dart';
 import 'package:brainbook/screens/illinois/springfield/springfield_screen.dart';
 import 'package:brainbook/screens/illinois/weapons/weapons_binding.dart';
-import 'package:brainbook/screens/illinois/weapons/weapons_controller.dart';
 import 'package:brainbook/screens/illinois/weapons/weapons_screen.dart';
 import 'package:brainbook/screens/illinois/weapons_detail/weapons_detail_binding.dart';
 import 'package:brainbook/screens/illinois/weapons_detail/weapons_detail_screen.dart';
@@ -127,6 +126,68 @@ import 'package:brainbook/screens/main/window_tint_laws/window_tint_laws_binding
 import 'package:brainbook/screens/illinois/naperville/naperville_screen.dart';
 import 'package:brainbook/screens/new_password/new_password_binding.dart';
 import 'package:brainbook/screens/new_password/new_password_screen.dart';
+import 'package:brainbook/screens/newyork/alcohol/newyork_alcohol_binding.dart';
+import 'package:brainbook/screens/newyork/alcohol/newyork_alcohol_screen.dart';
+import 'package:brainbook/screens/newyork/b&c_category/b&c_category_binding.dart';
+import 'package:brainbook/screens/newyork/b&c_category/b&c_category_screen.dart';
+import 'package:brainbook/screens/newyork/cell_phones/cell_phones_binding.dart';
+import 'package:brainbook/screens/newyork/cell_phones/cell_phones_screen.dart';
+import 'package:brainbook/screens/newyork/color_codes/color_codes_binding.dart';
+import 'package:brainbook/screens/newyork/color_codes/color_codes_screen.dart';
+import 'package:brainbook/screens/newyork/common_vtl/common_vtl_binding.dart';
+import 'package:brainbook/screens/newyork/common_vtl/common_vtl_screen.dart';
+import 'package:brainbook/screens/newyork/court_locations/court_locations_binding.dart';
+import 'package:brainbook/screens/newyork/court_locations/court_locations_screen.dart';
+import 'package:brainbook/screens/newyork/doc/doc_binding.dart';
+import 'package:brainbook/screens/newyork/doc/doc_screen.dart';
+import 'package:brainbook/screens/newyork/dsny/dsny_binding.dart';
+import 'package:brainbook/screens/newyork/dsny/dsny_screen.dart';
+import 'package:brainbook/screens/newyork/dsny_list/dsny_list_binding.dart';
+import 'package:brainbook/screens/newyork/dsny_list/dsny_list_screen.dart';
+import 'package:brainbook/screens/newyork/dsny_list_detail/dsny_list_detail_binding.dart';
+import 'package:brainbook/screens/newyork/dsny_list_detail/dsny_list_detail_screen.dart';
+import 'package:brainbook/screens/newyork/mile_markers/mile_markers_binding.dart';
+import 'package:brainbook/screens/newyork/mile_markers/mile_markers_screen.dart';
+import 'package:brainbook/screens/newyork/nassau_county/nassau_county_binding.dart';
+import 'package:brainbook/screens/newyork/nassau_county/nassau_county_screen.dart';
+import 'package:brainbook/screens/newyork/ny_agencies/ny_agencies_binding.dart';
+import 'package:brainbook/screens/newyork/ny_agencies/ny_agencies_screen.dart';
+import 'package:brainbook/screens/newyork/ny_agencies_detail/ny_agency_detail_binding.dart';
+import 'package:brainbook/screens/newyork/ny_agencies_detail/ny_agency_detail_screen.dart';
+import 'package:brainbook/screens/newyork/ny_sherrif/ny_sherrif_binding.dart';
+import 'package:brainbook/screens/newyork/ny_sherrif/ny_sherrif_screen.dart';
+import 'package:brainbook/screens/newyork/ny_sherrif_detail/ny_sherrif_detail_binding.dart';
+import 'package:brainbook/screens/newyork/ny_sherrif_detail/ny_sherrif_detail_screen.dart';
+import 'package:brainbook/screens/newyork/ny_state_detail/ny_state_detail_binding.dart';
+import 'package:brainbook/screens/newyork/ny_state_detail/ny_state_detail_screen.dart';
+import 'package:brainbook/screens/newyork/ny_state_police/ny_state_police_binding.dart';
+import 'package:brainbook/screens/newyork/ny_state_police/ny_state_police_screen.dart';
+import 'package:brainbook/screens/newyork/nyc_summons/nyc_summons_binding.dart';
+import 'package:brainbook/screens/newyork/nyc_summons/nyc_summons_screen.dart';
+import 'package:brainbook/screens/newyork/nyc_transit/nyc_transit_binding.dart';
+import 'package:brainbook/screens/newyork/nyc_transit/nyc_transit_screen.dart';
+import 'package:brainbook/screens/newyork/nypd/nypd_binding.dart';
+import 'package:brainbook/screens/newyork/nypd/nypd_screen.dart';
+import 'package:brainbook/screens/newyork/oath_ecb_summons/oath_ecb_summons_binding.dart';
+import 'package:brainbook/screens/newyork/oath_ecb_summons/oath_ecb_summons_screen.dart';
+import 'package:brainbook/screens/newyork/other_codes/other_codes_binding.dart';
+import 'package:brainbook/screens/newyork/other_codes/other_codes_screen.dart';
+import 'package:brainbook/screens/newyork/port_authority/port_authority_binding.dart';
+import 'package:brainbook/screens/newyork/port_authority/port_authority_screen.dart';
+import 'package:brainbook/screens/newyork/read_full_laws/read_full_laws_binding.dart';
+import 'package:brainbook/screens/newyork/read_full_laws/read_full_laws_screen.dart';
+import 'package:brainbook/screens/newyork/rules_and_regulation/rules_regulation_binding.dart';
+import 'package:brainbook/screens/newyork/rules_and_regulation/rules_regulation_screen.dart';
+import 'package:brainbook/screens/newyork/suffolk_county/suffolk_county_binding.dart';
+import 'package:brainbook/screens/newyork/suffolk_county/suffolk_county_screen.dart';
+import 'package:brainbook/screens/newyork/taxi_and_limo/taxi_and_limo_binding.dart';
+import 'package:brainbook/screens/newyork/taxi_and_limo/taxi_and_limo_screen.dart';
+import 'package:brainbook/screens/newyork/testimonies/testimonies_binding.dart';
+import 'package:brainbook/screens/newyork/testimonies/testimonies_screen.dart';
+import 'package:brainbook/screens/newyork/yonkers/yonkers_binding.dart';
+import 'package:brainbook/screens/newyork/yonkers/yonkers_screen.dart';
+import 'package:brainbook/screens/newyork/your_dept_newyork/you_dept_binding_newyork.dart';
+import 'package:brainbook/screens/newyork/your_dept_newyork/your_dept_screen_newyork.dart';
 import 'package:brainbook/screens/password_update/password_update_screen.dart';
 import 'package:brainbook/screens/main/pat_tracker_list/pat_tracker_list_binding.dart';
 import 'package:brainbook/screens/main/pat_tracker_list/pat_tracker_list_screen.dart';
@@ -205,11 +266,6 @@ class AppPages{
     GetPage(name: Routes.newPasswordScreen, page: ()=>  NewPassword(), binding:NewPasswordBinding()),
     GetPage(name: Routes.passwordUpdateScreen, page: ()=>  PasswordUpdate(),),
     GetPage(name: Routes.dashBoardScreen, page: ()=>  DashBoard(),binding: DashBoardBinding()),
-   // GetPage(name: Routes.homeScreen, page: ()=>  Home(),binding: HomeBinding()),
-   //  GetPage(name: Routes.favoritesScreen, page: ()=>  FavoritesScreen(),binding: FavoritesBinding()),
-   //  GetPage(name: Routes.askACopScreen, page: ()=>  AskACopScreen(),binding: AskACopBinding()),
-   //  GetPage(name: Routes.noteBookScreen, page: ()=>  NoteBookScreen(),binding: NoteBookBinding()),
-   //  GetPage(name: Routes.moreOptionScreen, page: ()=>  MoreOptionScreen(),binding: MoreBinding()),
     GetPage(name: Routes.translatorScreen, page: ()=>  TranslatorScreen(),binding: TranslatorBinding()),
     GetPage(name: Routes.commonPhraseScreen, page: ()=>  CommonPhraseScreen(),binding: CommonPhrasesBinding()),
     GetPage(name: Routes.audioScreen, page: ()=>  AudioScreen(),binding: AudioBinding()),
@@ -296,5 +352,36 @@ class AppPages{
     GetPage(name: Routes.weaponsScreen, page: ()=>  WeaponsScreen(),binding: WeaponsBinding()),
     GetPage(name: Routes.weaponDetailScreen, page: ()=>  WeaponDetailScreen(),binding: WeaponDetailBinding()),
     GetPage(name: Routes.domesticViolenceScreen, page: ()=>  DomesticViolenceScreen(),binding: DomesticViolenceBinding()),
+    GetPage(name: Routes.yourDeptNewYorkScreen, page: ()=>  YourDeptNewYorkScreen(),binding: YourDeptNewYorkBinding()),
+    GetPage(name: Routes.dSNYScreen, page: ()=>  DSNYScreen(),binding: DSNYBinding()),
+    GetPage(name: Routes.dSNYListScreen, page: ()=>  DSNYListScreen(),binding: DSNYListBinding()),
+    GetPage(name: Routes.dSNYListDetailScreen, page: ()=>  DSNYListDetailScreen(),binding: DSNYListDetailBinding()),
+    GetPage(name: Routes.dOCScreen, page: ()=>  DOCScreen(),binding: DOCBinding()),
+    GetPage(name: Routes.nYPDScreen, page: ()=>  NYPDScreen(),binding: NYPDBinding()),
+    GetPage(name: Routes.nassauCountyScreen, page: ()=>  NassauCountyScreen(),binding: NassauCountyBinding()),
+    GetPage(name: Routes.portAuthorityScreen, page: ()=>  PortAuthorityScreen(),binding: PortAuthorityBinding()),
+    GetPage(name: Routes.suffolkCountyScreen, page: ()=>  SuffolkCountyScreen(),binding: SuffolkCountyBinding()),
+    GetPage(name: Routes.taxiLimoScreen, page: ()=>  TaxiLimoScreen(),binding: TaxiLimoBinding()),
+    GetPage(name: Routes.yonkersScreen, page: ()=>  YonkersScreen(),binding: YonkersBinding()),
+    GetPage(name: Routes.nYCSummonsScreen, page: ()=>  NYCSummonsScreen(),binding: NYCSummonsBinding()),
+    GetPage(name: Routes.oATHECBSummonsScreen, page: ()=>  OATHECBSummonsScreen(),binding: OATHECBSummonsBinding()),
+    GetPage(name: Routes.bandCCategoryScreen, page: ()=>  BandCCategoryScreen(),binding: BandCCategoryBinding()),
+    GetPage(name: Routes.courtLocationScreen, page: ()=>  CourtLocationScreen(),binding: CourtLocationBinding()),
+    GetPage(name: Routes.nYCTransitScreen, page: ()=>  NYCTransitScreen(),binding: NYCTransitBinding()),
+    GetPage(name: Routes.rulesRegulationScreen, page: ()=>  RulesRegulationScreen(),binding: RulesRegulationBinding()),
+    GetPage(name: Routes.commonVTLScreen, page: ()=>  CommonVTLScreen(),binding: CommonVTLBinding()),
+    GetPage(name: Routes.newYorkAlcoholScreen, page: ()=>  NewYorkAlcoholScreen(),binding: NewYorkAlcoholBinding()),
+    GetPage(name: Routes.readFullLawsScreen, page: ()=>  ReadFullLawsScreen(),binding: ReadFullLawsBinding()),
+    GetPage(name: Routes.testimoniesScreen, page: ()=>  TestimoniesScreen(),binding: TestimoniesBinding()),
+    GetPage(name: Routes.cellPhonesScreen, page: ()=>  CellPhonesScreen(),binding: CellPhonesBinding()),
+    GetPage(name: Routes.otherCodesScreen, page: ()=>  OtherCodesScreen(),binding: OtherCodesBinding()),
+    GetPage(name: Routes.colorCodesScreen, page: ()=>  ColorCodesScreen(),binding: ColorCodesBinding()),
+    GetPage(name: Routes.nYStatePoliceScreen, page: ()=>  NYStatePoliceScreen(),binding: NYStatePoliceBinding()),
+    GetPage(name: Routes.nYStateDetailScreen, page: ()=>  NYStateDetailScreen(),binding: NYStateDetailBinding()),
+    GetPage(name: Routes.nYAgenciesScreen, page: ()=>  NYAgenciesScreen(),binding: NYAgenciesBinding()),
+    GetPage(name: Routes.nYAgenciesDetailScreen, page: ()=>  NYAgenciesDetailScreen(),binding: NYAgenciesDetailBinding()),
+    GetPage(name: Routes.nYSherrifScreen, page: ()=>  NYSherrifScreen(),binding: NYSherrifBinding()),
+    GetPage(name: Routes.nYSherrifDetailScreen, page: ()=>  NYSherrifDetailScreen(),binding: NYSherrifDetailBinding()),
+    GetPage(name: Routes.mileMarkersScreen, page: ()=>  MileMarkersScreen(),binding: MileMarkersBinding()),
   ];
 }

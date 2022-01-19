@@ -15,7 +15,7 @@ class AgeResultScreen extends GetView<AgeResultController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: const MyAppBar(
+        appBar:  MyAppBar(
           title: "Age Calculator",
         ),
         backgroundColor: Colors.blue.shade200,

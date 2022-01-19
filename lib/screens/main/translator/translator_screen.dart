@@ -14,7 +14,7 @@ class TranslatorScreen extends GetView<TranslatorController> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blue.shade200,
-        appBar: const MyAppBar(
+        appBar:  MyAppBar(
           title: "Translator",
         ),
         body: SingleChildScrollView(
