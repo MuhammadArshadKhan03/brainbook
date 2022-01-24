@@ -59,14 +59,7 @@ class DashBoardController extends GetxController {
     Routes.goOfflineScreen,
     Routes.supportScreen,
     Routes.privacyPolicyScreen,
-    Routes.profileScreen,
-    // Container(color: Colors.blue,),
-    // Container(color: Colors.red,),
-    // Container(color: Colors.orange,),
-    // Container(color: Colors.white,),
-    // Container(color: Colors.black,),
-    // Container(color: Colors.green,),
-    // Container(color: Colors.purple,),
+    Routes.loginScreen,
   ];
 
   List<Widget> pages = [

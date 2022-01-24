@@ -39,7 +39,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: image
                 ? Image.asset(
                     "assets/startpage/43.png",
-                    scale: 4,
+                    scale: 3.5,
                   )
                 : Text(
                     txtBtnTitle ?? "",

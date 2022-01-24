@@ -125,5 +125,34 @@ class Routes{
   static const String nYSherrifScreen = "/nYSherrifScreen";
   static const String nYSherrifDetailScreen = "/nYSherrifDetailScreen";
   static const String mileMarkersScreen = "/mileMarkersScreen";
+  static const String sHAD49Screen = "/sHAD49Screen";
+  static const String facePageScreen = "/facePageScreen";
+  static const String addFaceReportScreen = "/addFaceReportScreen";
+  static const String narrativeScreen = "/narrativeScreen";
+  static const String addNarrtaiveReportScreen = "/addNarrtaiveReportScreen";
+  static const String stationsScreen = "/stationsScreen";
+  static const String stationsDetailScreen = "/stationsDetailScreen";
+  static const String mDCScreen = "/mDCScreen";
+  static const String courtNoScreen = "/courtNoScreen";
+  static const String courtNoDetailScreen = "/courtNoDetailScreen";
+  static const String custodyScreen = "/custodyScreen";
+  static const String custodyDetailScreen = "/custodyDetailScreen";
+  static const String otherCommonCodesScreen = "/otherCommonCodesScreen";
+  static const String oCCDetailScreen = "/oCCDetailScreen";
+  static const String broadcastsScreen = "/broadcastsScreen";
+  static const String statCodesScreen = "/statCodesScreen";
+  static const String phoneticsScreen = "/phoneticsScreen";
+  static const String cHPScreen = "/cHPScreen";
+  static const String sACRScreen = "/sACRScreen";
+  static const String cHPOfficersScreen = "/cHPOfficersScreen";
+  static const String cHPOfficesDetailScreen = "/cHPOfficesDetailScreen";
+  static const String pursuitsScreen = "/pursuitsScreen";
+  static const String sampleReportsScreen = "/sampleReportsScreen";
+  static const String wICCodesScreen = "/wICCodesScreen";
+  static const String custodyInfoScreen = "/custodyInfoScreen";
+  static const String mISDExceptionsScreen = "/mISDExceptionsScreen";
+  static const String fieldOPSScreen = "/fieldOPSScreen";
+  static const String crowDisbursementScreen = "/crowDisbursementScreen";
+  static const String bradyBillScreen = "/bradyBillScreen";
 
 }

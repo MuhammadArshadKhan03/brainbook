@@ -3,6 +3,7 @@
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/global_widgets/radio_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/screens/main/vehicle_stop_form/vehicle_stop_form_screen.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +39,7 @@ class SubscriptionSurveyScreen extends GetView<SubscriptionSurveyController> {
                     shrinkWrap: true,
                     itemCount: controller.resubscribeList.length,
                     itemBuilder: (context, index) {
-                      return Obx(() => VehicleStopListView(
+                      return Obx(() => RadioWidget(
                             title: controller
                                 .resubscribeList[index],
                             value: controller

@@ -28,9 +28,7 @@ class BellwoodPDScreen extends GetView<BellwoodPDController> {
                 return FederalCard(
                   text: controller.bellwoodList[0],
                   isLock: true,
-                  // onTap: () => Get.toNamed(
-                  //   controller.deptRoutes[index],
-                  // ),
+                  onTap: () {},
                 );
               },
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

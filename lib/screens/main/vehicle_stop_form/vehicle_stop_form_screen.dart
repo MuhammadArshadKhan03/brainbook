@@ -6,6 +6,7 @@ import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
+import 'package:brainbook/global_widgets/radio_button.dart';
 import 'package:brainbook/global_widgets/rich_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:flutter/material.dart';
@@ -85,7 +86,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   shrinkWrap: true,
                   itemCount: controller.violationList.length,
                   itemBuilder: (context, index) {
-                    return Obx(() => VehicleStopListView(
+                    return Obx(() => RadioWidget(
                           title: controller.violationList[index],
                           value: controller.violationList[index],
                           groupValue: controller.violationSelectedOption.value,
@@ -110,7 +111,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.resultList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.resultList[index],
                         groupValue: controller.resultSelectedOption.value,
                         value: controller.resultList[index],
@@ -136,7 +137,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.driverStatusList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.driverStatusList[index],
                         value: controller.driverStatusList[index],
                         groupValue: controller.driverStatusSelectedOption.value,
@@ -162,7 +163,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.driverAgeList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.driverAgeList[index],
                         value: controller.driverAgeList[index],
                         groupValue: controller.driverAgeSelectedOption.value,
@@ -188,7 +189,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.driverGenderList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.driverGenderList[index],
                         value: controller.driverGenderList[index],
                         groupValue: controller.driverGenderSelectedOption.value,
@@ -247,7 +248,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.locationStopList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.locationStopList[index],
                         value: controller.locationStopList[index],
                         groupValue: controller.locationStopSelectedOption.value,
@@ -302,7 +303,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.probaleCauseList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.probaleCauseList[index],
                         value: controller.probaleCauseList[index],
                         groupValue: controller.probaleCauseSelectedOption.value,
@@ -328,7 +329,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.whatWasSearchList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.whatWasSearchList[index],
                         value: controller.whatWasSearchList[index],
                         groupValue:
@@ -355,7 +356,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.durationOfSearchList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.durationOfSearchList[index],
                         value: controller.durationOfSearchList[index],
                         groupValue:
@@ -411,7 +412,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.typeOfContrabandList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.typeOfContrabandList[index],
                         value: controller.typeOfContrabandList[index],
                         groupValue:
@@ -467,7 +468,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
                   itemCount: controller.arrestAllegedList.length,
                   itemBuilder: (context, index) {
                     return Obx(
-                      () => VehicleStopListView(
+                      () => RadioWidget(
                         title: controller.arrestAllegedList[index],
                         value: controller.arrestAllegedList[index],
                         groupValue:
@@ -521,33 +522,4 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
 // RxInt select= 0.obs;
 }
 
-class VehicleStopListView extends StatelessWidget {
-  const VehicleStopListView({
-    Key? key,
-    required this.title,
-    required this.groupValue,
-    required this.value,
-    required this.onChanged,
-  }) : super(key: key);
 
-  final String title;
-  final String groupValue;
-  final String value;
-  final void Function(String?) onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      horizontalTitleGap: 3.0,
-      title: Text(
-        title,
-      ),
-      leading: Radio(
-        groupValue: groupValue,
-        value: value,
-        onChanged: onChanged,
-        toggleable: false,
-      ),
-    );
-  }
-}

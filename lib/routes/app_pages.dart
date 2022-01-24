@@ -38,6 +38,64 @@ import 'package:brainbook/screens/illinois/weapons_detail/weapons_detail_binding
 import 'package:brainbook/screens/illinois/weapons_detail/weapons_detail_screen.dart';
 import 'package:brainbook/screens/illinois/will_county/will_county_binding.dart';
 import 'package:brainbook/screens/illinois/will_county/will_county_screen.dart';
+import 'package:brainbook/screens/lads/add_face_report/add_face_report_binding.dart';
+import 'package:brainbook/screens/lads/add_face_report/add_face_report_screen.dart';
+import 'package:brainbook/screens/lads/add_narrative_report/add_narrative_report_binding.dart';
+import 'package:brainbook/screens/lads/add_narrative_report/add_narrative_report_screen.dart';
+import 'package:brainbook/screens/lads/brady_bill/brady_bill_binding.dart';
+import 'package:brainbook/screens/lads/brady_bill/brady_bill_screen.dart';
+import 'package:brainbook/screens/lads/broadcasts/broadcasts_binding.dart';
+import 'package:brainbook/screens/lads/broadcasts/broadcasts_screen.dart';
+import 'package:brainbook/screens/lads/chp_180/chp_180_binding.dart';
+import 'package:brainbook/screens/lads/chp_180/chp_180_screen.dart';
+import 'package:brainbook/screens/lads/chp_offices/chp_offices_binding.dart';
+import 'package:brainbook/screens/lads/chp_offices/chp_offices_screen.dart';
+import 'package:brainbook/screens/lads/chp_offices_detail/chp_offices_detail_binding.dart';
+import 'package:brainbook/screens/lads/chp_offices_detail/chp_offices_detail_screen.dart';
+import 'package:brainbook/screens/lads/court_no/court_no_binding.dart';
+import 'package:brainbook/screens/lads/court_no/court_no_screen.dart';
+import 'package:brainbook/screens/lads/court_no_detail/court_no_detail_binding.dart';
+import 'package:brainbook/screens/lads/court_no_detail/court_no_detail_screen.dart';
+import 'package:brainbook/screens/lads/crowd_disbursement/crowd_disbursement_binding.dart';
+import 'package:brainbook/screens/lads/crowd_disbursement/crowd_disbursement_screen.dart';
+import 'package:brainbook/screens/lads/custody/custody_binding.dart';
+import 'package:brainbook/screens/lads/custody/custody_screen.dart';
+import 'package:brainbook/screens/lads/custody_detail/custody_detail_binding.dart';
+import 'package:brainbook/screens/lads/custody_detail/custody_detail_screen.dart';
+import 'package:brainbook/screens/lads/custody_info/custody_info_binding.dart';
+import 'package:brainbook/screens/lads/custody_info/custody_info_screen.dart';
+import 'package:brainbook/screens/lads/face_page/49_face_page_binding.dart';
+import 'package:brainbook/screens/lads/face_page/49_face_page_screen.dart';
+import 'package:brainbook/screens/lads/field_ops/field_ops_binding.dart';
+import 'package:brainbook/screens/lads/field_ops/field_ops_screen.dart';
+import 'package:brainbook/screens/lads/mdc_cad/mdc_cad_binding.dart';
+import 'package:brainbook/screens/lads/mdc_cad/mdc_cad_screen.dart';
+import 'package:brainbook/screens/lads/misd_exceptions/misd_exceptions_binding.dart';
+import 'package:brainbook/screens/lads/misd_exceptions/misd_exceptions_screen.dart';
+import 'package:brainbook/screens/lads/narrative/narrative_binding.dart';
+import 'package:brainbook/screens/lads/narrative/narrative_screen.dart';
+import 'package:brainbook/screens/lads/other_common_codes/other_common_codes_binding.dart';
+import 'package:brainbook/screens/lads/other_common_codes/other_common_codes_screen.dart';
+import 'package:brainbook/screens/lads/other_common_codes_detail/other_common_codes_detail_binding.dart';
+import 'package:brainbook/screens/lads/other_common_codes_detail/other_common_codes_detail_screen.dart';
+import 'package:brainbook/screens/lads/phonetics/phonetics_binding.dart';
+import 'package:brainbook/screens/lads/phonetics/phonetics_screen.dart';
+import 'package:brainbook/screens/lads/pursuits/pursuits_binding.dart';
+import 'package:brainbook/screens/lads/pursuits/pursuits_screen.dart';
+import 'package:brainbook/screens/lads/sacr/sacr_binding.dart';
+import 'package:brainbook/screens/lads/sacr/sacr_screen.dart';
+import 'package:brainbook/screens/lads/sample_reports/sample_reports_binding.dart';
+import 'package:brainbook/screens/lads/sample_reports/sample_reports_screen.dart';
+import 'package:brainbook/screens/lads/shad_49/shad_49_binding.dart';
+import 'package:brainbook/screens/lads/shad_49/shad_49_screen.dart';
+import 'package:brainbook/screens/lads/stat_codes/stat_codes_binding.dart';
+import 'package:brainbook/screens/lads/stat_codes/stat_codes_screen.dart';
+import 'package:brainbook/screens/lads/stations/stations_binding.dart';
+import 'package:brainbook/screens/lads/stations/stations_screen.dart';
+import 'package:brainbook/screens/lads/stations_details/stations_details_binding.dart';
+import 'package:brainbook/screens/lads/stations_details/stations_details_screen.dart';
+import 'package:brainbook/screens/lads/wic_codes/wic_codes_binding.dart';
+import 'package:brainbook/screens/lads/wic_codes/wic_codes_screen.dart';
 import 'package:brainbook/screens/main/Ist_amd_provokers/Ist_amd_provokers_screen.dart';
 import 'package:brainbook/screens/main/Ist_amd_provokers/lst_amd_provokers_binding.dart';
 import 'package:brainbook/screens/add_response/add_response_binding.dart';
@@ -273,7 +331,7 @@ class AppPages{
     GetPage(name: Routes.gangSlangDetailScreen, page: ()=>  GangSlangDetailScreen(),binding: GangSlangDetailBinding()),
     GetPage(name: Routes.nHTSAManualScreen, page: ()=>  SFSTMoreOptionScreen(),binding: SFTAMoreOptionBinding()),
     GetPage(name: Routes.lawCaseDetailScreen, page: ()=>  CaseLawDetailScreen(),binding: CaseLawDetailsBinding()),
-    GetPage(name: Routes.trespasserApbDetailsScreen, page: ()=>  TrespasserApbDetailsScreen(),binding: TrespasserApbDetailBinding()),
+    GetPage(name: Routes.trespasserApbDetailsScreen, page: ()=>  TrespasserApbDetailsScreen(),binding: TrespasserApbDetailBinding(),),
     GetPage(name: Routes.addTrespasserDetailsScreen, page: ()=>  AddTrespasserDetailsScreen(),binding: TrespasserAddDetailBinding()),
     GetPage(name: Routes.flashCardsScreen, page: ()=>  FlashCardsScreen(),binding: FlashCardsBinding()),
     GetPage(name: Routes.flashCardsListScreen, page: ()=>  FlashCardsListScreen(),binding: FlashCardListBinding()),
@@ -383,5 +441,34 @@ class AppPages{
     GetPage(name: Routes.nYSherrifScreen, page: ()=>  NYSherrifScreen(),binding: NYSherrifBinding()),
     GetPage(name: Routes.nYSherrifDetailScreen, page: ()=>  NYSherrifDetailScreen(),binding: NYSherrifDetailBinding()),
     GetPage(name: Routes.mileMarkersScreen, page: ()=>  MileMarkersScreen(),binding: MileMarkersBinding()),
+    GetPage(name: Routes.sHAD49Screen, page: ()=>  SHAD49Screen(),binding: SHAD49Binding()),
+    GetPage(name: Routes.facePageScreen, page: ()=>  FacePageScreen(),binding: FacePageBinding()),
+    GetPage(name: Routes.addFaceReportScreen, page: ()=>  AddFaceReportScreen(),binding: AddFaceReportBinding()),
+    GetPage(name: Routes.narrativeScreen, page: ()=>  NarrativeScreen(),binding: NarrativeBinding()),
+    GetPage(name: Routes.addNarrtaiveReportScreen, page: ()=>  AddNarrtaiveReportScreen(),binding: AddNarrativeReportBinding()),
+    GetPage(name: Routes.stationsScreen, page: ()=>  StationsScreen(),binding: StationsBinding()),
+    GetPage(name: Routes.stationsDetailScreen, page: ()=>  StationsDetailScreen(),binding: StationsDetailBinding()),
+    GetPage(name: Routes.mDCScreen, page: ()=>  MDCScreen(),binding: MDCBinding()),
+    GetPage(name: Routes.courtNoScreen, page: ()=>  CourtNoScreen(),binding: CourtNoBinding()),
+    GetPage(name: Routes.courtNoDetailScreen, page: ()=>  CourtNoDetailScreen(),binding: CourtNoDetailBinding()),
+    GetPage(name: Routes.custodyScreen, page: ()=>  CustodyScreen(),binding: CustodyBinding()),
+    GetPage(name: Routes.custodyDetailScreen, page: ()=>  CustodyDetailScreen(),binding: CustodyDetailBinding()),
+    GetPage(name: Routes.otherCommonCodesScreen, page: ()=>  OtherCommonCodesScreen(),binding: OtherCommonCodesBinding()),
+    GetPage(name: Routes.oCCDetailScreen, page: ()=>  OCCDetailScreen(),binding: OCCDetailBinding()),
+    GetPage(name: Routes.broadcastsScreen, page: ()=>  BroadcastsScreen(),binding: BroadcastsBinding()),
+    GetPage(name: Routes.statCodesScreen, page: ()=>  StatCodesScreen(),binding: StatCodesBinding()),
+    GetPage(name: Routes.phoneticsScreen, page: ()=>  PhoneticsScreen(),binding: PhoneticsBinding()),
+    GetPage(name: Routes.cHPScreen, page: ()=>  CHPScreen(),binding: CHPBinding()),
+    GetPage(name: Routes.sACRScreen, page: ()=>  SACRScreen(),binding: SACRBinding()),
+    GetPage(name: Routes.cHPOfficersScreen, page: ()=>  CHPOfficersScreen(),binding: CHPOfficersBinding()),
+    GetPage(name: Routes.cHPOfficesDetailScreen, page: ()=>  CHPOfficesDetailScreen(),binding: CHPOfficesDetailBinding()),
+    GetPage(name: Routes.pursuitsScreen, page: ()=>  PursuitsScreen(),binding: PursuitsBinding()),
+    GetPage(name: Routes.sampleReportsScreen, page: ()=>  SampleReportsScreen(),binding: SampleReportsBinding()),
+    GetPage(name: Routes.wICCodesScreen, page: ()=>  WICCodesScreen(),binding: WICCodesBinding()),
+    GetPage(name: Routes.custodyInfoScreen, page: ()=>  CustodyInfoScreen(),binding: CustodyInfoBinding()),
+    GetPage(name: Routes.mISDExceptionsScreen, page: ()=>  MISDExceptionsScreen(),binding: MISDExceptionsBinding()),
+    GetPage(name: Routes.fieldOPSScreen, page: ()=>  FieldOPSScreen(),binding: FieldOPSBinding()),
+    GetPage(name: Routes.crowDisbursementScreen, page: ()=>  CrowDisbursementScreen(),binding: CrowDisbursementBinding()),
+    GetPage(name: Routes.bradyBillScreen, page: ()=>  BradyBillScreen(),binding: BradyBillBinding()),
   ];
 }

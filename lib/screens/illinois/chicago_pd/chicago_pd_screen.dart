@@ -24,9 +24,7 @@ class ChicagoPDScreen extends GetView<ChicagoPDController> {
                 itemBuilder: (contex, index) {
                   return FederalCard(
                     text: controller.chcagoPdList[index],
-                    // onTap: () => Get.toNamed(
-                    //   controller.deptRoutes[index],
-                    // ),
+                    onTap: (){},
                   );
                 },
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

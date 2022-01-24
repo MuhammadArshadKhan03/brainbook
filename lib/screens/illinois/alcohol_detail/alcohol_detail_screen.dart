@@ -21,7 +21,6 @@ class AlcoholDetailScreen extends GetView<AlcoholDetailController> {
         ),
         backgroundColor: Colors.blue.shade200,
         body: Column(
-          //crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
               height: 20,

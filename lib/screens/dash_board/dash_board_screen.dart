@@ -1,5 +1,6 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/images.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/dash_board/dash_board_controller.dart';
 import 'package:brainbook/screens/dash_board/drawer_screen.dart';
 import 'package:flutter/material.dart';
@@ -27,8 +28,11 @@ class DashBoard extends GetView<DashBoardController> {
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 12.0, horizontal: 10.0),
-                child: Image.asset(
-                  drawer,
+                child: GestureDetector(
+                  onTap: ()=> Get.toNamed(Routes.loginScreen),
+                  child: Image.asset(
+                    logout,
+                  ),
                 ),
               )
             ],
