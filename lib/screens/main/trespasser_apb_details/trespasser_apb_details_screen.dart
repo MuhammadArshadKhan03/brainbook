@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class TrespasserApbDetailsScreen extends GetView<TrespasserApbDetailsController>
           txtBtnTitle: "Edit",
           onTap: () {},
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Column(

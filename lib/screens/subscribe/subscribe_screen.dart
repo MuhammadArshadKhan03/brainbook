@@ -22,7 +22,7 @@ class SubscribeScreen extends GetView<SubscribeController> {
         appBar: MyAppBar(
           title: "Subscription",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

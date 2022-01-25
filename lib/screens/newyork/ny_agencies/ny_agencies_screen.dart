@@ -18,7 +18,7 @@ class NYAgenciesScreen extends GetView<NYAgenciesController> {
         appBar: MyAppBar(
           title: "NY Agencies",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

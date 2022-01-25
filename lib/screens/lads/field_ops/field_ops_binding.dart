@@ -1,5 +1,4 @@
 
-import 'package:brainbook/screens/lads/phonetics/phonetics_controller.dart';
 import 'package:get/get.dart';
 
 import 'field_ops_controller.dart';

@@ -2,10 +2,7 @@
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
-import 'package:brainbook/screens/illinois/alcohol_detail/alcohol_detail_controller.dart';
-import 'package:brainbook/screens/illinois/isp_districts_details/isp_districts_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +19,7 @@ class DSNYListDetailScreen extends GetView<DSNYListDetailController> {
           title: Get.arguments[1],image: true,
         ),
 
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [

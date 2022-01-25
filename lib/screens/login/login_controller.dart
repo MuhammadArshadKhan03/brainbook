@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_function_declarations_over_variables
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,6 +17,10 @@ class LoginController extends GetxController{
 
   TextEditingController  emailController = TextEditingController();
   TextEditingController    passwordController = TextEditingController();
+
+
+
+
 
 
 

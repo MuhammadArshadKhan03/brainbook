@@ -1,3 +1,4 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/home_card.dart';
@@ -13,7 +14,7 @@ class TranslatorScreen extends GetView<TranslatorController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar:  MyAppBar(
           title: "Translator",
         ),

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/listview_text.dart';
@@ -19,12 +20,12 @@ class ExigentCircumstancesScreen extends GetView<ExigentCircumstanceController> 
         appBar:  MyAppBar(
           title: "Exigent Circumstances",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // ignore: prefer_const_constructors
+
               SizedBox(height: 20,),
               HeadingTextWidget(text: "Lorem Ipsum"),
               SizedBox(height: 20,),

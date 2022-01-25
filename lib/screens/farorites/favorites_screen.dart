@@ -1,11 +1,8 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:brainbook/core/theme/values/colors.dart';
-import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/global_widgets/delete_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
-import 'package:brainbook/screens/dash_board/dash_board_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

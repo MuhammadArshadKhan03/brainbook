@@ -7,7 +7,6 @@ import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/verification_code/verification_code_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:pinput/pin_put/pin_put.dart';
 
 class VerificationCode extends GetView<VerificationCodeController> {
@@ -17,7 +16,7 @@ class VerificationCode extends GetView<VerificationCodeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
           //  key: controller.globalKey,

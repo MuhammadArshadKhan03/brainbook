@@ -247,13 +247,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.4.0"
-  pin_code_fields:
-    dependency: "direct main"
-    description:
-      name: pin_code_fields
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "7.3.0"
   pinput:
     dependency: "direct main"
     description:
@@ -282,6 +275,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.2.4"
+  responsive_framework:
+    dependency: "direct main"
+    description:
+      name: responsive_framework
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.5"
   sky_engine:
     dependency: transitive
     description: flutter

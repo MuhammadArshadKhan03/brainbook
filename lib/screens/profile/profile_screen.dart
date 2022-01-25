@@ -20,7 +20,7 @@ class ProfileScreen extends GetView<ProfileController> {
         txtBtnTitle: "Save",
         onTap: () {},
       ),
-      backgroundColor: Colors.blue.shade200,
+      backgroundColor:  backgroundColor,
       body: SingleChildScrollView(
         child: Form(
          key: controller.globalKey,

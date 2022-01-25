@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/images.dart';
 import 'package:brainbook/core/theme/values/text_style.dart';
+import 'package:brainbook/global_controller/email_password_validator.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
@@ -10,13 +13,15 @@ import 'package:get/get.dart';
 import 'forgot_password_controller.dart';
 
 class ForgotPassword extends GetView<ForogtPasswordContoller> {
-  const ForgotPassword({Key? key}) : super(key: key);
+   ForgotPassword({Key? key}) : super(key: key);
+  ValidatorController validatorController = Get.find();
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,
@@ -42,10 +47,20 @@ class ForgotPassword extends GetView<ForogtPasswordContoller> {
                   icon: Icon(Icons.email_outlined,color: fontColorLight,),
                   title: "Lorem ipsum",
                   obscureText: false,
+                  validator: validatorController.emailValidator,
 
                 ),
                 SizedBox(height: 35,),
-                ButtonWidget(title: "SEND REQUEST",onTap: ()=>Get.toNamed(Routes.verificationCodeScreen),),
+                ButtonWidget(title: "SEND REQUEST",onTap: (){
+                  if(controller.globalKey.currentState!.validate())
+                  {
+                    // controller.globalKey.currentState!.save();
+                    controller.emailController.clear();
+
+                    Get.toNamed(Routes.verificationCodeScreen);
+
+                  }
+                }),
               ],
             ),
           ),

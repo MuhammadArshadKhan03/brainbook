@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/main/miranda/miranda_controller.dart';
@@ -16,7 +17,7 @@ class MirandaScreen extends GetView<MirandaController> {
         appBar: MyAppBar(
           title: "Miranda",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

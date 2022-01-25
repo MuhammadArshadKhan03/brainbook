@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/screens/illinois/naperville/naperville_controller.dart';
@@ -14,7 +17,7 @@ class NapervilleScreen extends GetView<NapervilleController> {
         appBar: MyAppBar(
           title: "Naperville",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 15,),

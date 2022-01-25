@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'dart:ffi';
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
@@ -26,7 +25,7 @@ class VehicleStopFormScreen extends GetView<VehicleStopFormController> {
         txtBtnTitle: "Reset",
         onTap: () {},
       ),
-      backgroundColor: Colors.blue.shade200,
+          backgroundColor: backgroundColor,
       body: SingleChildScrollView(
         child: Form(
           key: controller.globalKey,

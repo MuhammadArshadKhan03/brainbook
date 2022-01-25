@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/main/flash_cards/flash_cards_controller.dart';
-import 'package:brainbook/screens/main/recruits_studying/recruits_studying_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,9 +18,9 @@ class FlashCardsScreen extends GetView<FlashCardController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(
-          title:"AOA",
+          title:Get.arguments,
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

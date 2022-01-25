@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';

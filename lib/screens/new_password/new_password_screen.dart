@@ -1,5 +1,6 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/text_style.dart';
+import 'package:brainbook/global_controller/email_password_validator.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
@@ -8,13 +9,15 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class NewPassword extends GetView<NewPasswordContoller> {
-  const NewPassword({Key? key}) : super(key: key);
+   NewPassword({Key? key}) : super(key: key);
+  ValidatorController validatorController = Get.find();
+
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,
@@ -55,6 +58,7 @@ class NewPassword extends GetView<NewPasswordContoller> {
                         ),
                       ),
                     ),
+                        validator: validatorController.newPasswordValidator,
                   ),
                 ),
                 SizedBox(height: 35,),
@@ -79,10 +83,20 @@ class NewPassword extends GetView<NewPasswordContoller> {
                         ),
                       ),
                     ),
+                        validator: validatorController.confrinNewPasswordValidator,
                   ),
                 ),
                 SizedBox(height: 45,),
-                ButtonWidget(title: "CONFRIM",onTap: ()=>Get.toNamed(Routes.passwordUpdateScreen),),
+                ButtonWidget(title: "CONFRIM",onTap: (){
+                  if(controller.globalKey.currentState!.validate())
+                  {
+                    // controller.globalKey.currentState!.save();
+                    controller.newPasswordController.clear();
+                    controller.confrimPasswordController.clear();
+                    Get.toNamed(Routes.dashBoardScreen);
+
+                  }
+                },),
               ],
             ),
           ),

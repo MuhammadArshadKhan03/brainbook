@@ -1,6 +1,6 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
-import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +14,7 @@ class GladysMarsyScreen extends GetView<GladysMarsyController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar: MyAppBar(
           title: "Gladys R. / Marsy`s",
         ),

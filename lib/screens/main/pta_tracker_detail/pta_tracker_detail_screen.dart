@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/main/pta_tracker_detail/pta_tracker_detail_controller.dart';
@@ -18,7 +19,7 @@ class PATTrackerDetailScreen extends GetView<PtaTrackerDetailController> {
           txtBtnTitle: "Edit",
           onTap: () {},
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [

@@ -16,7 +16,7 @@ class LessLethal extends GetView<LessLethalController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Less Lethal",),
-        // backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

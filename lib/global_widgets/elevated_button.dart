@@ -1,7 +1,8 @@
 
+// ignore_for_file: must_be_immutable, prefer_const_constructors, unnecessary_null_in_if_null_operators
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class ButtonWidget extends StatelessWidget {
   ButtonWidget({

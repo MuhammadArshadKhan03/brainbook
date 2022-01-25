@@ -1,5 +1,4 @@
 import 'package:brainbook/core/theme/values/colors.dart';
-import 'package:brainbook/core/theme/values/images.dart';
 import 'package:brainbook/screens/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,7 +11,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        //backgroundColor: containerColor.withOpacity(0.15),
+        backgroundColor:  backgroundColor,
         body: SplashScreenView(
           navigateRoute:  WelcomeScreen(),
           duration: 6000,

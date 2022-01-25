@@ -18,7 +18,7 @@ class AgeResultScreen extends GetView<AgeResultController> {
         appBar:  MyAppBar(
           title: "Age Calculator",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

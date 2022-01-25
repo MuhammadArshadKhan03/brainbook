@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, annotate_overrides, unnecessary_null_in_if_null_operators
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:flutter/material.dart';

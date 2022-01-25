@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/privacy_policy/privacy_policy_controller.dart';
@@ -17,7 +18,7 @@ class PrivacyPolicyScreen extends GetView<PrivacyPolicyController> {
         appBar: MyAppBar(
           title: "Privacy Policy",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

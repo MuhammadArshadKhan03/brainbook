@@ -20,7 +20,7 @@ class FrontPlatesScreen extends GetView<FrontPlatesController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Front Plates",txtBtnTitle: "Edit",onTap: (){},),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

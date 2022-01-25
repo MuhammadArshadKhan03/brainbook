@@ -1,4 +1,3 @@
-import 'package:brainbook/screens/newyork/doc/doc_controller.dart';
 import 'package:get/get.dart';
 
 import 'suffolk_county_controller.dart';

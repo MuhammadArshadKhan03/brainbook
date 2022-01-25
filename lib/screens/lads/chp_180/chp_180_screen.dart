@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
-import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/lads/chp_180/chp_180_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +17,7 @@ class CHPScreen extends GetView<CHPController> {
         appBar: MyAppBar(
           title: "CHP-180 Narratives",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 15,),

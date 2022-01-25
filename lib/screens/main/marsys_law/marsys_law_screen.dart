@@ -1,6 +1,7 @@
-// ignore: file_names
+
 // ignore_for_file: file_names
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class MarsyLawScreen extends GetView<MarsyLawController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar: MyAppBar(
           title: "${Get.arguments}",
         ),

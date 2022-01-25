@@ -1,6 +1,7 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/images.dart';
 import 'package:brainbook/core/theme/values/text_style.dart';
+import 'package:brainbook/global_controller/email_password_validator.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/rich_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
@@ -13,12 +14,14 @@ import 'package:google_fonts/google_fonts.dart';
 class LoginScreen extends GetView<LoginController> {
   LoginScreen({Key? key}) : super(key: key);
 
+  ValidatorController validatorController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
      // resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.blue.shade200,
+      backgroundColor: backgroundColor,
       body: Form(
         key: controller.globalKey,
         child: SingleChildScrollView(
@@ -54,13 +57,17 @@ class LoginScreen extends GetView<LoginController> {
                 icon: Icon(Icons.person_outlined, color: fontColorDark),
                 obscureText: false,
                 controller: controller.emailController,
+                validator: validatorController.emailValidator,
               ),
               const SizedBox(
                 height: 15,
               ),
               Obx(
                 () => TextFormFieldWidget(
+
+                  validator: validatorController.passwordValidator,
                   title: "Password ",
+
                   icon: const Icon(
                     Icons.lock_open_outlined,
                     color: fontColorDark,
@@ -101,13 +108,26 @@ class LoginScreen extends GetView<LoginController> {
                   ),
                 ),
                 trailing: TextButton(
+
                   onPressed: ()=>Get.toNamed(Routes.forgotPasswordScreen),
                   child: Text("Forget Password?"),
                 ),
               ),
               ButtonWidget(
                 title: "LOGIN",
-                onTap: ()=>Get.toNamed(Routes.dashBoardScreen),
+              //  onTap: ()=>Get.toNamed(Routes.dashBoardScreen),
+                onTap: (){
+                  // controller.emailController.clear();
+                  // controller.passwordController.clear();
+                  if(controller.globalKey.currentState!.validate())
+                    {
+                     // controller.globalKey.currentState!.save();
+                      controller.emailController.clear();
+                      controller.passwordController.clear();
+                      Get.toNamed(Routes.dashBoardScreen);
+
+                    }
+                },
               ),
               const SizedBox(
                 height: 15,

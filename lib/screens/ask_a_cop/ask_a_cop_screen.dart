@@ -1,12 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:brainbook/core/theme/values/colors.dart';
-import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/ask_cop_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/routes/app_routes.dart';
-import 'package:brainbook/screens/ask_question/ask_question_screen.dart';
-import 'package:brainbook/screens/response/response_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

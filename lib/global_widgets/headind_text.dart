@@ -1,4 +1,3 @@
-import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:flutter/material.dart';
 
 class HeadingTextWidget extends StatelessWidget {

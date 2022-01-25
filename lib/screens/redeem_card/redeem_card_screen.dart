@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
@@ -22,7 +22,7 @@ class RedeemCardScreen extends GetView<RedeemCardController> {
         appBar: MyAppBar(
           title: "Redeem Card",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

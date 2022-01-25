@@ -18,7 +18,7 @@ class NoteBookScreen extends GetView<NoteBookController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.blue.shade200,
+      backgroundColor: backgroundColor,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

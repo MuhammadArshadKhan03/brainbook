@@ -1,6 +1,5 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/main/gang_slang/widgets/gang_card.dart';
@@ -19,7 +18,7 @@ class NYStatePoliceScreen extends GetView<NYStatePoliceController> {
         appBar: MyAppBar(
           title: "NY State Police",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

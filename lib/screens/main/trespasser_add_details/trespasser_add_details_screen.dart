@@ -6,7 +6,6 @@ import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
-import 'package:brainbook/screens/main/trespasser_apb/trespasser_apb_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +22,7 @@ class AddTrespasserDetailsScreen extends GetView<AddTrespasserDetailsController>
         appBar: MyAppBar(
           title: "Trespasser APB",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

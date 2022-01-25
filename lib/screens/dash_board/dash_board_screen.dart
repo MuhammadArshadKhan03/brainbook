@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/images.dart';
 import 'package:brainbook/routes/app_routes.dart';

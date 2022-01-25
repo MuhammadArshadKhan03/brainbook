@@ -17,7 +17,7 @@ class SHAD49Screen extends GetView<SHAD49Controller> {
         appBar: MyAppBar(
           title: "SHAD-49",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           children: [
             SizedBox(

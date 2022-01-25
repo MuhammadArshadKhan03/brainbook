@@ -1,7 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/screens/illinois/joliet_pd/joliet_pd_controller.dart';
-import 'package:brainbook/screens/illinois/will_county/will_county_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +17,7 @@ class JolietPDScreen extends GetView<JolietPDController> {
         appBar: MyAppBar(
           title: "Dupage County",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 15,),

@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, unnecessary_null_in_if_null_operators
+
 import 'package:flutter/material.dart';
 
 class DeleteCard extends StatelessWidget {

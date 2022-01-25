@@ -6,7 +6,6 @@ import 'package:brainbook/global_widgets/delete_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
-import 'package:brainbook/screens/dash_board/dash_board_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'location_controller.dart';
@@ -22,7 +21,7 @@ class LocationScreen extends GetView<LocationController> {
         appBar: MyAppBar(
           title: "Location",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Stack(
           children: [
             Form(

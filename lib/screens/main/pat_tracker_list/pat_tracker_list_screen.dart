@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/delete_card.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
@@ -24,7 +25,7 @@ class PATTrackerListScreen extends GetView<PATTrackerListController> {
         appBar: MyAppBar(
           title: "PAT Tracker",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

@@ -21,7 +21,7 @@ class NYSherrifDetailScreen extends GetView<NYSherrifDetailController> {
         appBar: MyAppBar(
           title: Get.arguments,image: true,
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           //crossAxisAlignment: CrossAxisAlignment.center,
           children: [

@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:brainbook/core/theme/values/colors.dart';
-import 'package:brainbook/core/theme/values/text_style.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +18,7 @@ class CourtLocationScreen extends GetView<CourtLocationController> {
         appBar: MyAppBar(
           title: "Court Location",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [

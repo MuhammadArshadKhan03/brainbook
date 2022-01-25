@@ -1,5 +1,7 @@
 
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
@@ -20,7 +22,7 @@ class CHPOfficersScreen extends GetView<CHPOfficersController> {
         appBar: MyAppBar(
           title: "CHP Officers",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

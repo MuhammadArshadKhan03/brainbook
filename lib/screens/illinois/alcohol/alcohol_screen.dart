@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
@@ -17,7 +19,7 @@ class AlcoholScreen extends GetView<AlcoholController> {
         appBar: MyAppBar(
           title: "Alcohol",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

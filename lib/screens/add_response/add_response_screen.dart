@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables
 
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';

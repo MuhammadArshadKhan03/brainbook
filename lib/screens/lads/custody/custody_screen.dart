@@ -1,7 +1,8 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:brainbook/screens/main/gang_slang/widgets/gang_card.dart';
@@ -20,7 +21,7 @@ class CustodyScreen extends GetView<CustodyController> {
         appBar: MyAppBar(
           title: "Custody",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

@@ -1,3 +1,4 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ class NassauCountyScreen extends GetView<NassauCountyController> {
         appBar: MyAppBar(
           title: "Nassau County",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 20,),

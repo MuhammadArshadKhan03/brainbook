@@ -1,3 +1,4 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
@@ -16,7 +17,7 @@ class AgeCalculationScreen extends GetView<AgeCalcutaionController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar: MyAppBar(
           title: "Age Calculator",
         ),

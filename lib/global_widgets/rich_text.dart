@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

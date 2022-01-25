@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/screens/illinois/domestic_violence/domestic_violence_controller.dart';
@@ -16,7 +17,7 @@ class DomesticViolenceScreen extends GetView<DomesticViolenceController> {
         appBar: MyAppBar(
           title: "Domestic Violence",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:backgroundColor,
         body: Container(
           margin: EdgeInsets.only(top: 10),
           child: ListView.builder(

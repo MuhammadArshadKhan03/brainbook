@@ -1,23 +1,26 @@
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/core/theme/values/images.dart';
 import 'package:brainbook/core/theme/values/text_style.dart';
+import 'package:brainbook/global_controller/email_password_validator.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/rich_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
+import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'signup_controller.dart';
 
 class SignUp extends GetView<SignUpController> {
-  const SignUp({Key? key}) : super(key: key);
+   SignUp({Key? key}) : super(key: key);
+  ValidatorController validatorController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
           //resizeToAvoidBottomInset: false,
-         // backgroundColor: containerColor,
+          backgroundColor:  backgroundColor,
           body: SingleChildScrollView(physics:ScrollPhysics() ,
             child: Form(
               key: controller.globalKey,
@@ -48,6 +51,7 @@ class SignUp extends GetView<SignUpController> {
                     icon: Icon(Icons.email_outlined, color: fontColorDark),
                     obscureText: false,
                     controller: controller.emailController,
+                    validator: validatorController.emailValidator,
                   ),
                   const SizedBox(
                     height: 20,
@@ -73,6 +77,7 @@ class SignUp extends GetView<SignUpController> {
                           ),
                         ),
                       ),
+                          validator: validatorController.passwordValidator,
                     ),
                   ),
                   const SizedBox(
@@ -89,7 +94,16 @@ class SignUp extends GetView<SignUpController> {
                   ),
                   ButtonWidget(
                     title: "CREATE ACCOUNT",
-                    onTap: () {},
+                    onTap: () {
+                      if(controller.globalKey.currentState!.validate())
+                      {
+                        // controller.globalKey.currentState!.save();
+                        controller.emailController.clear();
+                        controller.passwordController.clear();
+                        Get.toNamed(Routes.dashBoardScreen);
+
+                      }
+                    },
                   ),
 
                   const SizedBox(

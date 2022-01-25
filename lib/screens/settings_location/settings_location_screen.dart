@@ -21,7 +21,7 @@ class SettingsLocationScreen extends GetView<SettingsLocationController> {
           txtBtnTitle: "Save",
           onTap: () {},
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(
@@ -38,7 +38,7 @@ class SettingsLocationScreen extends GetView<SettingsLocationController> {
                 padding: const EdgeInsets.only(left: 18.0),
                 child: Text("Current location"),
               ),
-              // ignore: prefer_const_constructors
+
               SizedBox(
                 height: 15,
               ),

@@ -1,3 +1,4 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/listview_text.dart';
@@ -15,7 +16,7 @@ class TestifyingTipsScreen extends GetView<TestifyingTipsController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Testifying Tips",),
-        // backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

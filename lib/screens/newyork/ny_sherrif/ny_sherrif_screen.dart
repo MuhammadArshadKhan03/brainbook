@@ -19,7 +19,7 @@ class NYSherrifScreen extends GetView<NYSherrifController> {
         appBar: MyAppBar(
           title: "NY Sherrif's",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

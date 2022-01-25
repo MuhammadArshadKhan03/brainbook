@@ -20,7 +20,7 @@ class DSNYListScreen extends GetView<DSNYListController> {
         appBar: MyAppBar(
           title: controller.cardText,
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

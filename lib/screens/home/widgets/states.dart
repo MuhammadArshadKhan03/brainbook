@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/global_widgets/home_card.dart';
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';

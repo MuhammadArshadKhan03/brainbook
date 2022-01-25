@@ -2,7 +2,6 @@
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
-import 'package:brainbook/global_widgets/delete_card.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
@@ -26,7 +25,7 @@ class TrafficCodeScreen extends GetView<TrafficCodeController> {
         appBar: MyAppBar(
           title: "Traffic Codes",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Form(
           key: controller.globalKey,
           child: Column(

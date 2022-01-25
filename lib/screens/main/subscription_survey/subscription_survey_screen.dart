@@ -1,11 +1,11 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/elevated_button.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/radio_button.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
-import 'package:brainbook/screens/main/vehicle_stop_form/vehicle_stop_form_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +23,7 @@ class SubscriptionSurveyScreen extends GetView<SubscriptionSurveyController> {
         appBar: MyAppBar(
           title: "Subscription Survey",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

@@ -13,12 +13,13 @@ import 'warrents_controller.dart';
 class Warrants extends GetView<WarratnsController> {
   Warrants({Key? key}) : super(key: key);
 
-  //WarratnsController warratnsController = Get.put(WarratnsController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: backgroundColor,
+
         appBar:  MyAppBar(title: "Warrants",),
         body: SingleChildScrollView(
           child: Column(

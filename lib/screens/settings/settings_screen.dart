@@ -17,7 +17,7 @@ class SettingsScreen extends GetView<SettingsController> {
         appBar: MyAppBar(
           title: "Settings",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: Column(
           children: [
             ListTile(

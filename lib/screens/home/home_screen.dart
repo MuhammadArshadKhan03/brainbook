@@ -1,9 +1,7 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_contains, prefer_const_constructors_in_immutables
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
-import 'package:brainbook/global_widgets/home_card.dart';
-import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -18,7 +16,7 @@ class Home extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -50,6 +48,7 @@ class Home extends GetView<HomeController> {
                           key: controller.globalKey,
                           hint: Text("Select state"),
                           onChanged: (String? value) {
+                            controller.val.value=value!;
                           },
                           items: controller.Cities.map((city) {
                             return DropdownMenuItem(
@@ -71,11 +70,17 @@ class Home extends GetView<HomeController> {
                   ],
                 ),
               ),
+              SizedBox(
+                height: 9,
+              ),
                Container(
                   height: 470,
                   child: Obx(()=> controller.Cities.indexOf(controller.val.value)==-1? controller.pages[0]:
                   controller.pages[controller.Cities.indexOf(controller.val.value)]),
                 ),
+              SizedBox(
+                height: 9,
+              ),
 
             ],
           ),

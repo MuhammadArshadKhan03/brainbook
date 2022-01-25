@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/listview_text.dart';
@@ -15,7 +18,7 @@ class WindowTintLawsScreen extends GetView<WindowTintLawsController> {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Window Tint Laws",),
-        // backgroundColor: containerColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

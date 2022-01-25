@@ -16,7 +16,7 @@ class GangSlangScreen extends GetView<GangSlangController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar: MyAppBar(
           title: "Gang Slang",
         ),

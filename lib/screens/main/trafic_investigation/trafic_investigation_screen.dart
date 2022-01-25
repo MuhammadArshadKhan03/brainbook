@@ -15,7 +15,7 @@ class TraficInvestigationScreen extends GetView<TraficInvestigationController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      backgroundColor: Colors.blue.shade200,
+          backgroundColor: backgroundColor,
       appBar: MyAppBar(
         title: "Traffic Investigation",
       ),

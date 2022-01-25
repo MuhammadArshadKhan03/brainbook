@@ -1,6 +1,7 @@
 
 // ignore_for_file: prefer_const_constructors, file_names
 
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
@@ -20,7 +21,7 @@ class BandCCategoryScreen extends GetView<BandCCategoryController> {
         appBar: MyAppBar(
           title: "B&C Category",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,

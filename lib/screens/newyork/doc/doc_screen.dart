@@ -1,3 +1,4 @@
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/screens/newyork/doc/doc_controller.dart';
@@ -14,7 +15,7 @@ class DOCScreen extends GetView<DOCController> {
         appBar: MyAppBar(
           title: "DOC",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 20,),

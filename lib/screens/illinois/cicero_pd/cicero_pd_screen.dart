@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +18,7 @@ class CiceroPDScreen extends GetView<CiceroPDController> {
       appBar: MyAppBar(
         title: "Cicero PD",
       ),
-          backgroundColor: Colors.blue.shade200,
+          backgroundColor: backgroundColor,
           body: Column(
             children: [
               SizedBox(height: 30,),

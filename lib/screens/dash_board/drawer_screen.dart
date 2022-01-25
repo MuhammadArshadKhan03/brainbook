@@ -1,9 +1,10 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/screens/dash_board/dash_board_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'widgets/drawer_header.dart';
-import 'widgets/drawer_menu_item.dart';
 
 class NavigationDrawerScreen extends GetView<DashBoardController> {
   NavigationDrawerScreen({Key? key}) : super(key: key);

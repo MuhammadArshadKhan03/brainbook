@@ -9,14 +9,13 @@ import 'package:get/get.dart';
 
 class ColorCodesScreen extends GetView<ColorCodesController> {
   ColorCodesScreen({Key? key}) : super(key: key);
-  // LessLethalController lessLethalController = Get.put(LessLethalController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         appBar: MyAppBar(title: "Color Codes",),
-         backgroundColor: Colors.blue.shade200,
+         backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

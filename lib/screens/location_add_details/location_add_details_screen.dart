@@ -1,6 +1,5 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_constructors_in_immutables, sized_box_for_whitespace
 
-import 'dart:ffi';
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
@@ -28,7 +27,7 @@ class LocationAddDetailsScreen extends GetView<LocationAddDetailsController> {
             controller.clearTextField();
           },
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor:  backgroundColor,
         body: SingleChildScrollView(
           child: Form(
             key: controller.globalKey,

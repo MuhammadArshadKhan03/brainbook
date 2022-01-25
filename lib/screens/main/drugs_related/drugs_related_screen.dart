@@ -14,7 +14,7 @@ class DrugsRelated extends GetView<DrugsRelatedController> {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      //backgroundColor: containerColor,
+          backgroundColor: backgroundColor,
       appBar: MyAppBar(
         title: "Drugs Related",
       ),

@@ -2,7 +2,6 @@
 
 import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/routes/app_routes.dart';
-import 'package:brainbook/screens/response/response_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

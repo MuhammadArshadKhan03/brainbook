@@ -11,13 +11,12 @@ import 'audio_controller.dart';
 class AudioScreen extends GetView<AudioController> {
   AudioScreen({Key? key}) : super(key: key);
 
-  //AudioController audioController = Get.put(AudioController());
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         appBar:  MyAppBar(
           title: Get.arguments[2],
         ),

@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/federal_card.dart';
 import 'package:brainbook/screens/illinois/hometown_pd/hometown_pd_controller.dart';
@@ -14,7 +17,7 @@ class HometownPDScreen extends GetView<HometownPDController> {
         appBar: MyAppBar(
           title: "Hometown PD",
         ),
-        backgroundColor: Colors.blue.shade200,
+        backgroundColor: backgroundColor,
         body: Column(
           children: [
             SizedBox(height: 15,),
