@@ -45,7 +45,7 @@ class Home extends GetView<HomeController> {
                         padding: const EdgeInsets.symmetric(horizontal: 18.0),
                         child: DropdownButtonFormField(
                           isExpanded: true,
-                          key: controller.globalKey,
+                          //key: controller.globalKey,
                           hint: Text("Select state"),
                           onChanged: (String? value) {
                             controller.val.value=value!;
@@ -70,17 +70,17 @@ class Home extends GetView<HomeController> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 9,
-              ),
+              // SizedBox(
+              //   height: 5,
+              // ),
                Container(
-                  height: 470,
+                  height: MediaQuery.of(context).size.height / 1.52 ,
                   child: Obx(()=> controller.Cities.indexOf(controller.val.value)==-1? controller.pages[0]:
                   controller.pages[controller.Cities.indexOf(controller.val.value)]),
                 ),
-              SizedBox(
-                height: 9,
-              ),
+              // SizedBox(
+              //   height: 9,
+              // ),
 
             ],
           ),

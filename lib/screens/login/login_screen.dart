@@ -115,19 +115,7 @@ class LoginScreen extends GetView<LoginController> {
               ),
               ButtonWidget(
                 title: "LOGIN",
-              //  onTap: ()=>Get.toNamed(Routes.dashBoardScreen),
-                onTap: (){
-                  // controller.emailController.clear();
-                  // controller.passwordController.clear();
-                  if(controller.globalKey.currentState!.validate())
-                    {
-                     // controller.globalKey.currentState!.save();
-                      controller.emailController.clear();
-                      controller.passwordController.clear();
-                      Get.toNamed(Routes.dashBoardScreen);
-
-                    }
-                },
+                onTap: controller.onLoginTap,
               ),
               const SizedBox(
                 height: 15,
