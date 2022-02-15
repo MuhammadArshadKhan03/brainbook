@@ -45,22 +45,18 @@ class ForgotPassword extends GetView<ForogtPasswordContoller> {
                 TextFormFieldWidget(
                   controller: controller.emailController,
                   icon: Icon(Icons.email_outlined,color: fontColorLight,),
-                  title: "Lorem ipsum",
+                  title: "Email",
                   obscureText: false,
                   validator: validatorController.emailValidator,
 
                 ),
                 SizedBox(height: 35,),
-                ButtonWidget(title: "SEND REQUEST",onTap: (){
-                  if(controller.globalKey.currentState!.validate())
-                  {
-                    // controller.globalKey.currentState!.save();
-                    controller.emailController.clear();
-
-                    Get.toNamed(Routes.verificationCodeScreen);
-
-                  }
-                }),
+                ButtonWidget(title: "SEND REQUEST",onTap:
+                    // (){
+                    //   Get.toNamed(Routes.verificationCodeScreen,arguments: controller.emailController.text);
+                    // }
+                controller.sendRequest,
+                ),
               ],
             ),
           ),

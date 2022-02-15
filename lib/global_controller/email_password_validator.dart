@@ -10,7 +10,7 @@ class ValidatorController extends GetxController{
     }else if(email.length < 3){
       return 'email short';
     }
-    else if(email.length > 20){
+    else if(email.length > 30){
       return 'email long';
     }
     else if(!email.contains("@gmail.com")){
@@ -24,19 +24,27 @@ class ValidatorController extends GetxController{
     }else if(password.length < 3){
       return 'Password short';
     }
-    else if(password.length > 15){
+    else if(password.length > 25){
       return 'Password long';
     }
 
     return null;
   };
+
+  String? Function(String?)? verifyCodeValidator = (String? verifyCode){
+    if(verifyCode!.isEmpty){
+      return 'verifyCode empty';
+    }
+    return null;
+  };
+
   String? Function(String?)? newPasswordValidator = (String? newpassword){
     if(newpassword!.isEmpty){
       return 'Password empty';
     }else if(newpassword.length < 3){
       return 'Password short';
     }
-    else if(newpassword.length > 15){
+    else if(newpassword.length > 25){
       return 'Password long';
     }
 
@@ -48,7 +56,7 @@ class ValidatorController extends GetxController{
     }else if(cpnfrimnewpassword.length < 3){
       return 'Password short';
     }
-    else if(cpnfrimnewpassword.length > 15){
+    else if(cpnfrimnewpassword.length > 25){
       return 'Password long';
     }
 

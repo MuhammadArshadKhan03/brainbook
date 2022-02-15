@@ -56,30 +56,40 @@ class SignUpController extends GetxController {
     // }
 
      if (globalKey.currentState!.validate()) {
+       if(dropdownvalue == "")  {
+         print("error");
+         return Get.snackbar("State Error", "Please Select the State");
+       }
+       try{
+         final response = await userProvider.registerUser(
+           email: emailController.text,
+           password: passwordController.text,
+           state: _dropdownvalue.value,
+         );
+print(response[1]);
+         if (response is String) {
+           print("$response 111111111111");
+           Get.snackbar("Response", response);
+         } else {
+           print("$response 2222222222");
+           UserModel userModel = response;
+
+           Get.snackbar("Response", userModel.msg);
+         }
+       }
+           catch(e){
+         Get.snackbar("Error", e.toString());
+
+           }
        // emailController.clear();
        // passwordController.clear();
      // dropdownglobalKey.currentState!.reset();
      // Get.toNamed(Routes.loginScreen);
      }
     //
-     if(dropdownvalue == "")  {
-       print("error");
-       return Get.snackbar("State Error", "Please Select the State");
-     }
+
     //
     // // print(dropdownvalue);
-    final response = await userProvider.registerUser(
-      email: emailController.text,
-      password: passwordController.text,
-      state: _dropdownvalue.value,
-    );
 
-    if (response is String) {
-      print("$response 111111111111");
-      Get.snackbar("Response", response);
-    } else {
-      print(response);
-      UserModel userModel = response;
-    }
   }
 }

@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_function_declarations_over_variables
 
+import 'dart:convert';
+
 import 'package:brainbook/data/provider/user_provider.dart';
 import 'package:brainbook/routes/app_routes.dart';
 import 'package:flutter/material.dart';
@@ -27,26 +29,35 @@ class LoginController extends GetxController {
   TextEditingController passwordController = TextEditingController();
 
   onLoginTap() async {
+    if (globalKey.currentState!.validate()) {
+      try{
+        final response = await userProvider.loginUser(
+          email: emailController.text,
+          password: passwordController.text,
+        );
+        print(response);
 
-    // if (globalKey.currentState!.validate()) {
-    //   // emailController.clear();
-    //   // passwordController.clear();
-    //  // Get.toNamed(Routes.dashBoardScreen);
-    // }
-    final response = await userProvider.loginUser(
-      email: emailController.text,
-      password: passwordController.text,
-    );
+        if(response[1]==true){
+          Get.snackbar("scucess", response[2]);
 
-    final tokenOrMsg = response[0];
-    final statusCode = response[1];
-
-
-    if(statusCode == 200) {
-      print("$response response");
-      print("$tokenOrMsg 22222222222");
-    } else {
-      print("error: $tokenOrMsg");
+        }
+        else{
+          Get.snackbar("Error", response[2]);
+        }
+      }
+      catch(e){
+        Get.snackbar("Error", e.toString(),);
+      }
     }
+
+
+
+
+    // if(statusCode == 200) {
+    //   print("$response response");
+    //   print("$tokenOrMsg 22222222222");
+    // } else {
+    //   print("error: $tokenOrMsg");
+    // }
   }
 }

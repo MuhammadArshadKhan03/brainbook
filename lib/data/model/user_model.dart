@@ -3,12 +3,14 @@ class UserModel {
   final String msg;
   final _UserData data;
   final bool success;
+  final int uerId;
 
   UserModel({
     required this.code,
     required this.msg,
     required this.data,
     required this.success,
+    required this.uerId,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -17,6 +19,7 @@ class UserModel {
       msg: json["msg"],
       data: _UserData.fromJson(json["data"]),
       success: json["success"],
+      uerId: json["userId"]
     );
   }
 }
