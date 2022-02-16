@@ -39,7 +39,9 @@ class LoginController extends GetxController {
 
         if(response[1]==true){
           Get.snackbar("scucess", response[2]);
-
+          Get.toNamed(Routes.dashBoardScreen);
+          emailController.clear();
+          passwordController.clear();
         }
         else{
           Get.snackbar("Error", response[2]);

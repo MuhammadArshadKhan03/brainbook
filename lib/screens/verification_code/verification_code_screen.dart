@@ -54,7 +54,7 @@ class VerificationCode extends GetView<VerificationCodeController> {
                     fieldsCount: 4,
 
                     focusNode: FocusNode(),
-                    controller: controller.verificationCode,
+                    controller: controller.verificationCodeController,
                     submittedFieldDecoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(5.0),

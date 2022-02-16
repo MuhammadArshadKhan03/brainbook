@@ -12,6 +12,7 @@ class UserProvider {
   final String loginPath = "user/login";
   final String passwordResetPath = "user/password-reset";
   final String verifyCodePath = "user/veryfiy-reset-code";
+  final String newPasswordPath = "user/new-password";
 
   Future<dynamic> registerUser({
     required String email,
@@ -31,7 +32,6 @@ class UserProvider {
     final decodedJson = jsonDecode(response.body);
 
     if (response.statusCode == 201 && decodedJson["success"]) {
-
       return UserModel.fromJson(decodedJson);
     } else {
       return decodedJson["msg"];
@@ -51,16 +51,23 @@ class UserProvider {
 
     final decodedJson = jsonDecode(response.body);
 
-   // print(response.statusCode);
-    if (response.statusCode == 200) {
-      return [decodedJson["data"]["token"], decodedJson["success"],decodedJson["msg"]];
+    // print(response.statusCode);
+    if (decodedJson["success"] == true) {
+      return [
+        decodedJson["data"]["token"],
+        decodedJson["success"],
+        decodedJson["msg"]
+      ];
     } else
       (e) {
         [decodedJson["msg"] as String, response.statusCode];
       };
   }
 
- Future<dynamic> passwordReset({required String email}) async {
+
+
+
+  Future<dynamic> passwordReset({required String email}) async {
     print("callll");
 
     final response = await http.post(Uri.parse("$endPoint$passwordResetPath"),
@@ -69,38 +76,76 @@ class UserProvider {
         },
         body: jsonEncode({
           "email": email,
-
         }));
     print(response.body);
     final decodedJson = jsonDecode(response.body);
     print("$decodedJson ddddddddddddddd");
     Get.snackbar("Success", decodedJson["msg"]);
 
-if(decodedJson["success"] == true){
-return [decodedJson["msg"],decodedJson["success"]];
-}
-else{
-  decodedJson["msg"];
-}
+    if (decodedJson["success"] == true) {
+      return [decodedJson["msg"], decodedJson["success"]];
+    } else {
+      decodedJson["msg"];
+    }
   }
+
+
+
 
 
   Future<dynamic> verifyCode({required String code}) async {
     final response = await http.post(Uri.parse("$endPoint$verifyCodePath"),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode({
+          "code": code,
+        }));
+    print(response.body);
+    final decodedJson = jsonDecode(response.body);
+    if (decodedJson["success"] == true) {
+      return [
+        decodedJson["userId"],
+        decodedJson["success"],
+        decodedJson["data"]["passwordCode"]
+      ];
+    } else {
+      return decodedJson["msg"];
+    }
+  }
+
+
+
+
+
+
+  Future<dynamic> newPassword(
+      {required String userId,
+      required String code,
+      required String password,
+      required String confirmPassword}) async {
+    final response = await http.post(
+      Uri.parse("$endPoint$newPasswordPath"),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
       body: jsonEncode({
-        "code":code,
-      })
+        "userId": userId,
+        "code" :code,
+        "password": password,
+        "confirmPassword":confirmPassword,
+      }),
     );
-    print(response.body);
+    print("${response.body} response body");
     final decodedJson = jsonDecode(response.body);
-    if(decodedJson["success"] == true){
-      return [decodedJson["userId"],decodedJson["success"],];
+    print(decodedJson);
+    if(decodedJson["success"]==true){
+      print(decodedJson);
+      return [decodedJson["msg"],decodedJson["success"]];
+
     }
     else{
-     return decodedJson["msg"];
+      return decodedJson["msg"];
     }
 
   }

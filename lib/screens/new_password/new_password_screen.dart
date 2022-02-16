@@ -69,7 +69,7 @@ class NewPassword extends GetView<NewPasswordContoller> {
                       Icons.lock_open_outlined,
                       color: fontColorDark,
                     ),
-                    controller: controller.confrimPasswordController,
+                    controller: controller.confirmPasswordController,
                     obscureText: controller.obscureConfrim,
                     inkWell: GestureDetector(
                       onTap: () {
@@ -87,16 +87,12 @@ class NewPassword extends GetView<NewPasswordContoller> {
                   ),
                 ),
                 SizedBox(height: 45,),
-                ButtonWidget(title: "CONFRIM",onTap: (){
-                  if(controller.globalKey.currentState!.validate())
-                  {
-                    // controller.globalKey.currentState!.save();
-                    controller.newPasswordController.clear();
-                    controller.confrimPasswordController.clear();
-                    Get.toNamed(Routes.dashBoardScreen);
-
-                  }
-                },),
+                ButtonWidget(title: "CONFIRM",onTap:
+                //     (){
+                //
+                // },
+                    controller.confrimPassword,
+                ),
               ],
             ),
           ),
