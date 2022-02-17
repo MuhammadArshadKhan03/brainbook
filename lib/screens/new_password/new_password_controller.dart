@@ -40,10 +40,10 @@ class NewPasswordContoller extends GetxController {
           code: Get.arguments[1],
           password: newPasswordController.text,
           confirmPassword: confirmPasswordController.text);
-      print(response);
+      print("$response respoinsess");
       if(response[1]==true){
         Get.snackbar("Success", response[0]);
-        Get.toNamed(Routes.loginScreen);
+        Get.toNamed(Routes.passwordUpdateScreen);
       }
       else{
         Get.snackbar("Error", response[0]);

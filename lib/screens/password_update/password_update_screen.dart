@@ -33,7 +33,12 @@ class PasswordUpdate extends StatelessWidget {
               const Text("Your password has been updated!",textAlign: TextAlign.center,style: TextStyle(fontSize: 13),),
               const SizedBox(height: 25,),
               const  SizedBox(height: 35,),
-              ButtonWidget(title: "LOGIN",onTap: ()=>Get.toNamed(Routes.loginScreen),),
+              ButtonWidget(title: "LOGIN",onTap: (){
+                Get.back();
+                Get.back();
+                Get.back();
+                Get.back();
+              },),
             ],
           ),
         ),

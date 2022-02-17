@@ -23,7 +23,7 @@ class LoginController extends GetxController {
 
   set obscure(value) => _obscure.value = value;
 
-  GlobalKey<FormState> globalKey = GlobalKey<FormState>();
+  GlobalKey<FormState> globalKey = GlobalKey();
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -35,11 +35,11 @@ class LoginController extends GetxController {
           email: emailController.text,
           password: passwordController.text,
         );
-        print(response);
+        print("$response tokennnnn");
 
         if(response[1]==true){
           Get.snackbar("scucess", response[2]);
-          Get.toNamed(Routes.dashBoardScreen);
+          Get.toNamed(Routes.dashBoardScreen,arguments: response[0]);
           emailController.clear();
           passwordController.clear();
         }

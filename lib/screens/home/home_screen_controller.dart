@@ -14,10 +14,6 @@ class HomeController extends GetxController{
 
    var val= "".obs ;
 
-  // RxBool? hello = false.obs;
-
-
-
   List<String> Cities = [
     "California",
     "Illinois",

@@ -4,12 +4,16 @@ import 'package:brainbook/core/theme/values/colors.dart';
 import 'package:brainbook/screens/dash_board/dash_board_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../profile/profile_controller.dart';
 import 'widgets/drawer_header.dart';
 
 class NavigationDrawerScreen extends GetView<DashBoardController> {
-  NavigationDrawerScreen({Key? key}) : super(key: key);
+  NavigationDrawerScreen( this.token,  {Key? key}) : super(key: key);
+
+  //ProfileController profileController = Get.find();
 
   final padding = EdgeInsets.symmetric(horizontal: 20);
+final String token;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +52,8 @@ class NavigationDrawerScreen extends GetView<DashBoardController> {
                               : Colors.black),
                     ),
                     hoverColor: Colors.white70,
-                     onTap: ()=>Get.toNamed(controller.drawerRoutes[index],),
+                     // onTap: ()=>Get.toNamed(controller.drawerRoutes[index]==0?profileController.Profile():controller.drawerRoutes[index],arguments: {token}),
+                      onTap: ()=>Get.toNamed(controller.drawerRoutes[index],arguments: token),
                   ),
                 );
               },

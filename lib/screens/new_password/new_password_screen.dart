@@ -89,7 +89,7 @@ class NewPassword extends GetView<NewPasswordContoller> {
                 SizedBox(height: 45,),
                 ButtonWidget(title: "CONFIRM",onTap:
                 //     (){
-                //
+                //   Get.toNamed(Routes.passwordUpdateScreen)
                 // },
                     controller.confrimPassword,
                 ),

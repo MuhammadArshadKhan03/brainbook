@@ -13,6 +13,7 @@ class UserProvider {
   final String passwordResetPath = "user/password-reset";
   final String verifyCodePath = "user/veryfiy-reset-code";
   final String newPasswordPath = "user/new-password";
+  final String profilePath = "user/profile";
 
   Future<dynamic> registerUser({
     required String email,
@@ -103,11 +104,12 @@ class UserProvider {
         }));
     print(response.body);
     final decodedJson = jsonDecode(response.body);
+  //  print(decodedJson["data"]["code"]);
     if (decodedJson["success"] == true) {
       return [
         decodedJson["userId"],
         decodedJson["success"],
-        decodedJson["data"]["passwordCode"]
+        decodedJson["data"]["code"]
       ];
     } else {
       return decodedJson["msg"];
@@ -142,11 +144,28 @@ class UserProvider {
     if(decodedJson["success"]==true){
       print(decodedJson);
       return [decodedJson["msg"],decodedJson["success"]];
-
     }
     else{
       return decodedJson["msg"];
     }
 
   }
+
+  Future<dynamic> profile({required String token}) async{
+    final response = await http.get(Uri.parse("$endPoint$profilePath"),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+        'Authorization': 'Bearer ' + token,
+      },
+    );
+    final decodedJson = jsonDecode(response.body);
+   // print(decodedJson);
+    if(decodedJson["success"]==true){
+      return decodedJson;
+    }
+
+  }
+
+
+
 }

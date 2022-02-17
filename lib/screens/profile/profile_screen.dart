@@ -1,15 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:brainbook/core/theme/values/colors.dart';
+import 'package:brainbook/data/provider/user_provider.dart';
 import 'package:brainbook/global_widgets/appbar.dart';
 import 'package:brainbook/global_widgets/headind_text.dart';
 import 'package:brainbook/global_widgets/text_form_field.dart';
 import 'package:brainbook/screens/profile/profile_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:jwt_decoder/jwt_decoder.dart';
 
 class ProfileScreen extends GetView<ProfileController> {
-  const ProfileScreen({Key? key}) : super(key: key);
+   ProfileScreen({Key? key}) : super(key: key);
+   UserProvider userProvider = UserProvider();
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,14 @@ class ProfileScreen extends GetView<ProfileController> {
       appBar: MyAppBar(
         title: "Profile",
         txtBtnTitle: "Save",
-        onTap: () {},
+        onTap: () {
+          print("aaaaaaaaaaaa11111111");
+          //print(Get.arguments);
+          // controller.Profile();
+       // final response =await userProvider.profile(token: Get.arguments[0]);
+        // print(response["data"]["user"]["email"]);
+          //controller.Profile;
+        },
       ),
       backgroundColor:  backgroundColor,
       body: SingleChildScrollView(
@@ -40,13 +50,42 @@ class ProfileScreen extends GetView<ProfileController> {
                 height: 15,
               ),
               TextFormFieldWidget(
-                title: "Email",
+                title:"Email",
                 controller: controller.emailController,
                 icon: Icon(Icons.email_outlined),
               ),
               SizedBox(
                 height: 15,
               ),
+              // Container(
+              //   height: 60,
+              //   // width: 170,
+              //   child: Padding(
+              //     padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              //     child: DropdownButtonFormField(
+              //       isExpanded: true,
+              //       //key: controller.globalKey,
+              //       hint: Text("Select state"),
+              //       onChanged: (String? value) {
+              //         controller.val.value=value!;
+              //       },
+              //       items: controller.Cities.map((city) {
+              //         return DropdownMenuItem(
+              //           value: city,
+              //           child: Text(city),
+              //         );
+              //       }).toList(),
+              //       decoration: InputDecoration(
+              //         fillColor: Colors.white,
+              //         filled: true,
+              //         enabled: false,
+              //         enabledBorder: InputBorder.none,
+              //         border: OutlineInputBorder(
+              //           borderSide: BorderSide.none,
+              //           borderRadius: BorderRadius.circular(12),),),
+              //     ),
+              //   ),
+              // ),
               TextFormFieldWidget(
                 title: "State",
                 controller: controller.stateController,
@@ -121,7 +160,7 @@ class ProfileScreen extends GetView<ProfileController> {
                     Icons.lock_outlined,
                     color: fontColorDark,
                   ),
-                  controller: controller.confrimNewPasController,
+                  controller: controller.confirmNewPasController,
                   obscureText: controller.obscureConfrimPas,
                   inkWell: GestureDetector(
                     onTap: () {

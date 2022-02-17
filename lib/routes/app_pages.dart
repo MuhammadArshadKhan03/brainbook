@@ -310,6 +310,8 @@ import 'package:brainbook/screens/illinois/your_department/your_department_bindi
 import 'package:brainbook/screens/illinois/your_department/your_department_screen.dart';
 import 'package:get/get.dart';
 
+import '../screens/password_update/password_update_binding.dart';
+
 
 
 class AppPages{
@@ -322,7 +324,7 @@ class AppPages{
     GetPage(name: Routes.forgotPasswordScreen, page: ()=>  ForgotPassword(),binding:ForgotPasswordBinding() ),
     GetPage(name: Routes.verificationCodeScreen, page: ()=>  VerificationCode(), binding:VerficationBinding()),
     GetPage(name: Routes.newPasswordScreen, page: ()=>  NewPassword(), binding:NewPasswordBinding()),
-    GetPage(name: Routes.passwordUpdateScreen, page: ()=>  PasswordUpdate(),),
+    GetPage(name: Routes.passwordUpdateScreen, page: ()=>  PasswordUpdate(),binding: PasswordUpdateBinding()),
     GetPage(name: Routes.dashBoardScreen, page: ()=>  DashBoard(),binding: DashBoardBinding()),
     GetPage(name: Routes.translatorScreen, page: ()=>  TranslatorScreen(),binding: TranslatorBinding()),
     GetPage(name: Routes.commonPhraseScreen, page: ()=>  CommonPhraseScreen(),binding: CommonPhrasesBinding()),

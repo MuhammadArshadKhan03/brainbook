@@ -1,7 +1,20 @@
+import 'package:brainbook/data/provider/user_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class ProfileController extends GetxController{
+ProfileController({required this.userProvider});
+  UserProvider userProvider;
+
+  var val= "".obs ;
+
+  List<String> Cities = [
+    "California",
+    "Illinois",
+    "New York",
+    "LASD",
+  ];
+
 
   final   _obscurepassword = true.obs;
   get obscurepassword => _obscurepassword.value;
@@ -16,14 +29,30 @@ class ProfileController extends GetxController{
   set obscureConfrimPas(value) => _obscureConfrimPas.value=value;
 
 
+
   GlobalKey<FormState> globalKey = GlobalKey<FormState>();
 
   TextEditingController nameController = TextEditingController();
-  TextEditingController emailController = TextEditingController();
+   TextEditingController emailController = TextEditingController();
   TextEditingController stateController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController newPasController = TextEditingController();
-  TextEditingController confrimNewPasController = TextEditingController();
+  TextEditingController confirmNewPasController = TextEditingController();
+
+  Profile()async{
+
+    final response =await userProvider.profile(token: Get.arguments);
+    emailController.text = response["data"]["user"]["email"];
+    stateController.text = response["data"]["user"]["state"];
+    print(response);
+
+  }
+
+  @override
+  void onInit() {
+    Profile();
+    super.onInit();
+  }
 
 
 }

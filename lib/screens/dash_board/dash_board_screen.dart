@@ -17,7 +17,7 @@ class DashBoard extends GetView<DashBoardController> {
     return Obx(()=> SafeArea(
         child: Scaffold(
           extendBody: true,
-          drawer: NavigationDrawerScreen(),
+          drawer: NavigationDrawerScreen(Get.arguments),
           appBar: AppBar(
             flexibleSpace: Container(
               decoration: BoxDecoration(

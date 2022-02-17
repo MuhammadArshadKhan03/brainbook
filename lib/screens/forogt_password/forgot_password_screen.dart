@@ -54,7 +54,10 @@ class ForgotPassword extends GetView<ForogtPasswordContoller> {
                 ButtonWidget(title: "SEND REQUEST",onTap:
                     // (){
                     //   Get.toNamed(Routes.verificationCodeScreen,arguments: controller.emailController.text);
-                    // }
+                    // },
+                  // (){
+                  //   Get.to(Routes.loginScreen,);
+                  // }
                 controller.sendRequest,
                 ),
               ],
